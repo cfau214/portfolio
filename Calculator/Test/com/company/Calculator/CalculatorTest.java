@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// see junit user guide https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods
 class CalculatorTest {
 
     @Test
