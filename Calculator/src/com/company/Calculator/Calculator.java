@@ -67,7 +67,7 @@ public class Calculator {
         if (m == 0)
             return 0;
         else {
-            return n + multRecur(n, m-1);
+            return n + multiplyRecursive(n, m-1);
         }
     }
 
