@@ -46,6 +46,22 @@ public class Calculator {
     }
 
     /**
+     * Subtracts two integers n,m and returns the result.
+     * @param n int - First number.
+     * @param m int - Second number.
+     * @return int - Result of n - m.
+     */
+    public int subtract(int n, int m) { return n-m; }
+
+    /**
+     * Subtracts two decimal numbers n,m and returns the result.
+     * @param n double - First number.
+     * @param m double - Second number.
+     * @return double - Result of n - m.
+     */
+    public double subtract(double n, double m) { return n-m; }
+
+    /**
      * Multiplies two decimal numbers n,m and returns the result.
      * @param n double - First number.
      * @param m double - Second number.
