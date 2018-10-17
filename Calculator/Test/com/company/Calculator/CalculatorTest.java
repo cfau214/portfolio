@@ -1,38 +1,40 @@
 package com.company.Calculator;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void add() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void add1() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void multiply() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void subtract() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void subtract1() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void multiply1() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void multiplyRecursive() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void div() {
     }
 }
