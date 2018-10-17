@@ -40,7 +40,7 @@ public class Calculator {
      * @param m int - Second number.
      * @return int - Result of n * m.
      */
-    public int mult(int n, int m)
+    public int multiply(int n, int m)
     {
         return n*m;
     }
@@ -51,7 +51,7 @@ public class Calculator {
      * @param m double - Second number.
      * @return double - Result of n * m.
      */
-    public double mult(double n, double m)
+    public double multiply(double n, double m)
     {
         return n*m;
     }
@@ -62,7 +62,7 @@ public class Calculator {
      * @param m int - Second number.
      * @return int - Result of n + n + n + ... 'm' number of times.
      */
-    public int multRecur(int n, int m)
+    public int multiplyRecursive(int n, int m)
     {
         if (m == 0)
             return 0;
