@@ -1,41 +1,27 @@
 package com.company.Calculator;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// see junit user guide https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods
 class CalculatorTest {
+
+    private static Calculator myCalc;
+
+    @BeforeAll
+    public static void setUp() throws Exception {
+        myCalc = new Calculator();
+    }
 
     @Test
     void add() {
-    }
 
-    @Test
-    void add1() {
-    }
+        int op1 = 3;
+        int op2 = 2;
 
-    @Test
-    void multiply() {
-    }
+        int expectedVal = 5;
 
-    @Test
-    void subtract() {
-    }
-
-    @Test
-    void subtract1() {
-    }
-
-    @Test
-    void multiply1() {
-    }
-
-    @Test
-    void multiplyRecursive() {
-    }
-
-    @Test
-    void div() {
+        assertTrue(expectedVal == myCalc.add(op1, op2));
     }
 }
