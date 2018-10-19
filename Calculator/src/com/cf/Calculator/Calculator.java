@@ -1,7 +1,7 @@
-package com.company.Calculator;
+package com.cf.Calculator;
 
 /**
- * This class creates a calculator object that has all of the non-scientific functions of a calculator.
+ * This class creates a represents a calculator object that has all of the non-scientific, basic functions of a calculator.
  *
  */
 
@@ -14,6 +14,7 @@ public class Calculator {
 
     /**
      * Adds two integers n,m and returns the result.
+     *
      * @param n int - First number.
      * @param m int - Second number.
      * @return int - Result of n + m.
@@ -25,6 +26,7 @@ public class Calculator {
 
     /**
      * Adds two decimal numbers n,m and returns the result.
+     *
      * @param n double - First number.
      * @param m double - Second number.
      * @return double - Result of n + m.
@@ -36,6 +38,7 @@ public class Calculator {
 
     /**
      * Multiplies two integers n,m and returns the result.
+     *
      * @param n int - First number.
      * @param m int - Second number.
      * @return int - Result of n * m.
@@ -47,6 +50,7 @@ public class Calculator {
 
     /**
      * Subtracts two integers n,m and returns the result.
+     *
      * @param n int - First number.
      * @param m int - Second number.
      * @return int - Result of n - m.
@@ -55,14 +59,17 @@ public class Calculator {
 
     /**
      * Subtracts two decimal numbers n,m and returns the result.
+     *
      * @param n double - First number.
      * @param m double - Second number.
      * @return double - Result of n - m.
      */
+    @SuppressWarnings("unused")
     public double subtract(double n, double m) { return n-m; }
 
     /**
      * Multiplies two decimal numbers n,m and returns the result.
+     *
      * @param n double - First number.
      * @param m double - Second number.
      * @return double - Result of n * m.
@@ -74,6 +81,7 @@ public class Calculator {
 
     /**
      * Multiplies two integers n,m RECURSIVELY and returns the result.
+     *
      * @param n int - First number.
      * @param m int - Second number.
      * @return int - Result of n + n + n + ... 'm' number of times.
@@ -89,12 +97,15 @@ public class Calculator {
 
     /**
      * Divides two doubles n,m and returns the result.
-     * @param n int - Numerator.
-     * @param d int - Denominator.
-     * @return int - Result of n / d.
+     *
+     * @param n double - Numerator.
+     * @param d double - Denominator.
+     * @return double - Result of n / d.
      */
-    public double div (int n, int d)
-    {
+    public double div(double n, double d) {
+
+        if (d == 0)
+            throw new IllegalArgumentException();
         return (double) n/d;
     }
 }

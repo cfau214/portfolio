@@ -1,7 +1,7 @@
-package com.company;
-import com.company.Calculator.*;
+package com.cf;
+import com.cf.Calculator.*;
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
 

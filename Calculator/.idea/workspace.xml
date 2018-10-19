@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="392d23a5-5571-46c8-9973-944b52dcea3b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/com/company/Calculator/CalculatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/com/company/Calculator/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/cf/Calculator/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/com/company/Calculator/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/com/company/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Calculator/com/company/Calculator/CalculatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cf/Calculator/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cf/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,46 +23,57 @@
       <FILTER>com.company.Calculator.*</FILTER>
     </SUITE>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Calculator" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Calculator/Calculator.java">
+        <entry file="file://$PROJECT_DIR$/src/com/cf/Calculator/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="234">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
               <folding>
+                <element signature="e#465#466#0" expanded="true" />
                 <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#1517#1544#0" expanded="true" />
+                <element signature="e#1780#1781#0" expanded="true" />
+                <element signature="e#1806#1807#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/com/cf/Calculator/CalculatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/com/company/Calculator/CalculatorTest.java">
+        <entry file="file://$PROJECT_DIR$/src/com/cf/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="61" column="133" selection-start-line="61" selection-start-column="133" selection-end-line="61" selection-end-column="133" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="153">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -82,6 +97,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Calculator/CalculatorTest.java" />
         <option value="$PROJECT_DIR$/Test/com/company/Calculator/CalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/com/cf/Calculator/Calculator.java" />
+        <option value="$PROJECT_DIR$/Test/com/cf/Calculator/CalculatorTest.java" />
       </list>
     </option>
   </component>
@@ -89,7 +106,7 @@
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
-    <option name="height" value="969" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -97,6 +114,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,13 +132,13 @@
               <item name="Calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="Calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="Calculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
               <item name="Calculator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -146,8 +165,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,13 +176,15 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20114942" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cf.Calculator" />
       <recent name="com.company.Calculator" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -184,71 +203,98 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest.add">
-    <configuration name="All in Calculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cf.Main" />
       <module name="Calculator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.div" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Calculator.*" />
+          <option name="PATTERN" value="com.cf.Calculator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Calculator" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Calculator.CalculatorTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Calculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.Calculator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.Calculator" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Calculator.CalculatorTest" />
-      <option name="METHOD_NAME" value="add" />
+      <option name="PACKAGE_NAME" value="com.cf.Calculator" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.Calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="div" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.company.Calculator in Calculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.shouldReturnTrueIfAddTwoDouble" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Calculator.*" />
+          <option name="PATTERN" value="com.cf.Calculator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Calculator" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="com.cf.Calculator" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.Calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="shouldReturnTrueIfAddTwoDouble" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.shouldReturnTrueIfAddTwoInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.Calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cf.Calculator" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.Calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="shouldReturnTrueIfAddTwoInteger" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.shouldThrowIllegalArgumentExceptionWhenDivideByZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.Calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cf.Calculator" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.Calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="shouldThrowIllegalArgumentExceptionWhenDivideByZero" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.com.company.Calculator in Calculator" />
-      <item itemvalue="JUnit.All in Calculator" />
-      <item itemvalue="JUnit.CalculatorTest.add" />
-      <item itemvalue="JUnit.CalculatorTest" />
+      <item itemvalue="JUnit.CalculatorTest.shouldReturnTrueIfAddTwoDouble" />
+      <item itemvalue="JUnit.CalculatorTest.div" />
+      <item itemvalue="JUnit.CalculatorTest.shouldThrowIllegalArgumentExceptionWhenDivideByZero" />
+      <item itemvalue="JUnit.CalculatorTest.shouldReturnTrueIfAddTwoInteger" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculatorTest.add" />
-        <item itemvalue="JUnit.CalculatorTest" />
-        <item itemvalue="JUnit.All in Calculator" />
-        <item itemvalue="JUnit.com.company.Calculator in Calculator" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CalculatorTest.shouldReturnTrueIfAddTwoInteger" />
+        <item itemvalue="JUnit.CalculatorTest.shouldThrowIllegalArgumentExceptionWhenDivideByZero" />
+        <item itemvalue="JUnit.CalculatorTest.div" />
+        <item itemvalue="JUnit.CalculatorTest.shouldReturnTrueIfAddTwoDouble" />
       </list>
     </recent_temporary>
   </component>
@@ -266,64 +312,74 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculatorTest - 2018.10.18 at 19h 28m 39s.xml">
-      <configuration name="CalculatorTest" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_div - 2018.10.19 at 15h 14m 08s.xml">
+      <configuration name="CalculatorTest.div" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 29m 09s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_div - 2018.10.19 at 15h 15m 45s.xml">
+      <configuration name="CalculatorTest.div" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 30m 07s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_div - 2018.10.19 at 15h 16m 46s.xml">
+      <configuration name="CalculatorTest.div" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 32m 03s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_div - 2018.10.19 at 15h 17m 36s.xml">
+      <configuration name="CalculatorTest.div" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 33m 16s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_div - 2018.10.19 at 15h 18m 15s.xml">
+      <configuration name="CalculatorTest.div" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 33m 30s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_div - 2018.10.19 at 15h 21m 47s.xml">
+      <configuration name="CalculatorTest.div" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 44m 49s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_shouldThrowIllegalArgumentExceptionWhenDivideByZero - 2018.10.19 at 15h 30m 15s.xml">
+      <configuration name="CalculatorTest.shouldThrowIllegalArgumentExceptionWhenDivideByZero" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 46m 06s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_shouldThrowIllegalArgumentExceptionWhenDivideByZero - 2018.10.19 at 15h 30m 24s.xml">
+      <configuration name="CalculatorTest.shouldThrowIllegalArgumentExceptionWhenDivideByZero" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 48m 53s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_shouldThrowIllegalArgumentExceptionWhenDivideByZero - 2018.10.19 at 15h 30m 43s.xml">
+      <configuration name="CalculatorTest.shouldThrowIllegalArgumentExceptionWhenDivideByZero" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculatorTest_add - 2018.10.18 at 19h 49m 15s.xml">
-      <configuration name="CalculatorTest.add" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_shouldReturnTrueIfAddTwoInteger - 2018.10.19 at 15h 33m 12s.xml">
+      <configuration name="CalculatorTest.shouldReturnTrueIfAddTwoInteger" configurationId="JUnit" />
     </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16983017" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925038" visible="true" weight="0.16938272" />
+      <window_info id="Structure" order="1" sideWeight="0.50074965" side_tool="true" weight="0.16938272" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Favorites" order="4" sideWeight="0.50074965" side_tool="true" weight="0.16938272" />
+      <window_info anchor="bottom" id="Inspection Results" sideWeight="0.4982716" weight="0.32997987" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897383" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993964" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4962963" weight="0.32897383" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4967901" visible="true" weight="0.3993964" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4997531" weight="0.32997987" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32897383" />
-      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49925926" weight="0.32997987" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5032099" side_tool="true" visible="true" weight="0.3993964" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4997531" weight="0.32897383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" visible="true" weight="0.32967034" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -334,37 +390,79 @@
     <entry file="file://$PROJECT_DIR$/out/test/Calculator/com/company/Calculator/CalculatorTest.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.3.1/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/Assertions.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="207">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#1383#1384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.3.1/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/AssertTrue.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#403#404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="61" column="133" selection-start-line="61" selection-start-column="133" selection-end-line="61" selection-end-column="133" />
+          <caret line="235" selection-start-line="235" selection-end-line="235" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Calculator/Calculator.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.3.1/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/function/Executable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#491#492#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/com/company/Calculator/CalculatorTest.java">
+    <entry file="file://$PROJECT_DIR$/Test/com/cf/Calculator/CalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="935">
+          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cf/Calculator/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#1517#1544#0" expanded="true" />
+            <element signature="e#1780#1781#0" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cf/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>
