@@ -106,6 +106,7 @@ public class Calculator {
 
         if (d == 0)
             throw new IllegalArgumentException();
-        return (double) n/d;
+
+        return n/d;
     }
 }

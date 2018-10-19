@@ -1,6 +1,5 @@
 package com.cf.Calculator;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +15,8 @@ class CalculatorTest {
     }
 
     @Test
-    void shouldReturnTrueIfAddTwoInteger() {
+    void shouldReturnTrueIfExpectedvalEqualsAddInt1Int2() {
+        /* Calculator.add(int, int)     */
 
         int op1 = 3;
         int op2 = 2;
@@ -26,9 +26,9 @@ class CalculatorTest {
         assertEquals(expectedVal, myCalc.add(op1, op2));
     }
 
-
     @Test
-    void shouldReturnTrueIfAddTwoDouble() {
+    void shouldReturnTrueIfExpectedvalEqualsAddDouble1Double2() {
+        /* Calculator.add(double, double)   */
 
         double op1 = 3.5;
         double op2 = 4.2;
@@ -40,6 +40,7 @@ class CalculatorTest {
 
     @Test
     void shouldReturnTrueIfN1DivN2() {
+        /* Calculator.div(double,double)    */
 
         double numerator = 4.0;
         double denominator = 2.0;
@@ -51,6 +52,7 @@ class CalculatorTest {
 
     @Test
     void shouldThrowIllegalArgumentExceptionWhenDivideByZero() {
+        /* Calculator.div(double,0)     */
 
         double numerator = 4.0;
         double denominator = 0.0;
