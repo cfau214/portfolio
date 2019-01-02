@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is my Test Page.</title>
+</head>
+<script>
+	// PERSON OBJECT //
+	var Person = function(name, age) {
+		this.name = name;
+		this.age = age;
+	};
+	
+	Person.prototype.getName = function() {
+		return this.name;
+	};
+	Person.prototype.getAge = function() {
+		return this.age;
+	};
+	Person.prototype.setName = function(name) {
+		this.name = name;
+	};
+	Person.prototype.speak = function(battlecry) {
+		return battlecry;
+	};
+
+	
+	// MALE OBJECT //
+	var Male = function(name, age) {
+		Person.call(this, name, age);
+		this.strength = 50;
+	};
+	
+	Male.prototype = Object.create(Person.prototype);
+	
+	// FEMALE OBJECT //
+	var Female = function(name, age) {
+		Person.call(this, name, age);
+	};
+	
+	Female.prototype = Object.create(Person.prototype);
+	
+	/*
+	var text = JSON.stringify(Person);
+	var jParse = JSON.parse(text);
+	*/
+	
+	/*********
+	   MAIN
+	*********/
+	var myMale = new Male("Chris", 29);
+	var myFemale = new Female("Kris", 31);
+	
+	var txtMale = JSON.stringify(myMale);
+	var txtFemale = JSON.stringify(myFemale);
+	
+	var jsonMale = JSON.stringify(myMale);
+	var jsonFemale = JSON.stringify(myFemale);
+</script>
+
+<body>
+<!--
+	<script>alert("Chris age: " + jParse.Chris.age);</script>
+	<<h1 id="test"><script>document.getElementById('test').innerHTML = jParse.Becca.name;</script></h1>
+	-->
+	<script>alert("Male name: " + myMale.getName());</script>
+	<script>alert("Female name: " + myFemale.getName());</script>
+	<h1 id="test"><script>document.getElementById('test').innerHTML = "Name: " + myMale.getName() + " , Age: " + myMale.age;</script></h1>
+	<h2 id="voices"><script>document.getElementById('voices').innerHTML = myFemale.speak('RAWRRRR');</script></h2>
+	<h3 id="json"><script>document.getElementById('json').innerHTML = jsonMale + "<br><br>" + jsonFemale;</script></h3>
+</body>
+</html>

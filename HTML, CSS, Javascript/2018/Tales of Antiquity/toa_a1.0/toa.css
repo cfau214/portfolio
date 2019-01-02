@@ -1,0 +1,219 @@
+/* Tales of Antiquity CSS3 */
+body {  background-color: #F3EFE0; 
+		color: #A0A0A0;
+		font-family: "Tahoma", "Times New Roman", serif;
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat; }
+		
+a { text-decoration: none;
+	border: 0;
+	color: #A0A0A0; }
+
+img { border: 0;
+	  max-height: 100%;
+	  max-width: 100%; }
+	
+ul li {	margin-top: 15px;
+		margin-bottom: 15px; }
+	
+#footer { font-size: small;
+		  text-align: left;
+		  color: #707070;
+		  font-style: italic;
+		  border-bottom: 50px;
+		  padding-bottom: 10px; }
+
+#header { background: url(images/logo.png) #cccccc no-repeat;
+		  background-color: transparent;
+		  height: 251px;
+		  width: 764px;
+		  background-position: center;
+		  background-size: 80%;
+		  margin-left: auto;
+		  margin-right: auto; }  
+
+#rightDivUL ul li { margin-top: 25px;
+					margin-left: 25px;
+					margin-bottom: 25px; }
+					
+#leftDivUL { margin-left: 50px; }
+
+#btnHealthMinus { position: relative;
+				  transform: translate(48px,-520px); }
+				  
+#btnHealthAdd { position: relative;
+				transform: translate(6px,-522px); }
+  
+#btnAttackMinus { position: relative;
+				  transform: translate(-5px,-412px); }
+				  
+#btnAttackAdd { position: relative;
+				transform: translate(-47px,-412px); }
+				  
+#btnSkillMinus { position: relative;
+				 transform: translate(-57px,-305px); }
+				 
+#btnSkillAdd { position: relative;
+			   transform: translate(271px,-365px); }
+				 
+#btnFaithMinus { position: relative;
+				 transform: translate(-110px,-195px); }
+				 
+#btnFaithAdd { position: relative;
+			   transform: translate(218px,-255px); }
+				
+#btnAuthorityMinus { position: relative;
+					 transform: translate(-162px,-87px); }
+					 	   
+#btnAuthorityAdd { position: relative;
+				   transform: translate(165px,-145px); }
+				   
+#btnHalfTotal { position: relative;
+				padding: 32px 28px;
+				transform: translate(53px,-384px); }
+				
+#btnDoubleTotal { position: relative;
+				  padding: 32px 28px;
+				  transform: translate(270px,-385px); }
+		   
+#txtHealth { position: relative;
+			 transform: translate(-25px,-575px);
+			 text-align: center; }
+			 
+#txtAttack { position: relative;
+			 transform: translate(-129px,-467px);
+			 text-align: center; }
+			 
+#txtSkill { position: relative;
+			transform: translate(135px,-417px);
+			text-align: center; }
+			 
+#txtFaith { position: relative;
+			transform: translate(30px,-309px);
+			text-align: center; } 
+			
+#txtAuthority { position: relative;
+				transform: translate(-74px,-199px);
+				text-align: center; }
+				
+#txtTotals { position: relative;
+			 transform: translate(166px, -300px);
+			 text-align: center; }
+				
+#lblHealth { position: relative;
+			 transform: translate(133px,-713px);
+			 text-align: center; }
+			 
+#lblAttack { position: relative;
+			 transform: translate(133px,-625px);
+			 text-align: center; }
+			 
+#lblSkill { position: relative;
+			transform: translate(133px,-535px);
+			text-align: center; }
+			 
+#lblFaith { position: relative;
+			transform: translate(133px,-446px);
+			text-align: center; }	
+
+#lblAuthority { position: relative;
+				transform: translate(133px,-357px);
+				text-align: center; }
+
+#lblTotals { position: relative;
+			 transform: translate(170px, -388px);
+			 text-align: center; }
+
+#lblSin { position: relative;
+		  transform: translate(148px,-576px);
+	      text-align: center; }		
+		  
+#lblConfused { position: relative;
+			   transform: translate(156px,-620px);
+			   text-align: center; }
+			   
+#lblBurned { position: relative;
+			 transform: translate(170px,-515px);
+			 text-align: center; }
+			 
+#lblPoisoned { position: relative;
+			   transform: translate(158px,-415px);
+			   text-align: center; }
+			   
+#lblDice { position: relative;
+		   transform: translate(172px,-330px);
+		   font-size: 30pt;
+		   text-align: center;
+		   cursor: pointer;
+		   pointer-events: none; }
+		   
+#imgTotals { position: relative;
+			 transform: translate(40px, -225px); }
+			 
+.txtBox { margin: 0;
+		  background-color: transparent;
+		  height: 50px;
+		  width: 100px;
+		  color: white;
+		  font-size: 24pt;
+		  border: 0; }
+		  
+.lblName { margin: 0;
+		   background-color: transparent;
+		   height: 20px;
+		   width: 100px;
+		   color: black;
+		   font-size: 10pt;
+		   font-weight: bold;
+		   border: 0; }
+		   
+.lblStatus { margin: 0;
+			 background-color: transparent;
+		     height: 50px;
+		     width: 100px;
+		     color: white;
+			 pointer-events: none;
+		     font-size: 18pt;
+			 letter-spacing: 1.6px;
+		     border: 0; }
+				 
+.btnAddSub { padding: 22px 24px;
+			 color: transparent; 
+			 background-color: transparent;
+		     cursor: pointer;
+			 outline: none;
+			 border: none; }
+			 
+.btnStatus { padding: 30px 76px;
+			 color: transparent;
+		     cursor: pointer;
+			 background-color: transparent; 
+			 border: none; }
+			 
+.btnDice { padding: 68px 76px;
+		   color: transparent;
+		   cursor: pointer;
+		   background-color: yellow;
+		   border: none; }
+
+.ulCustom { list-style-type: none;
+			position: relative;
+			margin: 0 auto; }
+			
+ul#ulStatus li { cursor: pointer; }
+
+.addMargin { margin-top: 15px;
+			 margin-bottom: 15px; }
+			 	 
+.pageWrap { background: url(images/bg.png);
+			background-attachment: fixed;
+			background-position: center;
+			margin-top: 4%;
+			margin-bottom: 4%;
+			width: 800px;
+			min-height: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+			border: outset 3px #212121;
+			box-shadow: 3px 3px 5px 3px #000; }

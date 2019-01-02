@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--Tales of Antiquity-->
+<html lang="en">
+<head>
+<script type="text/javascript">
+	/* <![CDATA[ */
+
+	function addTen(id) {
+		/* Add ten to value of element passed. */
+		id = document.getElementById(id)
+		var result =  Number(id.value) + 10;
+
+		if (result > 9999) // maximum value allowed.
+			result = 9999;
+			
+		id.value = result;
+		
+		calcTotals();
+}
+	function subTen(id) {
+		/* Subtract ten from value of element passed. */
+		id = document.getElementById(id)
+		var result =  Number(id.value) - 10;
+		
+		if (result < -9999)
+			result = -9999;
+		id.value = result;
+		
+		calcTotals();
+}
+	function roll(el) {
+		/* Roll the dice. Max=6 and Min=1 will roll 1-6 */
+		var max = 6;
+		var min = 1;
+		
+		diceId = document.getElementById('dice');
+		
+		/* Disable dice while rolling. */
+		el.innerHTML = "-";
+		diceId.style.pointerEvents = "none";
+		
+		/* Delays dice value changes to simulate rolling. */
+		setTimeout(function(){
+				el.innerHTML = Math.floor(Math.random()*(max-min+1)+min);
+				diceId.style.pointerEvents = "auto";	// enable dice
+		},1000); // delay is in milliseconds (1 sec = 1000ms)
+}
+	function calcTotals() {
+		/* Re-calculate totals after any change to damage bases. */
+		var total = parseInt(document.getElementById('txtAttack').value) + parseInt(document.getElementById('txtSkill').value) + parseInt(document.getElementById('txtAuthority').value);
+		
+		/* Limit max and min values in total damage calculation. */
+		if (total > 9999) // max
+			total = 9999;
+		else if (total < -9999) // min
+			total = -9999;
+			
+		document.getElementById('txtTotals').value = total;
+}
+	function divideTotal() {
+		/* Divide total damage by percent. */
+		var perc = .5;
+		
+		var el = document.getElementById('txtTotals'); // references total damage box.
+		var total = Math.ceil(parseInt(el.value) * perc);
+		
+		el.value = total;
+}
+	function multiplyTotal() {
+		/* Multiply total damage by percent. */
+		var perc = 2.00;
+		
+		var el = document.getElementById('txtTotals'); // references total damage box.
+		var total = parseInt(el.value) * perc;
+		
+		/* Limit max and min values in total damage calculation. */
+		if (total > 9999) // max
+			total = 9999;
+		else if (total < -9999) // min
+			total = -9999;
+		
+		el.value = total;
+}
+	function validateNumber(el) {
+		/* Prevent entered number in el from being > 9999 or < -9999 */
+		var num = parseInt(el.value);
+		
+		if (num > 9999) 
+			el.value=9999;
+		else if (num < -9999)
+			el.value = -9999
+}
+	function toggle(el) {
+		/* sin */
+		if (el.name == "sin") {
+			if (el.className == "off") {
+				el.className = "on";
+				el.src = "images/sin_press.png";
+			}
+			else if (el.className == "on") {
+				el.className = "off";
+				el.src = "images/non_press.png";
+			}
+		}
+		/* confused */
+		else if (el.name == "confused") {
+			if (el.className == "off") {
+				el.className = "on";
+				el.src = "images/con_press.png";
+			}
+			else if (el.className == "on") {
+				el.className = "off";
+				el.src = "images/non_press.png";
+			}
+		}
+		/* burned */
+		else if (el.name == "burned") {
+			if (el.className == "off") {
+				el.className = "on";
+				el.src = "images/burn_press.png";
+			}
+			else if (el.className == "on") {
+				el.className = "off";
+				el.src = "images/non_press.png";
+			}
+		}
+		/* poisoned */
+		else if (el.name == "poisoned") {
+			if (el.className == "off") {
+				el.className = "on";
+				el.src = "images/pois_press.png";
+			}
+			else if (el.className == "on") {
+				el.className = "off";
+				el.src = "images/non_press.png";
+			}
+		}
+}
+
+	/* ]]> */
+</script>
+<title>Tales of Antiquity</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="toa.css" type="text/css">
+<link href="favicon.ico" rel="icon" type="image/x-icon">
+<link href="favicon.ico" rel="shortcut icon"  type="image/x-icon">
+<body>
+
+<!--Body-->
+<div class="pageWrap">
+
+<!--Header-->
+<a href="index.html">
+	<div id="header"></div>
+</a>
+
+<div style="width: 100%; overflow: hidden;">
+
+	<!-- Left Div -------->
+    <div id="leftDivUL" style="width: 50%; float: left; height: 773px; margin-top: 10px;">
+	
+		<!--Button GRAPHICS in left div-->
+			<!-- Images-->
+		<ul class="ulCustom" style="margin-top: 10px; margin-bottom: 10px;">
+			<li><img src="images/number_base.png" height="80%" width="80%"></li> 
+			<li><img src="images/number_base.png" height="80%" width="80%"></li> 
+			<li><img src="images/number_base.png" height="80%" width="80%"></li>  
+			<li><img src="images/number_base.png" height="80%" width="80%"></li>  
+			<li><img src="images/number_base.png" height="80%" width="80%"></li> 
+		</ul>
+			
+		
+		<!--Button ACTIONS in left div-->
+			<!--SUBS-->
+		<input type="button" id="btnHealthMinus" class="btnAddSub" onclick="subTen('txtHealth');">
+		<input type="button" id="btnAttackMinus" class="btnAddSub" onclick="subTen('txtAttack');">
+		<input type="button" id="btnSkillMinus" class="btnAddSub" onclick="subTen('txtSkill');">
+		<input type="button" id="btnFaithMinus" class="btnAddSub" onclick="subTen('txtFaith');">
+		<input type="button" id="btnAuthorityMinus" class="btnAddSub" onclick="subTen('txtAuthority');"
+			<!--ADDITIONS-->
+		<input type="button" id="btnHealthAdd" class="btnAddSub" onclick="addTen('txtHealth');">
+		<input type="button" id="btnAttackAdd" class="btnAddSub" onclick="addTen('txtAttack');">
+		<input type="button" id="btnSkillAdd" class="btnAddSub" onclick="addTen('txtSkill');">
+		<input type="button" id="btnFaithAdd" class="btnAddSub" onclick="addTen('txtFaith');">
+		<input type="button" id="btnAuthorityAdd" class="btnAddSub" onclick="addTen('txtAuthority');"> 
+		
+			<!--Number textboxes in left div-->
+		<input type="text" id="txtHealth" class="txtBox" name="txtHealth" maxlength="5" value="0" onchange="validateNumber(this);">
+		<input type="text" id="txtAttack" class="txtBox" name="txtAttack" maxlength="5" value="0" onchange="validateNumber(this);">
+		<input type="text" id="txtSkill" class="txtBox" name="txtSkill" maxlength="5" value="0" onchange="validateNumber(this);">
+		<input type="text" id="txtFaith" class="txtBox" name="txtFaith" maxlength="5" value="0" onchange="validateNumber(this);">
+		<input type="text" id="txtAuthority" class="txtBox" name="txtAuthority" maxlength="5" value="0" onchange="validateNumber(this);">	
+		
+		<!--Text labels-->
+		<div id="lblHealth" class="lblName">Health Points</div>
+		<div id="lblAttack" class="lblName">Attack Points</div>
+		<div id="lblSkill" class="lblName">Skill Damage</div>
+		<div id="lblFaith" class="lblName">Faith Points</div>
+		<div id="lblAuthority" class="lblName">Authority</div>
+		
+		<!--Totals bar-->
+		<div>
+			<img src="images/total_dmg.png" id="imgTotals" height="90%" width="90%">
+			<input type="text" id="txtTotals" class="txtBox" name="txtTotals" maxlength="5" value="0" onchange="validateNumber(this);">
+			<div id="lblTotals" class="lblName">Total Damage</div>
+			<input type="button" id="btnHalfTotal" class="btnAddSub" onclick="divideTotal();">
+			<input type="button" id="btnDoubleTotal" class="btnAddSub" onclick="multiplyTotal();">
+		</div>
+	</div>
+	<!--END left div-->
+	
+	<!-- Right Div -------->
+    <div id="rightDivUL" style="margin-left: 50%; height: 773px; margin-top: 35px;">
+	
+		<!--Button GRAPHICS in right div-->
+		<ul class="ulCustom" id="ulStatus" style="margin-top: 10px; margin-bottom: 10px; margin-left: 80px;">
+			<li><img class="off" name="sin" src="images/non_press.png" height="60%" width="60%" onclick="toggle(this);"></li> 
+			<li><img class="off" name="confused" src="images/non_press.png" height="60%" width="60%" onclick="toggle(this);"></li> 
+			<li><img class="off" name="burned" src="images/non_press.png" height="60%" width="60%" onclick="toggle(this);"></li>  
+			<li><img class="off" name="poisoned" src="images/non_press.png" height="60%" width="60%" onclick="toggle(this);"></li>  
+			<li><img id="dice" src="images/dice.png" height="60%" width="60%" onclick="roll(document.getElementById('lblDice'));"></img></li>
+		</ul>
+		
+		<!--Text labels-->
+		<div id="lblSin" class="lblStatus">SIN</div>
+		<div id="lblConfused" class="lblStatus">CONFUSED</div>
+		<div id="lblBurned" class="lblStatus">BURNED</div>
+		<div id="lblPoisoned" class="lblStatus">POISONED</div>
+		<div id="lblDice" class="lblStatus">ROLL</div>
+	</div>
+	<!--END right div-->
+	
+</div>
+<!--End Body-->
+	
+
+<!--Footer-->
+</div>
+</body>
+</html>
+
+<!--Author: Chris Fauteux 2018   cfau214037@live.com -->
