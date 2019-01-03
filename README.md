@@ -1,2 +1,3 @@
 # Christopher Fauteux
-# January, 2019
+# cfau214037@live.com
+# (860) 595-8677
