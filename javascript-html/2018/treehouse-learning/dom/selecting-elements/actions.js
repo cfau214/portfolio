@@ -1,4 +1,4 @@
-var change = function() {
+const change = () => {
 
     el = document.getElementById('btn1');
     
