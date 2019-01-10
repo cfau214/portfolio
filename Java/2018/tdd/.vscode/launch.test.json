@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "calculator",
+                "projectName": "calculator",
+                "workingDirectory": "f:\\Backup\\Documents\\Repositories\\portfolio\\java\\2018\\tdd\\calculator\\calculator",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "calculator",
+                "projectName": "calculator",
+                "workingDirectory": "f:\\Backup\\Documents\\Repositories\\portfolio\\java\\2018\\tdd\\calculator\\calculator",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
