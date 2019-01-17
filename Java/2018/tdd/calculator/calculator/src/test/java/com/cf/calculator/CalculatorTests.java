@@ -4,8 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import org.hamcrest.core.IsAnything;
-import org.junit.Before;
+import org.junit.*;
 import org.junit.BeforeClass;
 
 /**
