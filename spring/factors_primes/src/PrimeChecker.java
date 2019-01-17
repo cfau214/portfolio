@@ -1,15 +1,15 @@
 
 /**
- * PrimeChecker has the appropriate methods to check if an integer is a prime number.
- *
+ * PrimeChecker is a Singleton that has the appropriate methods to check if an integer is a prime number.
+ * <p>
  * By definition a prime number is an integer greater than 1 that cannot be formed by multiplying
  * two smaller integers greater than 1.
  *
  * @author Chris Fauteux
  * @since 2019
  */
-public class PrimeChecker {
-
+public enum PrimeChecker {
+    INSTANCE;
 
     /**
      * Checks if a number is prime.
@@ -26,7 +26,7 @@ public class PrimeChecker {
          */
         if (isEven(n)) {
 
-            for (int i = 2; i < Math.ceil(n/2); i++) {
+            for (int i = 2; i < Math.ceil(n / 2); i++) {
 
                 // If factor found, n is not a prime number.
                 if (isFactor(n, i)) {
@@ -34,10 +34,9 @@ public class PrimeChecker {
                     break;
                 }
             }
-        }
-        else {
+        } else {
 
-            for (int i = 3; i < Math.ceil(n/2); i += 2) {
+            for (int i = 3; i < Math.ceil(n / 2); i += 2) {
 
                 // If factor found, n is not a prime number.
                 if (isFactor(n, i)) {
@@ -63,7 +62,7 @@ public class PrimeChecker {
     /**
      * Checks if a number has a factor.
      *
-     * @param num original number
+     * @param num  original number
      * @param num2 factor to check
      * @return true if num2 is a factor of num.
      */
