@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a06272f-35d7-4838-a3d9-9d93b176d34d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/com/cf/Factors/FactorChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/cf/Factors/FactorChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/cf/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/cf/Main.java" afterDir="false" />
+    <list default="true" id="1671bbd8-f470-4a2a-a7af-a85626cc9c50" name="Default Changelist" comment="Updated FactorChecker class.&#10;&#10;Changed checkPrime() to isPrime() in PrimeChecker.java.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/cf/Factors/FactorChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/cf/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/cf/Primes/PrimeChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/cf/src/Factors/FactorChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/cf/src/Primes/PrimeChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/com.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/numbers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/numbers.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/FactorChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/com/PrimeChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Primes/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Primes/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/home.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/numbers.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,19 +34,31 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/cf/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com/cf/Factors/FactorChecker.java">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            <state relative-caret-position="187">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,14 +68,28 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/com/cf/Main.java" />
-        <option value="$PROJECT_DIR$/com/cf/Factors/FactorChecker.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/numbers.iml" />
+        <option value="$PROJECT_DIR$/src/home/cf/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Primes/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Main.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" />
       </list>
     </option>
   </component>
@@ -57,25 +102,40 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="cf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="cf" type="462c0819:PsiDirectoryNode" />
               <item name="Factors" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -84,13 +144,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/com/cf/src" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
@@ -105,54 +165,139 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="home.cf.Main" />
+      <module name="numbers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5a06272f-35d7-4838-a3d9-9d93b176d34d" name="Default Changelist" comment="" />
-      <created>1547741696011</created>
+      <changelist id="1671bbd8-f470-4a2a-a7af-a85626cc9c50" name="Default Changelist" comment="" />
+      <created>1547745103008</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547741696011</updated>
+      <updated>1547745103008</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24987654" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24987654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32997987" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32997987" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32997987" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.24987654" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32997987" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Run" order="5" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated FactorChecker class.&#10;&#10;Changed checkPrime() to isPrime() in PrimeChecker.java." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated FactorChecker class.&#10;&#10;Changed checkPrime() to isPrime() in PrimeChecker.java." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/com/cf/Main.java">
+    <entry file="file://$PROJECT_DIR$/numbers.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/cf/Factors/FactorChecker.java">
+    <entry file="file://$PROJECT_DIR$/src/home/cf/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/Primes/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/Factors/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -162,9 +307,81 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>com.fasterxml.jackson.core:jackson-databind:2.9.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>numbers</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

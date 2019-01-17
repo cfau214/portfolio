@@ -1,7 +1,5 @@
 package home.cf.Factors;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,20 +13,40 @@ import java.util.List;
  * @since 2019
  */
 public enum FactorChecker {
-    INSTANCE;
+    INSTANCE;   // Singleton Instance
+
+    private int lastNum = -1;           // Last number checked. Initialized to -1 so null check not required.
+    private List<Integer> factors;      // List of all factors for last number checked.
 
     /**
-     * Lists all factors of n.
+     * Calls methods that will populate the list with factors of n, and then return that list formatted as a string.
      *
-     * @param n number to check factors of
-     * @return list of factors.
+     * @param n number to factor.
+     * @return string representation of the list.
      */
-    public List<Integer> getFactors(int n) {
+    public String getFactors(int n) {
 
-        List<Integer> factors = new ArrayList<>();  // List to store factors of n.
+        /* Check if last number factored = n.
+           If equal, the factors are already in list, if not equal calculate factors. */
+        if (n != lastNum) {
+            calcFactors(n);
+        }
+
+        return listFactors();
+    }
+
+    /**
+     * Finds all factors of n and adds them to the FactorChecker factors list.
+     *
+     * @param n number to factor.
+     */
+    private void calcFactors(int n) {
 
         /* Check that n is a valid integer before finding factors.  */
         if (isValid(n)) {
+
+            factors = new ArrayList<>();  // List to store factors of n.
+            lastNum = n;                  // Update last number factored to current number.
             final int LIMIT = n / 2;      // Upper limit to check when looking for factors.
 
             //Find each factor of n.
@@ -39,8 +57,20 @@ public enum FactorChecker {
 
             factors.add(n);     // List will show initial number as the last factor.
         }
+    }
 
-        return factors;
+    /**
+     * Returns a string representation of the list of factors.
+     * @return string representation of the list of factors.
+     */
+    private String listFactors() {
+        String str = "Factors of " + lastNum + ": \n" + "----------------------\n";
+
+        for (Integer factor : factors) {
+            str += factor + "\n";
+        }
+
+        return str;
     }
 
     /**

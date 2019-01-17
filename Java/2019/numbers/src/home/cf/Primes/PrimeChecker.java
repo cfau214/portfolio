@@ -18,7 +18,7 @@ public enum PrimeChecker {
      * @param n number to check.
      * @return true if prime; false if not.
      */
-    public boolean checkPrime(int n) {
+    public boolean isPrime(int n) {
 
         boolean hasFactor = false;    // Flag used while calculating if n is prime.
 
