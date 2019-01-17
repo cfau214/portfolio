@@ -2,9 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Main Program to test classes.
+ * FactorChecker is a Singleton that has the appropriate methods to check if an integer has factors.
+ * <p>
+ * This class will maintain a list of factors for the most recent number passed into the getFactors() function.
+ *
+ * @author Chris Fauteux
+ * @since 2019
  */
-public class Main {
+public enum FactorChecker {
+    INSTANCE;
 
     public static void main(String[] args) {
         List<Integer> factors = new ArrayList<Integer>();
