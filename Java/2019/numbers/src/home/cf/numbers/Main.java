@@ -1,7 +1,7 @@
-package home.cf;
+package home.cf.numbers;
 
 /**
- * Main Program to test classes.
+ * Main Program.
  */
 public class Main {
 
