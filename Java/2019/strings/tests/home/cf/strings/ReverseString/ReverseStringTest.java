@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReverseStringTest {
 
     @Test
-    void reverse_ShouldBeTrueWhenOriginalEqualsReversed() {
+    void reverse_ShouldBeTrueWhenReversedEqualsExpectedAnswer() {
 
         ReverseString rs = new ReverseString();
 
@@ -16,6 +16,14 @@ class ReverseStringTest {
 
         assertEquals(answer, rs.reverse(original));
         assertEquals("", rs.reverse(""));
+    }
+
+    @Test
+    void getReversed_ShouldThrowNullPointerExceptionWhenNoStringPassedToRSClass() {
+
+        ReverseString rs = new ReverseString();
+
+        assertThrows(NullPointerException.class, rs::getReversed);
     }
 
     @Test

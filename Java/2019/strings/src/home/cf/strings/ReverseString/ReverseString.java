@@ -50,6 +50,9 @@ public class ReverseString {
      * @return recently reversed string.
      */
     public String getReversed() {
+        if (reversed == null)
+            throw new NullPointerException();
+
         return reversed;
     }
 
