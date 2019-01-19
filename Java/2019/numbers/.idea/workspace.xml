@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1671bbd8-f470-4a2a-a7af-a85626cc9c50" name="Default Changelist" comment="Updated FactorChecker class.&#10;&#10;Changed checkPrime() to isPrime() in PrimeChecker.java.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="1671bbd8-f470-4a2a-a7af-a85626cc9c50" name="Default Changelist" comment="Refactored packages. Fixed FibCalculator to work properly with lists.">
+      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/Factors/FactorChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/Factors/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/FibCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/Primes/PrimeChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/Primes/package-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/cf/Factors/FactorChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/cf/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/cf/Primes/PrimeChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/cf/src/Factors/FactorChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/cf/src/Primes/PrimeChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/com.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/numbers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/numbers.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/FactorChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/com/PrimeChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/numbers/home/cf/Factors/FactorChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/numbers/home/cf/Factors/FactorChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/numbers/home/cf/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/numbers/home/cf/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Fibonacci/FibCalculator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home/cf/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/cf/Primes/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/Primes/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/Primes/package-info.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home/cf/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/home.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/numbers.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,12 +28,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/home/cf/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="255">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Primes/PrimeChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/FibCalculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,19 +60,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Factors/FactorChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="901">
+              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,6 +76,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="package-info" />
       </list>
     </option>
@@ -85,11 +91,15 @@
         <option value="$PROJECT_DIR$/numbers.iml" />
         <option value="$PROJECT_DIR$/src/home/cf/java/Main.java" />
         <option value="$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Fibonacci/FibChecker.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Fibonacci/FibCalculator.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/Fibonacci/package-info.java" />
         <option value="$PROJECT_DIR$/src/home/cf/package-info.java" />
         <option value="$PROJECT_DIR$/src/home/cf/Primes/package-info.java" />
-        <option value="$PROJECT_DIR$/src/home/cf/Factors/package-info.java" />
         <option value="$PROJECT_DIR$/src/home/cf/Main.java" />
-        <option value="$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/FibCalculator.java" />
       </list>
     </option>
   </component>
@@ -137,7 +147,34 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
               <item name="Factors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="Fibonacci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="Primes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -148,10 +185,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="home.cf.numbers" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -199,27 +245,27 @@
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24987654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32997987" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32997987" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32997987" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32997987" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993964" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997987" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32997987" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -244,9 +290,50 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated FactorChecker class.&#10;&#10;Changed checkPrime() to isPrime() in PrimeChecker.java." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated FactorChecker class.&#10;&#10;Changed checkPrime() to isPrime() in PrimeChecker.java." />
+    <MESSAGE value="Refactored packages. Fixed FibCalculator to work properly with lists." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored packages. Fixed FibCalculator to work properly with lists." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/numbers.iml">
@@ -256,48 +343,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Factors/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="82" lean-forward="true" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Primes/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/home/cf/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/home/cf/Primes/package-info.java">
+    <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Factors/FactorChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/home/cf/Factors/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/home/cf/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="901">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/home/cf/Primes/PrimeChecker.java">
+    <entry file="file://$PROJECT_DIR$/src/home/cf/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        <state relative-caret-position="255">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/home/cf/Factors/FactorChecker.java">
+    <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Primes/PrimeChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="204">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/FibCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

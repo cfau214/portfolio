@@ -1,4 +1,4 @@
-package home.cf.Primes;
+package home.cf.numbers.Primes;
 
 /**
  * PrimeChecker is a Singleton that has the appropriate methods to check if an integer is a prime number.

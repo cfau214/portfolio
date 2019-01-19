@@ -1,4 +1,4 @@
-package home.cf.Factors;
+package home.cf.numbers.Factors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +61,7 @@ public enum FactorChecker {
 
     /**
      * Returns a string representation of the list of factors.
+     *
      * @return string representation of the list of factors.
      */
     private String listFactors() {
@@ -82,7 +83,7 @@ public enum FactorChecker {
     private boolean isValid(Integer num) {
 
         // Check that num is an integer and num > 1.
-        if (!Integer.class.isInstance(num)) {
+        if (num == null) {
             throw new IllegalArgumentException("Number not valid. Cannot find factors.");
         }
 
