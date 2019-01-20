@@ -23,7 +23,7 @@ class ReverseStringTest {
 
         ReverseString rs = new ReverseString();
 
-        assertThrows(NullPointerException.class, rs::getReversed);
+        assertThrows(NullPointerException.class, () -> rs.getReversed());
     }
 
     @Test
