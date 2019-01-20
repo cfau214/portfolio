@@ -12,12 +12,31 @@ public class RegEx {
     String[] words;         // Array of words in sentence.
 
     /**
-     * Default constructor
+     * Default Constructor
+     */
+    public RegEx() {
+
+    }
+
+    /**
+     * Overloaded Constructor
      *
      * @param sentence string to be converted to array.
      */
     public RegEx(String sentence) {
-        split(sentence);
+        this.sentence = sentence;
+    }
+
+    /**
+     * Returns an array of words after splitting the sentence with a regular expression.
+     * No parameter method will use RegEx sentence passed in default constructor.
+     *
+     * @return
+     */
+    public String[] split() {
+        words = sentence.split("\\W+");
+
+        return words;
     }
 
     /**
@@ -28,7 +47,7 @@ public class RegEx {
      */
     public String[] split(String sentence) {
         this.sentence = sentence;
-        words = sentence.split("[\\w*]");
+        words = sentence.split("\\W+");
 
         return words;
     }
