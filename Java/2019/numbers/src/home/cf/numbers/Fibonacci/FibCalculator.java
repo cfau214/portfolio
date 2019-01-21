@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author Chris Fauteux
  * @since 2019
- *
+ * <p>
  * Fn = Fn-1 + Fn-2
  */
 public class FibCalculator {
@@ -44,13 +44,14 @@ public class FibCalculator {
             if (i == 1 || i == 2)
                 fibList.add(1);
             else {
-                fibList.add(fibList.get(i-2) + fibList.get(i-3));
+                fibList.add(fibList.get(i - 2) + fibList.get(i - 3));
             }
         }
     }
 
     /**
      * Returns list of fibonacci numbers that was most recently generated.
+     *
      * @return list of fibonacci numbers.
      */
     public List<Integer> getList() {
