@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1671bbd8-f470-4a2a-a7af-a85626cc9c50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/home/cf/numbers/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../strings/src/home/cf/strings/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/cf/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home/cf/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/numbers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/numbers.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/numbers/home/cf/Factors/FactorChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/numbers/home/cf/Fibonacci/FibCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/numbers/home/cf/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/numbers/home/cf/Primes/PrimeChecker.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,41 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/IntegerReverser/IntegerReverser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Primes/PrimeChecker.java">
+        <entry file="file://$PROJECT_DIR$/tests/home/cf/numbers/IntegerReverser/IntegerReverserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/FibCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Factors/FactorChecker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,8 +53,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -91,6 +80,10 @@
         <option value="$PROJECT_DIR$/src/home/cf/numbers/Fibonacci/FibCalculator.java" />
         <option value="$PROJECT_DIR$/src/home/cf/numbers/Factors/FactorChecker.java" />
         <option value="$PROJECT_DIR$/src/home/cf/numbers/Main.java" />
+        <option value="$PROJECT_DIR$/tests/home/cf/numbers/PalindromeChecker/PalindromeCheckerTest.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/numbers/PalindromeChecker/PalindromeChecker.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/numbers/IntegerReverser/PalindromeChecker.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/numbers/IntegerReverser/IntegerReverser.java" />
       </list>
     </option>
   </component>
@@ -132,12 +125,33 @@
               <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="cf" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
+              <item name="IntegerReverser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="numbers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,14 +159,23 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../external libraries for intellij/opentest4j-1.1.1.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="home.cf.numbers.PalindromeChecker" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="home.cf.numbers" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -167,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.IntegerReverserTest.reverse_PassedNumberShouldEqualReversedNumber">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="home.cf.numbers.Main" />
       <module name="numbers" />
@@ -181,8 +204,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IntegerReverserTest.reverse_PassedNumberShouldEqualReversedNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="numbers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.numbers.IntegerReverser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.numbers.IntegerReverser" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.numbers.IntegerReverser.IntegerReverserTest" />
+      <option name="METHOD_NAME" value="reverse_PassedNumberShouldEqualReversedNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegerReverserTest.reverse_PassedNumberShouldEqualReversedNumber" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -205,6 +245,17 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="PalindromeCheckerTest_reverse_PassedNumberShouldEqualReversedNumber - 2019.01.20 at 20h 30m 11s.xml">
+      <configuration name="PalindromeCheckerTest.reverse_PassedNumberShouldEqualReversedNumber" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PalindromeCheckerTest_reverse_PassedNumberShouldEqualReversedNumber - 2019.01.20 at 20h 30m 49s.xml">
+      <configuration name="PalindromeCheckerTest.reverse_PassedNumberShouldEqualReversedNumber" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PalindromeCheckerTest_reverse_PassedNumberShouldEqualReversedNumber - 2019.01.20 at 20h 35m 11s.xml">
+      <configuration name="PalindromeCheckerTest.reverse_PassedNumberShouldEqualReversedNumber" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
@@ -215,7 +266,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32997987" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32997987" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993964" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -224,7 +275,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997987" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32997987" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32997987" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -300,13 +351,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Refactored packages. Fixed FibCalculator to work properly with lists." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/numbers.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Factors/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -338,7 +382,24 @@
     <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbers.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../external libraries for intellij/junit-jupiter-api-5.4.0-M1.jar!/org/junit/jupiter/api/Assertions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+          <folding>
+            <element signature="e#6559#6560#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -362,10 +423,27 @@
     <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/Factors/FactorChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/home/cf/numbers/IntegerReverser/IntegerReverserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/numbers/IntegerReverser/IntegerReverser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -447,6 +525,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Junit5.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
