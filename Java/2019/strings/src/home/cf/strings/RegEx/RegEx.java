@@ -5,6 +5,7 @@ package home.cf.strings.RegEx;
  * Used for testing regex expressions.
  *
  * @author Chris Fauteux
+ * @since 2019
  */
 public class RegEx {
 
@@ -31,7 +32,7 @@ public class RegEx {
      * Returns an array of words after splitting the sentence with a regular expression.
      * No parameter method will use RegEx sentence passed in default constructor.
      *
-     * @return
+     * @return array of words from sentence.
      */
     public String[] split() {
         words = sentence.split("\\W+");
@@ -43,7 +44,7 @@ public class RegEx {
      * Returns an array of words after splitting the sentence with a regular expression.
      *
      * @param sentence string to be converted to array.
-     * @return
+     * @return array of words from sentence.
      */
     public String[] split(String sentence) {
         this.sentence = sentence;

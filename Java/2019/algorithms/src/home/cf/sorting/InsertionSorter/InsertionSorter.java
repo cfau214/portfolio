@@ -2,6 +2,9 @@ package home.cf.sorting.InsertionSorter;
 
 /**
  * InsertionSorter implements the Insertion Sorting algorithm.
+ *
+ * @author Chris Fauteux
+ * @since 2019
  */
 public class InsertionSorter {
 
@@ -18,9 +21,9 @@ public class InsertionSorter {
             int j = i;
 
             while (j > 0) {
-                if (array[j] < array[j-1]) {
-                    int temp = array[j-1];
-                    array[j-1] = array[j];
+                if (array[j] < array[j - 1]) {
+                    int temp = array[j - 1];
+                    array[j - 1] = array[j];
                     array[j] = temp;
                 }
 

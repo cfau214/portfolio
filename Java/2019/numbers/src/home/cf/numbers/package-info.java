@@ -1,3 +1,3 @@
 package home.cf.numbers;
 
-/* Main package for classes created while practicing different programming principals. */
+/* Contains different classes used to solve different problems or sequences related to numbers. */

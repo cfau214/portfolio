@@ -2,6 +2,9 @@ package home.cf.sorting.BubbleSorter;
 
 /**
  * BubbleSorter implements the Bubble Sorting algorithm.
+ *
+ * @author Chris Fauteux
+ * @since 2019
  */
 public class BubbleSorter {
 

@@ -2,6 +2,9 @@ package home.cf.numbers.IntegerReverser;
 
 /**
  * IntegerReverser has a single method that will return a reversed copy of an integer.
+ *
+ * @author Chris Fauteux
+ * @since 2019
  */
 public class IntegerReverser {
 
