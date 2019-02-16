@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8cc3c453-806d-40eb-a126-97ca4e38a0e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../algorithms/src/home/cf/sorting/QuickSorter/QuickSorter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../algorithms/src/home/cf/sorting/QuickSorter/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/home/cf/strings/RegEx/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algorithms/src/home/cf/sorting/BubbleSorter/BubbleSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/home/cf/sorting/BubbleSorter/BubbleSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algorithms/src/home/cf/sorting/InsertionSorter/InsertionSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/home/cf/sorting/InsertionSorter/InsertionSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algorithms/test/home/cf/sorting/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numbers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../numbers/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numbers/src/home/cf/numbers/IntegerReverser/IntegerReverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../numbers/src/home/cf/numbers/IntegerReverser/IntegerReverser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numbers/src/home/cf/numbers/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../numbers/src/home/cf/numbers/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/cf/strings/RegEx/RegEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/cf/strings/RegEx/RegEx.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/strings/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/strings/package-info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/strings/RegEx/RegEx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="45" column="55" lean-forward="true" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="package-info" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/home/cf/strings/Main.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/strings/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/strings/ReverseString.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/strings/ReverseString/package-info.java" />
+        <option value="$PROJECT_DIR$/tests/MainTests.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/strings/ReverseString/ReverseString.java" />
+        <option value="$PROJECT_DIR$/tests/home/cf/strings/ReverseString/ReverseStringTest.java" />
+        <option value="$PROJECT_DIR$/tests/home/cf/strings/RegEx/RegExTest.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/strings/RegEx/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/strings/RegEx/RegEx.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="RegEx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="RegEx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="strings" type="462c0819:PsiDirectoryNode" />
+              <item name="ReverseString" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="strings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="JUnit5.2" type="70bed36:NamedLibraryElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path" value="F:\Backup\Documents\Repositories\portfolio\external libraries for intellij" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="home.cf.strings.RegEx" />
+      <recent name="home.cf.strings.ReverseString" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="home.cf.strings.ReverseString" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.RegExTest.split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation">
+    <configuration name="RegExTest.split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.strings.RegEx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.strings.RegEx" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.strings.RegEx.RegExTest" />
+      <option name="METHOD_NAME" value="split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.strings.RegEx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.strings.RegEx" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.strings.RegEx.RegExTest" />
+      <option name="METHOD_NAME" value="split_ShouldCreateArrayOfWordsAndRemovePunctuation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseStringTest.getReversed_ShouldThrowNullPointerExceptionWhenNoStringPassedToRSClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.strings.ReverseString.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.strings.ReverseString" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.strings.ReverseString.ReverseStringTest" />
+      <option name="METHOD_NAME" value="getReversed_ShouldThrowNullPointerExceptionWhenNoStringPassedToRSClass" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseStringTest.isPalindrome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.strings.ReverseString.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.strings.ReverseString" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.strings.ReverseString.ReverseStringTest" />
+      <option name="METHOD_NAME" value="isPalindrome" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseStringTest.isPalindrome_ShouldBeTrueIfPalindrome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="strings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.strings.ReverseString.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.strings.ReverseString" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.strings.ReverseString.ReverseStringTest" />
+      <option name="METHOD_NAME" value="isPalindrome_ShouldBeTrueIfPalindrome" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RegExTest.split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation" />
+        <item itemvalue="JUnit.RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" />
+        <item itemvalue="JUnit.ReverseStringTest.getReversed_ShouldThrowNullPointerExceptionWhenNoStringPassedToRSClass" />
+        <item itemvalue="JUnit.ReverseStringTest.isPalindrome_ShouldBeTrueIfPalindrome" />
+        <item itemvalue="JUnit.ReverseStringTest.isPalindrome" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8cc3c453-806d-40eb-a126-97ca4e38a0e4" name="Default Changelist" comment="" />
+      <created>1547919893823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547919893823</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Created JUnit test class for ReverseString.&#10;&#10;Finished ReverseString class. Javadoc updated and fixed isPalindrome method to properly use equals method when comparing strings.">
+      <created>1547922710057</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547922710057</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created RegEx class to practice regular expressions and string splitting.">
+      <created>1548001046702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548001046703</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created RegEx JUnit tests for RegEx.split().">
+      <created>1548003863050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548003863050</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="RegExTest_split_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 11h 52m 01s.xml">
+      <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 11h 53m 29s.xml">
+      <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 11h 58m 45s.xml">
+      <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 11h 59m 07s.xml">
+      <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 11h 59m 11s.xml">
+      <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 11h 59m 36s.xml">
+      <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 11h 59m 50s.xml">
+      <configuration name="RegExTest.split_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 12h 02m 25s.xml">
+      <configuration name="RegExTest.split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 12h 02m 49s.xml">
+      <configuration name="RegExTest.split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegExTest_split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation - 2019.01.20 at 12h 02m 53s.xml">
+      <configuration name="RegExTest.split_OverloadedStringParam_ShouldCreateArrayOfWordsAndRemovePunctuation" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24987654" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32997987" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993964" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997987" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32997987" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created JUnit test class for ReverseString.&#10;&#10;Finished ReverseString class. Javadoc updated and fixed isPalindrome method to properly use equals method when comparing strings." />
+    <MESSAGE value="Created RegEx class to practice regular expressions and string splitting." />
+    <MESSAGE value="Created RegEx JUnit tests for RegEx.split()." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created RegEx JUnit tests for RegEx.split()." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/strings.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/MainTests.java" />
+    <entry file="file://$PROJECT_DIR$/src/home/cf/strings/ReverseString/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../external libraries for intellij/junit-jupiter-api-5.4.0-M1.jar!/org/junit/jupiter/api/function/Executable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/strings/ReverseString/ReverseString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../external libraries for intellij/junit-jupiter-api-5.4.0-M1.jar!/org/junit/jupiter/api/Assertions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#1431#1432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../external libraries for intellij/junit-platform-commons-1.4.0-M1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="290" selection-start-line="290" selection-end-line="290" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/home/cf/strings/ReverseString/ReverseStringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/strings/RegEx/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/home/cf/strings/RegEx/RegExTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/strings/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/strings/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/strings/RegEx/RegEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="45" column="55" lean-forward="true" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>com.fasterxml.jackson.core:jackson-databind:2.9.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>strings</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

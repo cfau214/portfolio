@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="505f087a-dc30-42e9-bdbb-d38cc112f589" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/QuickSorter/QuickSorter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="package-info" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/home/cf/sorting/BubbleSorter/package-info.java" />
+        <option value="$PROJECT_DIR$/test/home/cf/sorting/BubbleSorter/BubbleSorterTest.java" />
+        <option value="$PROJECT_DIR$/test/home/cf/sorting/package-info.java" />
+        <option value="$PROJECT_DIR$/test/home/cf/sorting/BubbleSorter/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/sorting/InsertionSorter/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/sorting/package-info.java" />
+        <option value="$PROJECT_DIR$/test/home/cf/sorting/InsertionSorter/InsertionSorterTest.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/sorting/InsertionSorter/InsertionSorter.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/sorting/BubbleSorter/BubbleSorter.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/sorting/QuickSorter/package-info.java" />
+        <option value="$PROJECT_DIR$/src/home/cf/sorting/QuickSorter/QuickSorter.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="sorting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="sorting" type="462c0819:PsiDirectoryNode" />
+              <item name="InsertionSorter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="cf" type="462c0819:PsiDirectoryNode" />
+              <item name="sorting" type="462c0819:PsiDirectoryNode" />
+              <item name="QuickSorter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../external libraries for intellij/opentest4j-1.1.1.jar!/" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="plugins.junitgenerator.application" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="home.cf.sorting.InsertionSorter" />
+      <recent name="home.cf.sorting.BubbleSorter" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="home.cf.sorting" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.InsertionSorterTest.sort_ShouldEqualExpectedAfterSorting">
+    <configuration name="BubbleSorterTest.sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.sorting.BubbleSorter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.sorting.BubbleSorter" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.sorting.BubbleSorter.BubbleSorterTest" />
+      <option name="METHOD_NAME" value="sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BubbleSorterTest.sort_ShouldBeTrueWhenExpectedSortIsEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.sorting.BubbleSorter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.sorting.BubbleSorter" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.sorting.BubbleSorter.BubbleSorterTest" />
+      <option name="METHOD_NAME" value="sort_ShouldBeTrueWhenExpectedSortIsEqual" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertionSorterTest.sort_ShouldEqualExpectedAfterSorting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.cf.sorting.InsertionSorter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="home.cf.sorting.InsertionSorter" />
+      <option name="MAIN_CLASS_NAME" value="home.cf.sorting.InsertionSorter.InsertionSorterTest" />
+      <option name="METHOD_NAME" value="sort_ShouldEqualExpectedAfterSorting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InsertionSorterTest.sort_ShouldEqualExpectedAfterSorting" />
+        <item itemvalue="JUnit.BubbleSorterTest.sort_ShouldBeTrueWhenExpectedSortIsEqual" />
+        <item itemvalue="JUnit.BubbleSorterTest.sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="505f087a-dc30-42e9-bdbb-d38cc112f589" name="Default Changelist" comment="" />
+      <created>1548041276088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548041276088</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Created algorithm package to start practicing sorting algorithms.&#10;&#10;BubbleSorter class and tests created.">
+      <created>1548043755051</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548043755051</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created InsertionSorter class that implements insertion sorting algorithm.">
+      <created>1548044822368</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548044822369</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created QuickSorter package and class. No implementation yet.&#10;&#10;Added missing package-info files and updated Javadoc in a few classes.">
+      <created>1548045625635</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548045625635</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="BubbleSorterTest_sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual - 2019.01.20 at 22h 58m 03s.xml">
+      <configuration name="BubbleSorterTest.sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSorterTest_sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual - 2019.01.20 at 22h 58m 18s.xml">
+      <configuration name="BubbleSorterTest.sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSorterTest_sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual - 2019.01.20 at 22h 58m 44s.xml">
+      <configuration name="BubbleSorterTest.sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSorterTest_sort_ShouldBeTrueWhenExpectedSortIsEqual - 2019.01.20 at 23h 06m 17s.xml">
+      <configuration name="BubbleSorterTest.sort_ShouldBeTrueWhenExpectedSortIsEqual" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSorterTest_sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual - 2019.01.20 at 23h 06m 20s.xml">
+      <configuration name="BubbleSorterTest.sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSorterTest_sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual - 2019.01.20 at 23h 06m 21s.xml">
+      <configuration name="BubbleSorterTest.sortOptimized_ShouldBeTrueWhenExpectedSortIsEqual" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSorterTest_sort_ShouldBeTrueWhenExpectedSortIsEqual - 2019.01.20 at 23h 06m 30s.xml">
+      <configuration name="BubbleSorterTest.sort_ShouldBeTrueWhenExpectedSortIsEqual" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertionSorterTest_sort_ShouldEqualExpectedAfterSorting - 2019.01.20 at 23h 24m 48s.xml">
+      <configuration name="InsertionSorterTest.sort_ShouldEqualExpectedAfterSorting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertionSorterTest_sort_ShouldEqualExpectedAfterSorting - 2019.01.20 at 23h 26m 01s.xml">
+      <configuration name="InsertionSorterTest.sort_ShouldEqualExpectedAfterSorting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertionSorterTest_sort_ShouldEqualExpectedAfterSorting - 2019.01.20 at 23h 34m 33s.xml">
+      <configuration name="InsertionSorterTest.sort_ShouldEqualExpectedAfterSorting" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24987654" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32997987" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993964" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32997987" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32997987" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created algorithm package to start practicing sorting algorithms.&#10;&#10;BubbleSorter class and tests created." />
+    <MESSAGE value="Created InsertionSorter class that implements insertion sorting algorithm." />
+    <MESSAGE value="Created QuickSorter package and class. No implementation yet." />
+    <MESSAGE value="Created QuickSorter package and class. No implementation yet.&#10;&#10;Added missing package-info files and updated Javadoc in a few classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created QuickSorter package and class. No implementation yet.&#10;&#10;Added missing package-info files and updated Javadoc in a few classes." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/home/cf/sorting/BubbleSorter/BubbleSorterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/home/cf/sorting/BubbleSorter/package-info.java" />
+    <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/BubbleSorter/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/home/cf/sorting/package-info.java" />
+    <entry file="file://$PROJECT_DIR$/test/home/cf/sorting/InsertionSorter/InsertionSorterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/InsertionSorter/InsertionSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/BubbleSorter/BubbleSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/InsertionSorter/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/QuickSorter/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../strings/src/home/cf/strings/RegEx/RegEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/cf/sorting/QuickSorter/QuickSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>JUnit5.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>algorithms</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
