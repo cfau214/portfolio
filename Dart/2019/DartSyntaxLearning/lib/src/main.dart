@@ -1,4 +1,4 @@
-import 'shapes/shapes.dart';
+import 'package:dart_syntax_learning/lib.dart';
 
 /// Main
 void main() {
