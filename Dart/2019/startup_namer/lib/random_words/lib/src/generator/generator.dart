@@ -1,16 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class RandomWords extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Startup Name Generator',
-      home: RandomWords(),
-    );
-  }
+  State<StatefulWidget> createState() => new RandomWordsState();
 }
 
 class RandomWordsState extends State<RandomWords> {
@@ -49,9 +42,4 @@ class RandomWordsState extends State<RandomWords> {
       ),
     );
   }
-}
-
-class RandomWords extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => new RandomWordsState();
 }
