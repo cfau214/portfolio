@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:startup_namer/random_words/lib/random_words.dart';
-import 'package:startup_namer/random_numbers/lib/random_numbers.dart';
+//import 'package:random_generators/random_words/lib/random_words.dart';
+import 'package:random_generators/random_numbers/lib/random_numbers.dart';
 
 void main() => runApp(MyApp());
 

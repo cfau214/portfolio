@@ -1,4 +1,4 @@
-# startup_namer
+# random_generators
 
 A new Flutter project that infinitely generates random company names.
 

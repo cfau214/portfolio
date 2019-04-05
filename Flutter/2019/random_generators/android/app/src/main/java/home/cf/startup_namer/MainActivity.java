@@ -1,4 +1,4 @@
-package home.cf.startup_namer;
+package home.cf.random_generators;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
