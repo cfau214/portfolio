@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Practice</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script src='../node_modules/vue/dist/vue.js'></script>
+</head>
+<body>
+
+<!-- Displaying variables -->
+<div id='app'>
+        {{ message }}
+    </div>
+    <div id='app2'>
+        {{ myMessage }}
+    </div>
+    <p id='para1'>
+        {{ paraMessage }}
+    </p>
+
+    <!-- Span Text Color Mods -->
+    <p id='title1'>
+        Hover over the blue!! <span v-bind:title="message" style="color:blue">Test Title and V-Bind</span>
+    </p>
+
+    <!-- List Elements From Array -->
+    <div id='appTodo'>
+        <ul>
+            <li v-for='todo in todos'>
+                {{ todo.text }}
+            </li>
+        </ul>
+    </div>
+
+    <!-- Transitions -->
+    <div id='appIf'>
+        <button v-on:click="seen = !seen">
+        Transition Div
+        </button>
+        <transition name="fade">
+            <p v-if="seen">Can you see me?!</p>
+        </transition>
+    </div>
+
+    <script src='index.js'></script>
+</body>
+</html>
