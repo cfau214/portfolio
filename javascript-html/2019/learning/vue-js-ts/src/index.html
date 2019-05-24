@@ -11,6 +11,15 @@
     <div id='app'>
         {{ message }}
     </div>
+    <div id='app2'>
+        {{ myMessage }}
+    </div>
+    <p id='para1'>
+        {{ paraMessage }}
+    </p>
+    <p id='title1'>
+        Hover over the blue!! <span v-bind:title="message" style="color:blue">Test Title and V-Bind</span>
+    </p>
 
     <script src='index.js'></script>
 </body>
