@@ -10,29 +10,35 @@ html, body {
   background: turquoise;
 }
 
-ul, li {
-  font-size: large;
+ul {
+  padding-inline-start: 0px;
 }
 
 #output {
-  padding: 20px;
   text-align: center;
 }
 
 #testing {
-  padding: 20px;
   text-align: center;
 }
 
-#LITest {
+#ULITest {
+  padding-inline-start: none;
+  text-align: center;
+}
+
+.bigFont {
+  padding: none;
+  font-size: large;
+}
+
+#wrapper {
+  border-radius: 25px;
+  min-height: 200px;
   margin-left: 40%;
   margin-right: 40%;
+  margin-top: 30px;
   padding: 20px;
-  text-align: center;
-  border: 5px solid blue;
-}
-
-.bigFont li {
-  padding: 4px;
-  list-style: none;
+  background: white;
+  box-shadow: 10px 10px 5px darkslategray;
 }
