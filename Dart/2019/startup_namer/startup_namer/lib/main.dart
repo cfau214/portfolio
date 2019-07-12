@@ -45,9 +45,15 @@ class RandomWordsState extends State<RandomWords> {
   }
 
   Widget _buildRow(WordPair pair) {
+    bool titleStatus = false;
+    final _styleOnClick = TextStyle(color: Colors.blue);
+
     return ListTile (
       leading: Icon(getIcon(pair.asPascalCase)),
-      title: Text(pair.asPascalCase, style: _biggerFont),
+      title: Text(pair.asPascalCase, style: titleStatus == false ? _biggerFont : _styleOnClick),
+      onTap: () {
+        titleStatus = !titleStatus;
+      }
     );
   }
 
@@ -55,7 +61,6 @@ class RandomWordsState extends State<RandomWords> {
     IconData icon;
 
     switch (pair.toLowerCase()[0]) {
-
       case 'a':
         icon = Icons.android;
         break;
