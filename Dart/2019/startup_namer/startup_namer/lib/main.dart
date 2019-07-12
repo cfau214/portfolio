@@ -46,8 +46,35 @@ class RandomWordsState extends State<RandomWords> {
 
   Widget _buildRow(WordPair pair) {
     return ListTile (
-      title: Text(pair.asPascalCase, style: _biggerFont)
+      leading: Icon(getIcon(pair.asPascalCase)),
+      title: Text(pair.asPascalCase, style: _biggerFont),
     );
+  }
+
+  IconData getIcon(String pair) {
+    IconData icon;
+
+    switch (pair.toLowerCase()[0]) {
+
+      case 'a':
+        icon = Icons.android;
+        break;
+      case 'b':
+        icon = Icons.battery_alert;
+        break;
+      case 'c':
+        icon = Icons.cake;
+        break;
+      case 'h':
+        icon = Icons.home;
+        break;
+
+      default:
+        icon = null;
+        break;
+    }
+
+    return icon;
   }
 }
 
