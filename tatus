@@ -1,0 +1,71 @@
+[33m494e837[m[33m ([m[1;36mHEAD -> [m[1;32mflutter-dev[m[33m)[m Test installing Dart packages via pubmanager.
+[33m3e6a463[m[33m ([m[1;31morigin/flutter-dev[m[33m)[m Refactored flutter project names and folder hierarchy.
+[33mc11df10[m Moved and refactored flutter projects into their own directory.
+[33me7ec335[m Fixed ...
+[33mac7d459[m Created first flutter app without following a guide! Similar to the random company name generator, but instead just randomly generated numbers. Used first app as a reference when lost.
+[33mc55db3c[m Created first Flutter App!
+[33m43cfd1b[m Working on dependencies and libraries. Working point for package:lib
+[33m98f8b8c[m Started learning Dart syntax. Figuring out package structure.
+[33m3a68e4c[m Created QuickSorter package and class. No implementation yet.
+[33m688ebfe[m Created InsertionSorter class that implements insertion sorting algorithm.
+[33md2a2bf0[m Created algorithm package to start practicing sorting algorithms.
+[33m5c35715[m Added comments to IntegerReverser.
+[33ma8c9f06[m Created IntegerReverser class. Contains method that reverses a passed integer.
+[33mb5456a3[m Created RegEx JUnit tests for RegEx.split().
+[33m57c03b3[m Created RegEx class to practice regular expressions and string splitting.
+[33mb9f371c[m Updated tests.
+[33m7b1221a[m Added more tests for ReverseString.
+[33m5313df0[m Created JUnit test class for ReverseString.
+[33m9ec5bb7[m Refactored packages. Fixed FibCalculator to work properly with lists.
+[33m52cba2d[m Created Fibonacci sequence generator.
+[33m438a527[m gitignore
+[33ma62487c[m Minor changes to comments and removed unused imports.
+[33m612ff22[m Changed packages and file structure for java/2019/numbers.
+[33ma05168e[m Refactored file trees to proper locations.
+[33mf0d315b[m Deleted Factorable class, never used.
+[33m370f262[m Changed PrimeChecker class to an Enum and implemented as a Singleton.
+[33mdba4902[m Created project for working with numbers.
+[33me6df54e[m Updated JUnit test file.
+[33m8937ed2[m Created first JUnit Test class.
+[33m4d180c3[m Refactored folder tree.
+[33m1cb737f[m Changed change() to use arrow functionality.
+[33m59fb1e1[m Renamed folder trees.
+[33m1ef9430[m Fixed tales of antiquity deletion.
+[33me079266[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Merge pull request #2 from cfau214/gh-pages
+[33mc99fbd2[m Fixed Java/2018/Design Patterns folders.
+[33m4f3f869[m Fixed chain of responsibility repository folder.
+[33mcbeb9f0[m Fixed chain of responsibility java folder.
+[33m349a01f[m Updated git website content.
+[33m5490a83[m Updated git website content.
+[33m2487478[m Updated git website contact information.
+[33m19346d3[m Merge pull request #1 from cfau214/gh-pages
+[33me0371cd[m Update README.md
+[33mb64db15[m Updated git website.
+[33mcc96f8e[m Updated README.md
+[33m07a9c35[m Updated git website content.
+[33m3e91446[m Updated git website content.
+[33me55848e[m Updated git website content.
+[33m5ab9f68[m Update README.md to include contact info.
+[33m1b3eb5f[m Updated git website page content.
+[33mf927046[m Update README.md
+[33mded619c[m Updated git website HTML.
+[33ma30f87e[m Added custom CSS and HTML files for git website.
+[33mad82376[m Update README.md
+[33md0ff4a6[m Delete CNAME
+[33m0fa6b17[m Create CNAME
+[33mdad34f9[m Set theme jekyll-theme-cayman
+[33m7bb8c2b[m Removed duplicate directory Calculator in root of MyProjects repo.
+[33me5c0afe[m Organized MyProjects repository.
+[33m0343b06[m workspace moved
+[33m8615359[m Code cleanup.
+[33md1e46f2[m Saved IntelliJ Project File
+[33m13cb4cd[m Created more JUnit test Methods and added Div() Functionality.
+[33m1724d77[m Created working JUnit Test.
+[33m21a4007[m Setup tests with link to documentation.
+[33me1e9623[m Deleted previous JUnit Test class and re-created a new one.
+[33mc650004[m Added JUnit Integration.
+[33m174f838[m Created Sub functions and started Main program functionality.
+[33mc1f3a9a[m Minor Bugfixes.
+[33me503277[m Changed method names.
+[33mba700c2[m Created Calculator Class
+[33m31c81c3[m Initial commit
