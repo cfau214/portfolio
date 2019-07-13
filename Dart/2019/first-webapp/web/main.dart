@@ -43,7 +43,11 @@ List<UListElement> getList2(List<String> strList) {
 }
 
 addToDoItem(Event e) {
-  toDoList.children.add(LIElement()..text = toDoInput.value);
+  var newElement = LIElement()
+    ..text = toDoInput.value;
+  newElement.onClick.listen((e) => newElement.remove());  // remove element when user clicks on list item
+
+  toDoList.children.add(newElement);
   toDoInput.value = '';
 }
 
