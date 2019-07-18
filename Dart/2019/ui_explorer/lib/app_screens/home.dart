@@ -66,6 +66,9 @@ class Body extends StatelessWidget {
 }
 
 class ListButton extends StatelessWidget {
+  final rectBorder = RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(16)));
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -73,6 +76,7 @@ class ListButton extends StatelessWidget {
         width: 250,
         height: 50,
         child: RaisedButton(
+          shape: rectBorder,
           color: Colors.lightBlueAccent,
           child: Text(
             "Generate New List",
@@ -95,12 +99,14 @@ class ListButton extends StatelessWidget {
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
         ),
         content: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text('Can you see it?', textAlign: TextAlign.center),
             ButtonBar(
               children: <Widget>[
                 FlatButton(
-                    child: Text('Ok'),
+                    shape: rectBorder,
+                    child: Text('Ok', style: TextStyle(color: Colors.white)),
                     color: Colors.lightBlueAccent,
                     onPressed: () => Navigator.pop(context)),
               ],
