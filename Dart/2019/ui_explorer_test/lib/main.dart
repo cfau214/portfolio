@@ -13,3 +13,22 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// Widget myWidget() {
+//   return Row(
+//     children: <Widget>[
+//       Expanded(
+//         flex: 7,
+//         child: Container(
+//           color: Colors.green,
+//         ),
+//       ),
+//       Expanded(
+//         flex: 3,
+//         child: Container(
+//           color: Colors.yellow,
+//         ),
+//       ),
+//     ],
+//   );
+// }
