@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
           title: Text('Testing Stateless UI Widgets'),
           backgroundColor: Colors.lightBlueAccent,
         ),
-        body: myWidget());
+        body: Body());
   }
 }
 
