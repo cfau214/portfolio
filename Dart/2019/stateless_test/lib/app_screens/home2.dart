@@ -12,6 +12,7 @@ class _Home2State extends State<Home2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(title: Text('Stateful 2 Testing')),
       body: body(context),
@@ -38,7 +39,6 @@ class _Home2State extends State<Home2> {
             //
             Padding(padding: EdgeInsets.only(top: 50)),
             Card(
-              clipBehavior: Clip.antiAlias,
               elevation: 8,
               color: Colors.lightBlueAccent,
               shape: RoundedRectangleBorder(
