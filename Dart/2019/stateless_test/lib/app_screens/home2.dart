@@ -78,10 +78,11 @@ class _Home2State extends State<Home2> {
       children: <Widget>[
         RaisedButton(
           elevation: 8,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           onPressed: () => {
             setState(() {
-              addItem();
+              addItem(context);
             }),
           },
           color: Colors.lightBlueAccent,
@@ -89,7 +90,8 @@ class _Home2State extends State<Home2> {
         ),
         RaisedButton(
           elevation: 8,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           onPressed: () => {
             setState(() {
               removeItem();
@@ -102,9 +104,24 @@ class _Home2State extends State<Home2> {
     );
   }
 
-  addItem() {
-    _boxList.add(_textControllerOne.text);
-    _textControllerOne.text = "";
+  addItem(BuildContext context) {
+    if (_textControllerOne.text == "") {
+      showDialog(
+        context: context,
+        child: AlertDialog(
+          content: Text("Text Field 1 is empty."),
+          actions: <Widget>[
+            FlatButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('Ok'),
+            ),
+          ],
+        ),
+      );
+    } else {
+      _boxList.add(_textControllerOne.text);
+      _textControllerOne.text = "";
+    }
   }
 
   removeItem() {
