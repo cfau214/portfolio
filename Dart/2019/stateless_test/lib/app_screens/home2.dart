@@ -7,7 +7,14 @@ class Home2 extends StatefulWidget {
 }
 
 class _Home2State extends State<Home2> {
-  var _str = "";
+  var _boxList = <String>[];
+  final _textControllerOne = TextEditingController();
+
+  @override
+  void dispose() {
+    _textControllerOne.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +34,7 @@ class _Home2State extends State<Home2> {
         child: Column(
           children: <Widget>[
             TextField(
+              controller: _textControllerOne,
               textAlign: TextAlign.center,
             ),
             Padding(padding: EdgeInsets.only(top: 10)),
@@ -49,7 +57,7 @@ class _Home2State extends State<Home2> {
                 height: 200,
                 child: Center(
                   child: Text(
-                    _str,
+                    _boxList.isEmpty ? "" : _boxList.join("\n"),
                     style: TextStyle(
                       fontSize: 28,
                       fontStyle: FontStyle.italic,
@@ -70,25 +78,36 @@ class _Home2State extends State<Home2> {
       children: <Widget>[
         RaisedButton(
           elevation: 8,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           onPressed: () => {
             setState(() {
-              _str = 'Button 1 Pressed';
+              addItem();
             }),
           },
           color: Colors.lightBlueAccent,
-          child: Text('Button 1'),
+          child: Text('Add'),
         ),
         RaisedButton(
           elevation: 8,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           onPressed: () => {
             setState(() {
-              _str = 'Button 2 Pressed';
+              removeItem();
             }),
           },
           color: Colors.blue,
-          child: Text('Button 2'),
+          child: Text('Remove'),
         ),
       ],
     );
+  }
+
+  addItem() {
+    _boxList.add(_textControllerOne.text);
+    _textControllerOne.text = "";
+  }
+
+  removeItem() {
+    if (_boxList.isNotEmpty) _boxList.removeLast();
   }
 }
