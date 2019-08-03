@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
 main() => runApp(MaterialApp(
-    title: 'Basic Calculator',
-    home: CalcHome(),
-    theme: ThemeData(
+      title: 'Basic Calculator',
+      home: CalcHome(),
+      theme: ThemeData(
         buttonTheme: ButtonThemeData(
+          padding: EdgeInsets.only(left: 15, top: 2, right: 15, bottom: 2),
           colorScheme: ColorScheme.light(
             primary: Colors.grey[300],
-            
           ),
-            layoutBehavior: ButtonBarLayoutBehavior.constrained))));
+        ),
+      ),
+    ));
 
 class CalcHome extends StatefulWidget {
   @override
@@ -34,50 +36,89 @@ class _CalcHomeState extends State<CalcHome> {
         padding: EdgeInsets.all(_minPadding * 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            createNumberRow(_numRowOne),
-            createNumberRow(_numRowTwo),
-            createNumberRow(_numRowThree),
-            createNumberRow(_numRowZero),
+            ButtonBar(
+              alignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ...createNumberRow(_numRowOne),
+              ],
+            ),
+
+            ButtonBar(
+              alignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ...createNumberRow(_numRowTwo),
+              ],
+            ),
+
+            ButtonBar(
+              alignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ...createNumberRow(_numRowThree),
+              ],
+            ),
+
+            ButtonBar(
+              alignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ...createNumberRow(_numRowZero),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget createNumberRow(List<num> list) {
+  List<Widget> createNumberRow(List<num> list) {
     final _defaultOpacity = 1.0;
 
     num getOpacity(num number) {
       return number == -1 ? 0.0 : _defaultOpacity;
     }
 
-    return Row(
-      children: list
-          .map(
-            (listItem) => Expanded(
-              flex: 1,
-              child: Padding(
-                padding: EdgeInsets.only(
-                    top: _minPadding,
-                    bottom: _minPadding,
-                    left: _minPadding * 2,
-                    right: _minPadding * 2),
-                child: Opacity(
-                  opacity: getOpacity(listItem),
-                  child: RaisedButton(
-                    elevation: 4,
-                    child: Text(listItem.toString()),
-                    onPressed: () {
-                      debugPrint(listItem.toString());
-                    },
-                  ),
-                ),
+    return list
+        .map(
+          (listItem) => ConstrainedBox(
+            constraints: BoxConstraints.expand(width: 60, height: 50),
+            child: Opacity(
+              opacity: getOpacity(listItem),
+              child: RaisedButton(
+                elevation: 4,
+                child: Text(listItem.toString()),
+                onPressed: () {
+                  debugPrint(listItem.toString());
+                },
               ),
             ),
-          )
-          .toList(),
-    );
+          ),
+        )
+        .toList();
   }
+
+  // Widget createNumberRow(List<num> list) {
+  //   final _defaultOpacity = 1.0;
+
+  //   num getOpacity(num number) {
+  //     return number == -1 ? 0.0 : _defaultOpacity;
+  //   }
+
+  //   return  ButtonBar(
+  //       children: list
+  //           .map(
+  //             (listItem) => Opacity(
+  //               opacity: getOpacity(listItem),
+  //               child: RaisedButton(
+  //                 elevation: 4,
+  //                 child: Text(listItem.toString()),
+  //                 onPressed: () {
+  //                   debugPrint(listItem.toString());
+  //                 },
+  //               ),
+  //             ),
+  //           )
+  //           .toList(),
+  //   );
+  // }
 }
