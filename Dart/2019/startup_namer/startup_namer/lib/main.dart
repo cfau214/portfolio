@@ -71,7 +71,7 @@ class RandomWordsState extends State<RandomWords> {
         icon = Icons.cake;
         break;
       case 'h':
-        icon = Icons.home;
+        icon = Icons.landscape;
         break;
 
       default:
