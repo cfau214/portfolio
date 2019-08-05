@@ -5,10 +5,13 @@ main() => runApp(MaterialApp(
       home: CalcHome(),
       theme: ThemeData(
         buttonTheme: ButtonThemeData(
-          padding: EdgeInsets.only(left: 15, top: 2, right: 15, bottom: 2),
+          minWidth: double.maxFinite,
+          padding: EdgeInsets.all(1),
           colorScheme: ColorScheme.light(
             primary: Colors.grey[300],
           ),
+          hoverColor: Colors.lightBlueAccent,
+          layoutBehavior: ButtonBarLayoutBehavior.constrained,
         ),
       ),
     ));
@@ -19,12 +22,10 @@ class CalcHome extends StatefulWidget {
 }
 
 class _CalcHomeState extends State<CalcHome> {
-  final _numRowOne = [1, 2, 3];
-  final _numRowTwo = [4, 5, 6];
-  final _numRowThree = [7, 8, 9];
+  final _numRowOne = [9, 8, 7];
+  final _numRowTwo = [6, 5, 4];
+  final _numRowThree = [3, 2, 1];
   final _numRowZero = [-1, 0, -1];
-
-  final _minPadding = 5.0;
 
   @override
   Widget build(BuildContext context) {
@@ -33,31 +34,35 @@ class _CalcHomeState extends State<CalcHome> {
         title: Text('Basic Calculator'),
       ),
       body: Container(
-        padding: EdgeInsets.all(_minPadding * 10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            ButtonBar(
-              alignment: MainAxisAlignment.center,
+
+            Divider(height: 200),
+
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 ...createNumberRow(_numRowOne),
               ],
             ),
-            ButtonBar(
-              alignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 ...createNumberRow(_numRowTwo),
               ],
             ),
-            ButtonBar(
-              alignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 ...createNumberRow(_numRowThree),
               ],
             ),
-            ButtonBar(
-              alignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 ...createNumberRow(_numRowZero),
               ],
@@ -77,7 +82,7 @@ class _CalcHomeState extends State<CalcHome> {
 
     return list
         .map((listItem) => ConstrainedBox(
-              constraints: BoxConstraints.expand(width: 60, height: 50),
+              constraints: BoxConstraints.expand(width: 100, height: 80),
               child: Opacity(
                 opacity: getOpacity(listItem),
                 child: RaisedButton(
@@ -91,29 +96,4 @@ class _CalcHomeState extends State<CalcHome> {
             ))
         .toList();
   }
-
-  // Widget createNumberRow(List<num> list) {
-  //   final _defaultOpacity = 1.0;
-
-  //   num getOpacity(num number) {
-  //     return number == -1 ? 0.0 : _defaultOpacity;
-  //   }
-
-  //   return  ButtonBar(
-  //       children: list
-  //           .map(
-  //             (listItem) => Opacity(
-  //               opacity: getOpacity(listItem),
-  //               child: RaisedButton(
-  //                 elevation: 4,
-  //                 child: Text(listItem.toString()),
-  //                 onPressed: () {
-  //                   debugPrint(listItem.toString());
-  //                 },
-  //               ),
-  //             ),
-  //           )
-  //           .toList(),
-  //   );
-  // }
 }
