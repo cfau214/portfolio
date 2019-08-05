@@ -44,21 +44,18 @@ class _CalcHomeState extends State<CalcHome> {
                 ...createNumberRow(_numRowOne),
               ],
             ),
-
             ButtonBar(
               alignment: MainAxisAlignment.center,
               children: <Widget>[
                 ...createNumberRow(_numRowTwo),
               ],
             ),
-
             ButtonBar(
               alignment: MainAxisAlignment.center,
               children: <Widget>[
                 ...createNumberRow(_numRowThree),
               ],
             ),
-
             ButtonBar(
               alignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -79,21 +76,19 @@ class _CalcHomeState extends State<CalcHome> {
     }
 
     return list
-        .map(
-          (listItem) => ConstrainedBox(
-            constraints: BoxConstraints.expand(width: 60, height: 50),
-            child: Opacity(
-              opacity: getOpacity(listItem),
-              child: RaisedButton(
-                elevation: 4,
-                child: Text(listItem.toString()),
-                onPressed: () {
-                  debugPrint(listItem.toString());
-                },
+        .map((listItem) => ConstrainedBox(
+              constraints: BoxConstraints.expand(width: 60, height: 50),
+              child: Opacity(
+                opacity: getOpacity(listItem),
+                child: RaisedButton(
+                  elevation: 4,
+                  child: Text(listItem.toString()),
+                  onPressed: () {
+                    debugPrint(listItem.toString());
+                  },
+                ),
               ),
-            ),
-          ),
-        )
+            ))
         .toList();
   }
 
