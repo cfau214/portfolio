@@ -18,28 +18,12 @@ class Calc2Body extends StatefulWidget {
 }
 
 class _Calc2BodyState extends State<Calc2Body> {
-  final _buttonRowOne = [9, 8, 7];
-  final _buttonRowTwo = [6, 5, 4];
-  final _buttonRowThree = [3, 2, 1];
-  final _buttonRowFour = [-1, 0, -1];
+  final _buttonRowOne = [7, 8, 9];
+  final _buttonRowTwo = [4, 5, 6];
+  final _buttonRowThree = [1, 2, 3];
+  final _buttonRowFour = ['+/-', 0, '.'];
 
-  num getOpacity(num item) => item == -1 ? 0.0 : 1.0;
-
-  List<Widget> buildButtonRow(List<num> list) {
-    return list
-        .map((item) => Opacity(
-          opacity: getOpacity(item),
-                  child: Expanded(
-                child: RaisedButton(
-                  onPressed: () {
-                    debugPrint(item.toString());
-                  },
-                  child: Text(item.toString()),
-                ),
-              ),
-        ))
-        .toList();
-  }
+  num getOpacity(dynamic item) => (item is num && item == -1) ? 0.0 : 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +35,13 @@ class _Calc2BodyState extends State<Calc2Body> {
       body: Container(
         color: Colors.black54,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
+            Expanded(
+              child: Center(
+                child: Text('Test'),
+              ),
+            ),
             Row(
               children: <Widget>[
                 ...buildButtonRow(_buttonRowOne),
@@ -76,5 +66,32 @@ class _Calc2BodyState extends State<Calc2Body> {
         ),
       ),
     );
+  }
+
+  List<Widget> buildButtonRow(List<dynamic> list) {
+    return list
+        .map((item) => Expanded(
+              child: Opacity(
+                opacity: getOpacity(item),
+                child: Container(
+                  height: 80,
+                  child: Center(
+                    child: Text(
+                      item.toString(),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[500],
+                    border: Border.all(
+                      color: Colors.black38,
+                      width: 0.5,
+                    ),
+                  ),
+                ),
+              ),
+            ))
+        .toList();
   }
 }
