@@ -21,7 +21,9 @@ class _Calc2BodyState extends State<Calc2Body> {
   final _buttonRowOne = [7, 8, 9];
   final _buttonRowTwo = [4, 5, 6];
   final _buttonRowThree = [1, 2, 3];
-  final _buttonRowFour = ['+/-', 0, '.'];
+  final _buttonRowFour = ['+', 0, 'C'];
+
+  var _lastClicked = "";
 
   num getOpacity(dynamic item) => (item is num && item == -1) ? 0.0 : 1.0;
 
@@ -42,7 +44,7 @@ class _Calc2BodyState extends State<Calc2Body> {
                 padding: EdgeInsets.all(50),
                 alignment: Alignment.topRight,
                 child: Text(
-                  'Test',
+                  _lastClicked,
                   style: TextStyle(
                     color: Colors.grey[200],
                     fontSize: 32,
@@ -81,20 +83,31 @@ class _Calc2BodyState extends State<Calc2Body> {
         .map((item) => Expanded(
               child: Opacity(
                 opacity: getOpacity(item),
-                child: Container(
-                  height: 100,
-                  child: Center(
-                    child: Text(
-                      item.toString(),
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: item == '.' ? 36 : 24),
+                child: InkWell(
+                  onTap: () {
+                    setState(() {
+                      if (item.toString().toUpperCase() == 'C') {
+                        _lastClicked = "";
+                      } else {
+                        _lastClicked += item.toString();
+                      }
+                    });
+                  },
+                  child: Container(
+                    height: 90,
+                    child: Center(
+                      child: Text(
+                        item.toString(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: item == '.' ? 36 : 24),
+                      ),
                     ),
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    border: Border.all(
-                      color: Colors.black38,
-                      width: 0.5,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      border: Border.all(
+                        color: Colors.black38,
+                        width: 0.5,
+                      ),
                     ),
                   ),
                 ),
