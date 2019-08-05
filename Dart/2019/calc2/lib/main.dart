@@ -38,8 +38,16 @@ class _Calc2BodyState extends State<Calc2Body> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             Expanded(
-              child: Center(
-                child: Text('Test'),
+              child: Container(
+                padding: EdgeInsets.all(50),
+                alignment: Alignment.topRight,
+                child: Text(
+                  'Test',
+                  style: TextStyle(
+                    color: Colors.grey[200],
+                    fontSize: 32,
+                  ),
+                ),
               ),
             ),
             Row(
@@ -74,16 +82,16 @@ class _Calc2BodyState extends State<Calc2Body> {
               child: Opacity(
                 opacity: getOpacity(item),
                 child: Container(
-                  height: 80,
+                  height: 100,
                   child: Center(
                     child: Text(
                       item.toString(),
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: item == '.' ? 36 : 24),
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.grey[500],
+                    color: Colors.grey[300],
                     border: Border.all(
                       color: Colors.black38,
                       width: 0.5,
