@@ -25,10 +25,12 @@ class _Calc2BodyState extends State<Calc2Body> {
   final _buttonRowFour = [0, '.', 'C', '+'];
   final _smallOperandButtons = ['/', '*', '-', '+'];
   var _lastClicked = "";
+  var _hasDecimal = false;
 
   num getOpacity(dynamic item) => (item is num && item == -1) ? 0.0 : 1.0;
   num getFlex(dynamic item) => (_smallOperandButtons.contains(item)) ? 2 : 3;
-  Color getColor(dynamic item) => (item is num) ? Colors.black54 : Colors.red[700];
+  Color getColor(dynamic item) =>
+      (item is num) ? Colors.black54 : Colors.red[700];
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +94,12 @@ class _Calc2BodyState extends State<Calc2Body> {
   }
 
   List<Widget> buildButtonRow(List<dynamic> list) {
+
+    reset () {
+      _lastClicked = "";
+      _hasDecimal = false;
+    }
+
     return list
         .map((item) => Expanded(
               flex: getFlex(item),
@@ -111,8 +119,14 @@ class _Calc2BodyState extends State<Calc2Body> {
                     onPressed: () {
                       HapticFeedback.vibrate();
                       setState(() {
-                        if (item.toString().toUpperCase() == 'C') {
-                          _lastClicked = "";
+                        if (item == 'C') {
+                          reset();
+                        } else if (item == '.') {  
+                          
+                          if (!_hasDecimal) {
+                            _lastClicked += item;
+                            _hasDecimal = true;
+                          }
                         } else {
                           _lastClicked += item.toString();
                         }
@@ -128,6 +142,5 @@ class _Calc2BodyState extends State<Calc2Body> {
         .toList();
   }
 }
-
 
 // color: Colors.black54,
