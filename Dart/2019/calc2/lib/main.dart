@@ -40,19 +40,31 @@ class _Calc2BodyState extends State<Calc2Body> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             Expanded(
-              child: Container(
-                padding: EdgeInsets.all(50),
-                alignment: Alignment.topRight,
-                child: Text(
-                  _lastClicked,
-                  style: TextStyle(
-                    color: Colors.grey[200],
-                    fontSize: 32,
+              child: Card(
+                color: Colors.black45,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.elliptical(32, 12),
+                    topRight: Radius.elliptical(32, 12),
+                    bottomLeft: Radius.elliptical(32, 4),
+                    bottomRight: Radius.elliptical(32, 4),
+                  ),
+                ),
+                child: Container(
+                  padding: EdgeInsets.all(50),
+                  alignment: Alignment.topRight,
+                  child: Text(
+                    _lastClicked,
+                    style: TextStyle(
+                      color: Colors.grey[200],
+                      fontSize: 32,
+                    ),
                   ),
                 ),
               ),
             ),
             Row(
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 ...buildButtonRow(_buttonRowOne),
               ],
@@ -81,33 +93,26 @@ class _Calc2BodyState extends State<Calc2Body> {
   List<Widget> buildButtonRow(List<dynamic> list) {
     return list
         .map((item) => Expanded(
-              child: Opacity(
-                opacity: getOpacity(item),
-                child: InkWell(
-                  onTap: () {
-                    setState(() {
-                      if (item.toString().toUpperCase() == 'C') {
-                        _lastClicked = "";
-                      } else {
-                        _lastClicked += item.toString();
-                      }
-                    });
-                  },
-                  child: Container(
-                    height: 90,
-                    child: Center(
-                      child: Text(
-                        item.toString(),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: item == '.' ? 36 : 24),
-                      ),
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      border: Border.all(
-                        color: Colors.black38,
-                        width: 0.5,
-                      ),
+              child: Container(
+                color: Colors.black54,
+                child: SizedBox(
+                  height: 85,
+                  child: OutlineButton(
+                    child: Text(item.toString(),
+                        style: TextStyle(
+                          color: Colors.grey[400],
+                        )),
+                    onPressed: () {
+                      setState(() {
+                        if (item.toString().toUpperCase() == 'C') {
+                          _lastClicked = "";
+                        } else {
+                          _lastClicked += item.toString();
+                        }
+                      });
+                    },
+                    shape: Border.all(
+                      color: Colors.grey[400],
                     ),
                   ),
                 ),
