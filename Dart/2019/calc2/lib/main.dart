@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(Calc2());
 
@@ -18,14 +19,16 @@ class Calc2Body extends StatefulWidget {
 }
 
 class _Calc2BodyState extends State<Calc2Body> {
-  final _buttonRowOne = [7, 8, 9];
-  final _buttonRowTwo = [4, 5, 6];
-  final _buttonRowThree = [1, 2, 3];
-  final _buttonRowFour = ['+', 0, 'C'];
-
+  final _buttonRowOne = [7, 8, 9, '/'];
+  final _buttonRowTwo = [4, 5, 6, '*'];
+  final _buttonRowThree = [1, 2, 3, '-'];
+  final _buttonRowFour = [0, '.', 'C', '+'];
+  final _smallOperandButtons = ['/', '*', '-', '+'];
   var _lastClicked = "";
 
   num getOpacity(dynamic item) => (item is num && item == -1) ? 0.0 : 1.0;
+  num getFlex(dynamic item) => (_smallOperandButtons.contains(item)) ? 2 : 3;
+  Color getColor(dynamic item) => (item is num) ? Colors.black54 : Colors.red[700];
 
   @override
   Widget build(BuildContext context) {
@@ -91,18 +94,22 @@ class _Calc2BodyState extends State<Calc2Body> {
   List<Widget> buildButtonRow(List<dynamic> list) {
     return list
         .map((item) => Expanded(
+              flex: getFlex(item),
               child: Container(
-                color: Colors.black54,
+                color: getColor(item),
                 child: SizedBox(
                   height: 100,
                   child: OutlineButton(
                     highlightedBorderColor: Colors.grey[400],
-                    child: Text(item.toString(),
-                        style: TextStyle(
-                          fontSize: 32,
-                          color: Colors.grey[400],
-                        )), 
+                    child: Text(
+                      item.toString(),
+                      style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.grey[400],
+                      ),
+                    ),
                     onPressed: () {
+                      HapticFeedback.vibrate();
                       setState(() {
                         if (item.toString().toUpperCase() == 'C') {
                           _lastClicked = "";
@@ -121,3 +128,6 @@ class _Calc2BodyState extends State<Calc2Body> {
         .toList();
   }
 }
+
+
+// color: Colors.black54,
