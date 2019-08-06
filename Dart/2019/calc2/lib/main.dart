@@ -46,8 +46,6 @@ class _Calc2BodyState extends State<Calc2Body> {
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.elliptical(32, 12),
                     topRight: Radius.elliptical(32, 12),
-                    bottomLeft: Radius.elliptical(32, 4),
-                    bottomRight: Radius.elliptical(32, 4),
                   ),
                 ),
                 child: Container(
@@ -96,12 +94,14 @@ class _Calc2BodyState extends State<Calc2Body> {
               child: Container(
                 color: Colors.black54,
                 child: SizedBox(
-                  height: 85,
+                  height: 100,
                   child: OutlineButton(
+                    highlightedBorderColor: Colors.grey[400],
                     child: Text(item.toString(),
                         style: TextStyle(
+                          fontSize: 32,
                           color: Colors.grey[400],
-                        )),
+                        )), 
                     onPressed: () {
                       setState(() {
                         if (item.toString().toUpperCase() == 'C') {
