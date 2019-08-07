@@ -218,16 +218,16 @@ class _Calc2BodyState extends State<Calc2Body> {
       _operand = _operand;
       _operandEquals = "";
       _result = "";
-      _hasLHSDecimal = false;
+      _hasLHSDecimal = _hasResultDecimal;
       _hasRHSDecimal = false;
-      _hasResultDecimal = _hasResultDecimal;
+      _hasResultDecimal = false;
     }
 
     setOperand(String op) {
       if (_leftHandSide.isNotEmpty) _operand = op;
     }
 
-    validateFields() {
+    bool validateFields() {
       if (_leftHandSide.isNotEmpty &&
           _operand.isNotEmpty &&
           _rightHandSide.isNotEmpty) {
@@ -238,6 +238,8 @@ class _Calc2BodyState extends State<Calc2Body> {
         }
         return true;
       }
+
+      return false;
     }
 
     calculate() {
@@ -267,8 +269,8 @@ class _Calc2BodyState extends State<Calc2Body> {
           default:
             break;
         }
-
-        _result = result.toString();
+        
+        _result = result.toStringAsFixed(2);
       }
     }
 
