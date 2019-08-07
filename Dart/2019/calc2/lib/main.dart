@@ -25,14 +25,19 @@ class _Calc2BodyState extends State<Calc2Body> {
   final _buttonRowFour = [0, '.', 'C', '=', '+'];
   final _smallOperandButtons = ['/', '*', '-', '+', 'C', '='];
   var _leftHandSide = "";
+  var _rightHandSide = "";
   var _operand = "";
   var _result = "";
   var _hasDecimal = false;
 
   num getOpacity(dynamic item) => (item is num && item == -1) ? 0.0 : 1.0;
   num getFlex(dynamic item) => (_smallOperandButtons.contains(item)) ? 2 : 4;
+  
+  /// Returns Button Color.
+  /// 
+  /// * [ret], The color returned to calling button.
   Color getColor(dynamic item) {
-    Color ret;
+    Color ret;  // Button color.
 
     if (item == 'C') {
       ret = Colors.grey[700];
@@ -73,7 +78,7 @@ class _Calc2BodyState extends State<Calc2Body> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    // OPERAND BOX
+                    // OPERAND DISPLAY
                     Container(
                       padding: EdgeInsets.only(right: 50),
                       alignment: Alignment.center,
@@ -87,33 +92,37 @@ class _Calc2BodyState extends State<Calc2Body> {
                     ),
                     Column(
                       children: <Widget>[
+                        // LHS DISPLAY
                         Container(
                           padding: EdgeInsets.only(right: 50, top: 20),
                           alignment: Alignment.topRight,
                           child: Text(
                             _leftHandSide,
+                            textDirection: TextDirection.ltr,
                             style: TextStyle(
                               color: Colors.grey[200],
                               fontSize: 32,
                             ),
                           ),
                         ),
+                        // RHS DISPLAY
                         Container(
                           padding: EdgeInsets.only(right: 50, top: 20),
                           alignment: Alignment.topRight,
                           child: Text(
-                            _leftHandSide,
+                            _rightHandSide,
                             style: TextStyle(
                               color: Colors.grey[200],
                               fontSize: 32,
                             ),
                           ),
                         ),
+                        // RESULT DISPLAY
                         Container(
                           padding: EdgeInsets.only(right: 50, top: 20),
                           alignment: Alignment.topRight,
                           child: Text(
-                            _leftHandSide,
+                            _result,
                             style: TextStyle(
                               color: Colors.grey[200],
                               fontSize: 32,
@@ -161,16 +170,26 @@ class _Calc2BodyState extends State<Calc2Body> {
   List<Widget> buildButtonRow(List<dynamic> list) {
     reset() {
       _leftHandSide = "";
+      _rightHandSide = "";
       _operand = "";
       _result = "";
       _hasDecimal = false;
     }
 
     setOperand(String op) {
-      _operand = op;
+      if (_leftHandSide.isNotEmpty) _operand = op;
     }
 
     getResult() {}
+
+    handleNumPress(dynamic buttonPressed) {
+      if (buttonPressed is num) {
+        _operand.isEmpty ? _leftHandSide += buttonPressed.toString() : _rightHandSide += buttonPressed.toString();
+      }
+      else {
+        _operand.isEmpty ? _leftHandSide += buttonPressed.toString() : _rightHandSide += buttonPressed.toString();
+      }
+    }
 
     processButtonAction(dynamic item) {
       if (item is String) {
@@ -181,7 +200,7 @@ class _Calc2BodyState extends State<Calc2Body> {
 
           case '.':
             if (!_hasDecimal) {
-              _leftHandSide += item;
+              handleNumPress(item);
               _hasDecimal = true;
             }
             break;
@@ -197,7 +216,7 @@ class _Calc2BodyState extends State<Calc2Body> {
       }
       // Item is num
       else {
-        _leftHandSide += item.toString();
+        handleNumPress(item);
       }
     }
 
