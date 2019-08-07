@@ -24,20 +24,22 @@ class _Calc2BodyState extends State<Calc2Body> {
   final _buttonRowThree = [1, 2, 3, '-'];
   final _buttonRowFour = [0, '.', 'C', '=', '+'];
   final _smallOperandButtons = ['/', '*', '-', '+', 'C', '='];
-  var _leftHandSide = "";
-  var _rightHandSide = "";
-  var _operand = "";
-  var _result = "";
-  var _hasDecimal = false;
+  String _leftHandSide = "";
+  String _rightHandSide = "";
+  String _operand = "";
+  String _operandEquals = "";
+  String _result = "";
+  bool _hasLHSDecimal = false;
+  bool _hasRHSDecimal = false;
 
   num getOpacity(dynamic item) => (item is num && item == -1) ? 0.0 : 1.0;
   num getFlex(dynamic item) => (_smallOperandButtons.contains(item)) ? 2 : 4;
-  
+
   /// Returns Button Color.
-  /// 
+  ///
   /// * [ret], The color returned to calling button.
   Color getColor(dynamic item) {
-    Color ret;  // Button color.
+    Color ret; // Button color.
 
     if (item == 'C') {
       ret = Colors.grey[700];
@@ -78,54 +80,84 @@ class _Calc2BodyState extends State<Calc2Body> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    // OPERAND DISPLAY
-                    Container(
-                      padding: EdgeInsets.only(right: 50),
-                      alignment: Alignment.center,
-                      child: Text(
-                        _operand,
-                        style: TextStyle(
-                          color: Colors.yellow[200],
-                          fontSize: 32,
+                    // OPERAND DISPLAYS
+                    Column(
+                      // OPERAND
+                      children: <Widget>[
+                        // EMPTY SPACER BOX
+                        Expanded(
+                          child: Divider(),
                         ),
-                      ),
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(right: 50),
+                            alignment: Alignment.center,
+                            child: Text(
+                              _operand,
+                              style: TextStyle(
+                                color: Colors.yellow[200],
+                                fontSize: 32,
+                              ),
+                            ),
+                          ),
+                        ),
+                        // EQUALS
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(right: 50),
+                            alignment: Alignment.center,
+                            child: Text(
+                              _operandEquals,
+                              style: TextStyle(
+                                color: Colors.yellow[200],
+                                fontSize: 32,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     Column(
                       children: <Widget>[
                         // LHS DISPLAY
-                        Container(
-                          padding: EdgeInsets.only(right: 50, top: 20),
-                          alignment: Alignment.topRight,
-                          child: Text(
-                            _leftHandSide,
-                            textDirection: TextDirection.ltr,
-                            style: TextStyle(
-                              color: Colors.grey[200],
-                              fontSize: 32,
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(right: 50),
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              _leftHandSide,
+                              style: TextStyle(
+                                color: Colors.grey[200],
+                                fontSize: 32,
+                              ),
                             ),
                           ),
                         ),
                         // RHS DISPLAY
-                        Container(
-                          padding: EdgeInsets.only(right: 50, top: 20),
-                          alignment: Alignment.topRight,
-                          child: Text(
-                            _rightHandSide,
-                            style: TextStyle(
-                              color: Colors.grey[200],
-                              fontSize: 32,
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(right: 50),
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              _rightHandSide,
+                              style: TextStyle(
+                                color: Colors.grey[200],
+                                fontSize: 32,
+                              ),
                             ),
                           ),
                         ),
                         // RESULT DISPLAY
-                        Container(
-                          padding: EdgeInsets.only(right: 50, top: 20),
-                          alignment: Alignment.topRight,
-                          child: Text(
-                            _result,
-                            style: TextStyle(
-                              color: Colors.grey[200],
-                              fontSize: 32,
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.only(right: 50),
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              _result,
+                              style: TextStyle(
+                                color: Colors.grey[200],
+                                fontSize: 32,
+                              ),
                             ),
                           ),
                         ),
@@ -172,26 +204,86 @@ class _Calc2BodyState extends State<Calc2Body> {
       _leftHandSide = "";
       _rightHandSide = "";
       _operand = "";
+      _operandEquals = "";
       _result = "";
-      _hasDecimal = false;
+      _hasLHSDecimal = false;
+      _hasRHSDecimal = false;
     }
 
     setOperand(String op) {
       if (_leftHandSide.isNotEmpty) _operand = op;
     }
 
-    getResult() {}
+    validateFields() {
+      if (_leftHandSide.isNotEmpty &&
+          _operand.isNotEmpty &&
+          _rightHandSide.isNotEmpty) {
+        _operandEquals = "=";
+        return true;
+      }
+    }
+
+    calculate() {
+      num _lhs = num.tryParse(_leftHandSide);
+      num _rhs = num.tryParse(_rightHandSide);
+
+      if (_lhs != null && _rhs != null) {
+        num result;
+
+        switch (_operand) {
+          case '/':
+            result = _lhs / _rhs;
+            break;
+
+          case '*':
+            result = _lhs * _rhs;
+            break;
+
+          case '-':
+            result = _lhs - _rhs;
+            break;
+
+          case '+':
+            result = _lhs + _rhs;
+            break;
+
+          default:
+            break;
+        }
+
+        _result = result.toString();
+      }
+    }
 
     handleNumPress(dynamic buttonPressed) {
-      if (buttonPressed is num) {
-        _operand.isEmpty ? _leftHandSide += buttonPressed.toString() : _rightHandSide += buttonPressed.toString();
+      // LHS
+      if (_operand.isEmpty) {
+        if (buttonPressed == '.') {
+          if (!_hasLHSDecimal) {
+            _leftHandSide += buttonPressed.toString();
+          }
+          _hasLHSDecimal = true;
+        } else {
+          _leftHandSide += buttonPressed.toString();
+        }
       }
+      // RHS
       else {
-        _operand.isEmpty ? _leftHandSide += buttonPressed.toString() : _rightHandSide += buttonPressed.toString();
+        if (buttonPressed == '.') {
+          if (!_hasRHSDecimal) {
+            _rightHandSide += buttonPressed.toString();
+          }
+          _hasRHSDecimal = true;
+        } else {
+          _rightHandSide += buttonPressed.toString();
+        }
       }
     }
 
     processButtonAction(dynamic item) {
+      if (_result.isNotEmpty) {
+        reset();
+      }
       if (item is String) {
         switch (item) {
           case 'C':
@@ -199,14 +291,13 @@ class _Calc2BodyState extends State<Calc2Body> {
             break;
 
           case '.':
-            if (!_hasDecimal) {
-              handleNumPress(item);
-              _hasDecimal = true;
-            }
+            handleNumPress(item);
             break;
 
           case '=':
-            getResult();
+            if (validateFields()) {
+              calculate();
+            }
             break;
 
           default:
