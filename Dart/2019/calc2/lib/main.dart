@@ -31,6 +31,7 @@ class _Calc2BodyState extends State<Calc2Body> {
   String _result = "";
   bool _hasLHSDecimal = false;
   bool _hasRHSDecimal = false;
+  bool _hasResultDecimal = false;
 
   num getOpacity(dynamic item) => (item is num && item == -1) ? 0.0 : 1.0;
   num getFlex(dynamic item) => (_smallOperandButtons.contains(item)) ? 2 : 4;
@@ -208,6 +209,18 @@ class _Calc2BodyState extends State<Calc2Body> {
       _result = "";
       _hasLHSDecimal = false;
       _hasRHSDecimal = false;
+      _hasResultDecimal = false;
+    }
+
+    resetKeepResult() {
+      _leftHandSide = _result;
+      _rightHandSide = "";
+      _operand = _operand;
+      _operandEquals = "";
+      _result = "";
+      _hasLHSDecimal = false;
+      _hasRHSDecimal = false;
+      _hasResultDecimal = _hasResultDecimal;
     }
 
     setOperand(String op) {
@@ -219,6 +232,10 @@ class _Calc2BodyState extends State<Calc2Body> {
           _operand.isNotEmpty &&
           _rightHandSide.isNotEmpty) {
         _operandEquals = "=";
+
+        if (_hasLHSDecimal || _hasRHSDecimal) {
+          _hasResultDecimal = true;
+        }
         return true;
       }
     }
@@ -282,6 +299,9 @@ class _Calc2BodyState extends State<Calc2Body> {
 
     processButtonAction(dynamic item) {
       if (_result.isNotEmpty) {
+        if (item is String) {
+          resetKeepResult();
+        }
         reset();
       }
       if (item is String) {
@@ -343,3 +363,5 @@ class _Calc2BodyState extends State<Calc2Body> {
         .toList();
   }
 }
+
+//TODO Figure out why resetKeepResulting is not working.
