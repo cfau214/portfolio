@@ -12,3 +12,9 @@ class TipCalculator extends StatelessWidget {
     );
   }
 }
+
+/**
+ * TODO:
+ *  [x] - Cleanup Code Before Moving Forward.
+ *  [x] - Clean up UI
+ */
