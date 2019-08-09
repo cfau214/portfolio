@@ -27,6 +27,8 @@ var buttonMap = <Buttons, dynamic>{
   Buttons.eight: "8",
   Buttons.nine: "9",
   Buttons.zero: "0",
+  Buttons.delete: Icons.backspace,
+  Buttons.calculate: Icons.arrow_right
 };
 
 class CalcButtons extends StatelessWidget {
@@ -68,6 +70,14 @@ Widget calcButtons() {
           ],
         ),
       ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            ...buildButtons(rowFour),
+          ],
+        ),
+      ),
       SizedBox(
         height: 40,
         child: Container(color: Colors.lightBlue),
@@ -82,13 +92,17 @@ List<Widget> buildButtons(List<Buttons> buttonList) {
             flex: 1,
             child: OutlineButton(
               onPressed: () {},
-              child: Text(
+              child: (buttonMap[button] is String) ? 
+              Text(
                 buttonMap[button],
                 style: TextStyle(
                   fontSize: 28,
                 ),
                 textAlign: TextAlign.center,
-              ),
+              )
+              :
+              Icon(buttonMap[button])
+              ,
             ),
           ))
       .toList();
