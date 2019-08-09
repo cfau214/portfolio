@@ -68,106 +68,7 @@ class _Calc2BodyState extends State<Calc2Body> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             // DISPLAY
-            Expanded(
-              child: Card(
-                color: Colors.black45,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.elliptical(32, 12),
-                    topRight: Radius.elliptical(32, 12),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    // OPERAND DISPLAYS
-                    Column(
-                      // OPERAND
-                      children: <Widget>[
-                        // EMPTY SPACER BOX
-                        Expanded(
-                          child: Divider(),
-                        ),
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(right: 50),
-                            alignment: Alignment.center,
-                            child: Text(
-                              _operand,
-                              style: TextStyle(
-                                color: Colors.yellow[200],
-                                fontSize: 32,
-                              ),
-                            ),
-                          ),
-                        ),
-                        // EQUALS
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(right: 50),
-                            alignment: Alignment.center,
-                            child: Text(
-                              _operandEquals,
-                              style: TextStyle(
-                                color: Colors.yellow[200],
-                                fontSize: 32,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        // LHS DISPLAY
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(right: 50),
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              _leftHandSide,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: 32,
-                              ),
-                            ),
-                          ),
-                        ),
-                        // RHS DISPLAY
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(right: 50),
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              _rightHandSide,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: 32,
-                              ),
-                            ),
-                          ),
-                        ),
-                        // RESULT DISPLAY
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(right: 50),
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              _result,
-                              style: TextStyle(
-                                color: Colors.grey[200],
-                                fontSize: 32,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            new Test(operand: _operand, operandEquals: _operandEquals, leftHandSide: _leftHandSide, rightHandSide: _rightHandSide, result: _result),
 
             // BUTTONS
             Row(
@@ -363,6 +264,127 @@ class _Calc2BodyState extends State<Calc2Body> {
               ),
             ))
         .toList();
+  }
+}
+
+class Test extends StatelessWidget {
+  const Test({
+    Key key,
+    @required String operand,
+    @required String operandEquals,
+    @required String leftHandSide,
+    @required String rightHandSide,
+    @required String result,
+  }) : _operand = operand, _operandEquals = operandEquals, _leftHandSide = leftHandSide, _rightHandSide = rightHandSide, _result = result, super(key: key);
+
+  final String _operand;
+  final String _operandEquals;
+  final String _leftHandSide;
+  final String _rightHandSide;
+  final String _result;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Card(
+        color: Colors.black45,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.elliptical(32, 12),
+            topRight: Radius.elliptical(32, 12),
+          ),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            // OPERAND DISPLAYS
+            Column(
+              // OPERAND
+              children: <Widget>[
+                // EMPTY SPACER BOX
+                Expanded(
+                  child: Divider(),
+                ),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(right: 50),
+                    alignment: Alignment.center,
+                    child: Text(
+                      _operand,
+                      style: TextStyle(
+                        color: Colors.yellow[200],
+                        fontSize: 32,
+                      ),
+                    ),
+                  ),
+                ),
+                // EQUALS
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(right: 50),
+                    alignment: Alignment.center,
+                    child: Text(
+                      _operandEquals,
+                      style: TextStyle(
+                        color: Colors.yellow[200],
+                        fontSize: 32,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                // LHS DISPLAY
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(right: 50),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      _leftHandSide,
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                        fontSize: 32,
+                      ),
+                    ),
+                  ),
+                ),
+                // RHS DISPLAY
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(right: 50),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      _rightHandSide,
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                        fontSize: 32,
+                      ),
+                    ),
+                  ),
+                ),
+                // RESULT DISPLAY
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(right: 50),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      _result,
+                      style: TextStyle(
+                        color: Colors.grey[200],
+                        fontSize: 32,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 

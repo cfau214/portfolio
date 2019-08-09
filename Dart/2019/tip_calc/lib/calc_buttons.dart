@@ -46,6 +46,7 @@ Widget calcButtons() {
     children: <Widget>[
       Expanded(
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             ...buildButtons(rowOne),
           ],
@@ -53,6 +54,7 @@ Widget calcButtons() {
       ),
       Expanded(
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             ...buildButtons(rowTwo),
           ],
@@ -60,11 +62,16 @@ Widget calcButtons() {
       ),
       Expanded(
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             ...buildButtons(rowThree),
           ],
         ),
       ),
+      SizedBox(
+        height: 40,
+        child: Container(color: Colors.lightBlue),
+      )
     ],
   );
 }
@@ -73,17 +80,14 @@ List<Widget> buildButtons(List<Buttons> buttonList) {
   List<Widget> buttons = buttonList
       .map((button) => Expanded(
             flex: 1,
-            child: Center(
-              //TODO: Fix this, look at outline and have the buttons expand properly.
-              child: OutlineButton(
-                onPressed: () {},
-                child: Text(
-                  buttonMap[button],
-                  style: TextStyle(
-                    fontSize: 28,
-                  ),
-                  textAlign: TextAlign.center,
+            child: OutlineButton(
+              onPressed: () {},
+              child: Text(
+                buttonMap[button],
+                style: TextStyle(
+                  fontSize: 28,
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
           ))
