@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 /// Amount
 ///
 /// This class is a provider that allows outside widgets to access and modify [_amount].
+/// 
 ///
 /// * [_amount] - The tip amount entered.
 /// * [getAmount] - Returns the current amount entered.

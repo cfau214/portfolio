@@ -3,13 +3,12 @@ import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 
 import 'results.dart';
-import 'calc_home.dart';
 import 'Amount.dart';
 
 /// Buttons
-/// 
+///
 /// Enumerator used for processing each button's action and label through a [buttonMap]
-/// Used primarily in conjunction with each button action in [CalcButtons].
+/// Used primarily in conjunction with each button action in [ButtonRow].
 enum Buttons {
   one,
   two,
@@ -25,16 +24,6 @@ enum Buttons {
   calculate
 }
 
-/// Global Variables
-/// 
-/// * [amountState] -A change provider passed to this widget that has the amount 
-/// variable displayed in the [TopBar] of calc_home.
-/// 
-/// * [ctx] - Parent context used so [CalcButtons] can navigate pages.
-/// 
-Amount amountState;
-BuildContext ctx;
-
 var buttonMap = <Buttons, dynamic>{
   Buttons.one: "1",
   Buttons.two: "2",
@@ -46,19 +35,19 @@ var buttonMap = <Buttons, dynamic>{
   Buttons.eight: "8",
   Buttons.nine: "9",
   Buttons.zero: "0",
-  Buttons.delete: Icon(Icons.backspace, size:30),
+  Buttons.delete: Icon(Icons.backspace, size: 30),
   Buttons.calculate: Icon(Icons.arrow_right, size: 60)
 };
 
 /// CalcButtons creates the layout for the calculator.
-/// 
+///
 /// * [rowOne] - Buttons 7-9
 /// * [rowTwo] - Buttons 4-6
 /// * [rowThree] - Buttons 1-3
 /// * [rowFour] - Buttons delete, 0, calculate
-/// 
+///
 /// Each button pressed will perform a different [buttonAction]
-/// 
+///
 class CalcButtons extends StatelessWidget {
   final rowOne = <Buttons>[Buttons.seven, Buttons.eight, Buttons.nine];
   final rowTwo = <Buttons>[Buttons.four, Buttons.five, Buttons.six];
@@ -67,43 +56,12 @@ class CalcButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    amountState = Provider.of<Amount>(context);
-    ctx = context;
-
     return Column(
       children: <Widget>[
-        Expanded(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              ...buildButtons(rowOne),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              ...buildButtons(rowTwo),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              ...buildButtons(rowThree),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              ...buildButtons(rowFour),
-            ],
-          ),
-        ),
+        ButtonRow(row: rowOne),
+        ButtonRow(row: rowTwo),
+        ButtonRow(row: rowThree),
+        ButtonRow(row: rowFour),
         SizedBox(
           height: 50,
           child: Container(color: Colors.lightBlue),
@@ -111,39 +69,56 @@ class CalcButtons extends StatelessWidget {
       ],
     );
   }
+}
 
-  /// Returns a list of Outline Buttons used for the calculator.
-  /// 
-  List<Widget> buildButtons(List<Buttons> buttonList) {
-    List<Widget> buttons = buttonList
-        .map((button) => Expanded(
-              flex: 1,
-              child: OutlineButton(
-                onPressed: () {
-                  buttonAction(button);
-                },
-                /// The type of child will change based on the button pressed.
-                child: (buttonMap[button] is String)
-                    ? Text(
-                        buttonMap[button],
-                        style: TextStyle(
-                          fontSize: 28,
-                        ),
-                        textAlign: TextAlign.center,
-                      )
-                    : buttonMap[button],
-              ),
-            ))
-        .toList();
+/// ButtonRow creates a spreadable row of pressable buttons based on a [Buttons] enumerated list
+/// that is passed as the required [row].
+/// 
+class ButtonRow extends StatelessWidget {
+  const ButtonRow({
+    Key key,
+    @required this.row,
+  }) : super(key: key);
 
-    return buttons;
+  final List<Buttons> row;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            ...row
+                .map((button) => Expanded(
+                    flex: 1,
+                    child: OutlineButton(
+                      onPressed: () {
+                        buttonAction(button, context);
+                      },
+
+                      /// The type of child will change based on the button pressed.
+                      child: (buttonMap[button] is String)
+                          ? Text(
+                              buttonMap[button],
+                              style: TextStyle(
+                                fontSize: 28,
+                              ),
+                              textAlign: TextAlign.center,
+                            )
+                          : buttonMap[button],
+                    )))
+                .toList(),
+          ]),
+    );
   }
 
   /// buttonAction
-  /// 
+  ///
   /// Performs a different action based on the [Buttons] pressed.
   ///
-  buttonAction(Buttons button) {
+  buttonAction(Buttons button, BuildContext context) {
+    var amountState = Provider.of<Amount>(context);
+
     switch (button) {
       case Buttons.one:
         amountState.addAmount(1);
@@ -190,7 +165,12 @@ class CalcButtons extends StatelessWidget {
         break;
 
       case Buttons.calculate:
-        Navigator.push(ctx, MaterialPageRoute(builder: (_) => Results(amountState.getAmount)));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => Results(amountState.getAmount),
+          ),
+        );
         break;
 
       default:

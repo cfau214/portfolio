@@ -16,4 +16,5 @@ class TipCalculator extends StatelessWidget {
 /**
  * TODO:
  * [x] - Learn how to switch screens.
+ * [x] - Refactor calc buttons to use widgets instead of functions, this way we can remove the global variables and use a change provider instead.
  */
