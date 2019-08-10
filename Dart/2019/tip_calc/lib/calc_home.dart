@@ -3,8 +3,23 @@ import 'calc_buttons.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 
+/// numFormatter
+///
+/// Provides the display format for the tip amount.
 final numFormatter = NumberFormat("##,###.##", "en_US");
 
+/// Amount
+///
+/// This class is a provider that allows outside widgets to access and modify [_amount].
+///
+/// * [_amount] - The tip amount entered.
+/// * [getAmount] - Returns the current amount entered.
+///
+/// * [addAmount] - Appends the last button pressed to the end of current amount and shifts the decimal one place.
+/// * [clear] - Resets the tip amount back to 0.
+///
+/// * [_isUnderMaxLength] - Controls the number of digits the user can enter. Currently only allows a number of length ##,###.##.
+///
 class Amount with ChangeNotifier {
   Amount();
 
@@ -14,9 +29,9 @@ class Amount with ChangeNotifier {
   void addAmount(num amount) {
     if (_isUnderMaxLength()) {
       _amount *= 10;
-      _amount += amount/100;
+      _amount += amount / 100;
       notifyListeners();
-    }  
+    }
   }
 
   void clear() {
@@ -24,8 +39,8 @@ class Amount with ChangeNotifier {
     notifyListeners();
   }
 
+  /// Returns true if amount is no more than 7 characters in length, to keep formatted as ##,###.00
   _isUnderMaxLength() => _amount.toStringAsFixed(2).length < 8;
-  
 }
 
 class CalcHome extends StatelessWidget {
@@ -42,7 +57,11 @@ class CalcBody extends StatefulWidget {
   _CalcBodyState createState() => _CalcBodyState();
 }
 
-// MAIN LAYOUT FUNCTION
+/// CalcBodyState - The main user interface for the calculator' home.
+///
+/// This includes a [TopBar] that displays the amount being entered by the user and
+/// a buttom container of [CalcButtons] that generates the buttons for the calculator.
+/// 
 class _CalcBodyState extends State<CalcBody> {
   @override
   Widget build(BuildContext context) {
@@ -51,12 +70,14 @@ class _CalcBodyState extends State<CalcBody> {
       child: Container(
         child: Column(
           children: <Widget>[
+            // Top Bar
             Expanded(
-              flex: 2,
+              flex: 3,
               child: TopBar(),
             ),
+            // Calculator Buttons
             Expanded(
-              flex: 7,
+              flex: 9,
               child: CalcButtons(),
             )
           ],
@@ -66,6 +87,10 @@ class _CalcBodyState extends State<CalcBody> {
   }
 }
 
+/// TopBar - The 'AppBar' for the Calculator's home within the [_CalcBodyState].
+///
+/// Keeps track of the amount entered by the user through the [amountState] change provider.
+/// 
 class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -74,7 +99,7 @@ class TopBar extends StatelessWidget {
     return Container(
       alignment: Alignment.bottomCenter,
       width: double.infinity,
-      padding: EdgeInsets.only(top: 80, left: 20, right: 12, bottom: 12),
+      padding: EdgeInsets.only(top: 80, left: 20, right: 12, bottom: 20),
       color: Colors.lightBlueAccent,
       child: Row(
         children: <Widget>[
@@ -85,11 +110,12 @@ class TopBar extends StatelessWidget {
               textAlign: TextAlign.left,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 12,
+                fontSize: 14,
                 fontStyle: FontStyle.italic,
               ),
             ),
           ),
+          // Amount Display
           Expanded(
             flex: 3,
             child: Text(
@@ -97,7 +123,7 @@ class TopBar extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 36,
+                fontSize: 42,
                 fontStyle: FontStyle.italic,
               ),
             ),

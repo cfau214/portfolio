@@ -3,6 +3,10 @@ import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 import 'calc_home.dart';
 
+/// Buttons
+/// 
+/// Enumerator used for processing each button's action and label through a [buttonMap]
+/// Used primarily in conjunction with each button action in [CalcButtons].
 enum Buttons {
   one,
   two,
@@ -18,6 +22,9 @@ enum Buttons {
   calculate
 }
 
+/// AmountState
+/// 
+/// A change provider passed to this widget that has the amount variable displayed in the [TopBar] of calc_home.
 Amount amountState;
 
 var buttonMap = <Buttons, dynamic>{
@@ -35,6 +42,15 @@ var buttonMap = <Buttons, dynamic>{
   Buttons.calculate: Icon(Icons.arrow_right, size: 60)
 };
 
+/// CalcButtons creates the layout for the calculator.
+/// 
+/// * [rowOne] - Buttons 7-9
+/// * [rowTwo] - Buttons 4-6
+/// * [rowThree] - Buttons 1-3
+/// * [rowFour] - Buttons delete, 0, calculate
+/// 
+/// Each button pressed will perform a different [buttonAction]
+/// 
 class CalcButtons extends StatelessWidget {
   final rowOne = <Buttons>[Buttons.seven, Buttons.eight, Buttons.nine];
   final rowTwo = <Buttons>[Buttons.four, Buttons.five, Buttons.six];
@@ -80,13 +96,15 @@ class CalcButtons extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 40,
+          height: 50,
           child: Container(color: Colors.lightBlue),
         )
       ],
     );
   }
 
+  /// Returns a list of Outline Buttons used for the calculator.
+  /// 
   List<Widget> buildButtons(List<Buttons> buttonList) {
     List<Widget> buttons = buttonList
         .map((button) => Expanded(
@@ -95,6 +113,7 @@ class CalcButtons extends StatelessWidget {
                 onPressed: () {
                   buttonAction(button);
                 },
+                /// The type of child will change based on the button pressed.
                 child: (buttonMap[button] is String)
                     ? Text(
                         buttonMap[button],
@@ -111,6 +130,10 @@ class CalcButtons extends StatelessWidget {
     return buttons;
   }
 
+  /// buttonAction
+  /// 
+  /// Performs a different action based on the [Buttons] pressed.
+  ///
   buttonAction(Buttons button) {
     switch (button) {
       case Buttons.one:
