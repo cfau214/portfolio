@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
+
+import 'results.dart';
 import 'calc_home.dart';
+import 'Amount.dart';
 
 /// Buttons
 /// 
@@ -22,10 +25,15 @@ enum Buttons {
   calculate
 }
 
-/// AmountState
+/// Global Variables
 /// 
-/// A change provider passed to this widget that has the amount variable displayed in the [TopBar] of calc_home.
+/// * [amountState] -A change provider passed to this widget that has the amount 
+/// variable displayed in the [TopBar] of calc_home.
+/// 
+/// * [ctx] - Parent context used so [CalcButtons] can navigate pages.
+/// 
 Amount amountState;
+BuildContext ctx;
 
 var buttonMap = <Buttons, dynamic>{
   Buttons.one: "1",
@@ -60,6 +68,7 @@ class CalcButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     amountState = Provider.of<Amount>(context);
+    ctx = context;
 
     return Column(
       children: <Widget>[
@@ -181,6 +190,7 @@ class CalcButtons extends StatelessWidget {
         break;
 
       case Buttons.calculate:
+        Navigator.push(ctx, MaterialPageRoute(builder: (_) => Results(amountState.getAmount)));
         break;
 
       default:
