@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:provider/provider.dart';
+import 'calc_home.dart';
 
 enum Buttons {
   one,
@@ -16,6 +18,8 @@ enum Buttons {
   calculate
 }
 
+Amount amountState;
+
 var buttonMap = <Buttons, dynamic>{
   Buttons.one: "1",
   Buttons.two: "2",
@@ -27,85 +31,137 @@ var buttonMap = <Buttons, dynamic>{
   Buttons.eight: "8",
   Buttons.nine: "9",
   Buttons.zero: "0",
-  Buttons.delete: Icons.backspace,
-  Buttons.calculate: Icons.arrow_right
+  Buttons.delete: Icon(Icons.backspace, size:30),
+  Buttons.calculate: Icon(Icons.arrow_right, size: 60)
 };
 
 class CalcButtons extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return calcButtons();
-  }
-}
-
-Widget calcButtons() {
   final rowOne = <Buttons>[Buttons.seven, Buttons.eight, Buttons.nine];
   final rowTwo = <Buttons>[Buttons.four, Buttons.five, Buttons.six];
   final rowThree = <Buttons>[Buttons.one, Buttons.two, Buttons.three];
   final rowFour = <Buttons>[Buttons.delete, Buttons.zero, Buttons.calculate];
 
-  return Column(
-    children: <Widget>[
-      Expanded(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            ...buildButtons(rowOne),
-          ],
-        ),
-      ),
-      Expanded(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            ...buildButtons(rowTwo),
-          ],
-        ),
-      ),
-      Expanded(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            ...buildButtons(rowThree),
-          ],
-        ),
-      ),
-      Expanded(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            ...buildButtons(rowFour),
-          ],
-        ),
-      ),
-      SizedBox(
-        height: 40,
-        child: Container(color: Colors.lightBlue),
-      )
-    ],
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    amountState = Provider.of<Amount>(context);
 
-List<Widget> buildButtons(List<Buttons> buttonList) {
-  List<Widget> buttons = buttonList
-      .map((button) => Expanded(
-            flex: 1,
-            child: OutlineButton(
-              onPressed: () {},
-              child: (buttonMap[button] is String) ? 
-              Text(
-                buttonMap[button],
-                style: TextStyle(
-                  fontSize: 28,
-                ),
-                textAlign: TextAlign.center,
-              )
-              :
-              Icon(buttonMap[button])
-              ,
-            ),
-          ))
-      .toList();
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              ...buildButtons(rowOne),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              ...buildButtons(rowTwo),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              ...buildButtons(rowThree),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              ...buildButtons(rowFour),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+          child: Container(color: Colors.lightBlue),
+        )
+      ],
+    );
+  }
 
-  return buttons;
+  List<Widget> buildButtons(List<Buttons> buttonList) {
+    List<Widget> buttons = buttonList
+        .map((button) => Expanded(
+              flex: 1,
+              child: OutlineButton(
+                onPressed: () {
+                  buttonAction(button);
+                },
+                child: (buttonMap[button] is String)
+                    ? Text(
+                        buttonMap[button],
+                        style: TextStyle(
+                          fontSize: 28,
+                        ),
+                        textAlign: TextAlign.center,
+                      )
+                    : buttonMap[button],
+              ),
+            ))
+        .toList();
+
+    return buttons;
+  }
+
+  buttonAction(Buttons button) {
+    switch (button) {
+      case Buttons.one:
+        amountState.addAmount(1);
+        break;
+
+      case Buttons.two:
+        amountState.addAmount(2);
+        break;
+
+      case Buttons.three:
+        amountState.addAmount(3);
+        break;
+
+      case Buttons.four:
+        amountState.addAmount(4);
+        break;
+
+      case Buttons.five:
+        amountState.addAmount(5);
+        break;
+
+      case Buttons.six:
+        amountState.addAmount(6);
+        break;
+
+      case Buttons.seven:
+        amountState.addAmount(7);
+        break;
+
+      case Buttons.eight:
+        amountState.addAmount(8);
+        break;
+
+      case Buttons.nine:
+        amountState.addAmount(9);
+        break;
+
+      case Buttons.zero:
+        amountState.addAmount(0);
+        break;
+
+      case Buttons.delete:
+        amountState.clear();
+        break;
+
+      case Buttons.calculate:
+        break;
+
+      default:
+        break;
+    }
+  }
 }

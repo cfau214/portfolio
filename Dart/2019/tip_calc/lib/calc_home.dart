@@ -1,5 +1,32 @@
 import 'package:flutter/material.dart';
 import 'calc_buttons.dart';
+import 'package:provider/provider.dart';
+import 'package:intl/intl.dart';
+
+final numFormatter = NumberFormat("##,###.##", "en_US");
+
+class Amount with ChangeNotifier {
+  Amount();
+
+  num _amount = 0;
+  num get getAmount => _amount;
+
+  void addAmount(num amount) {
+    if (_isUnderMaxLength()) {
+      _amount *= 10;
+      _amount += amount/100;
+      notifyListeners();
+    }  
+  }
+
+  void clear() {
+    _amount = 0;
+    notifyListeners();
+  }
+
+  _isUnderMaxLength() => _amount.toStringAsFixed(2).length < 8;
+  
+}
 
 class CalcHome extends StatelessWidget {
   @override
@@ -19,28 +46,31 @@ class CalcBody extends StatefulWidget {
 class _CalcBodyState extends State<CalcBody> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Expanded(
-            flex: 2,
-            child: TopBar(),
-          ),
-          Expanded(
-            flex: 7,
-            child: CalcButtons(),
-          )
-        ],
+    return ChangeNotifierProvider<Amount>(
+      builder: (_) => Amount(),
+      child: Container(
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: TopBar(),
+            ),
+            Expanded(
+              flex: 7,
+              child: CalcButtons(),
+            )
+          ],
+        ),
       ),
     );
   }
 }
 
 class TopBar extends StatelessWidget {
-  final _amount = 0.00;
-
   @override
   Widget build(BuildContext context) {
+    var amountState = Provider.of<Amount>(context);
+
     return Container(
       alignment: Alignment.bottomCenter,
       width: double.infinity,
@@ -63,7 +93,7 @@ class TopBar extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Text(
-              '\$${_amount.toStringAsFixed(2)}',
+              '\$${numFormatter.format(amountState.getAmount)}',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
