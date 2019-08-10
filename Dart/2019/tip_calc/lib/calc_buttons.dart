@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 
 import 'results.dart';
-import 'Amount.dart';
+import 'AmountProvider.dart';
 
 /// Buttons
 ///
@@ -24,6 +24,9 @@ enum Buttons {
   calculate
 }
 
+/// buttonMap
+///
+/// This map allows the label for a button to change based on it's enumerated [Buttons] type.
 var buttonMap = <Buttons, dynamic>{
   Buttons.one: "1",
   Buttons.two: "2",
@@ -73,7 +76,7 @@ class CalcButtons extends StatelessWidget {
 
 /// ButtonRow creates a spreadable row of pressable buttons based on a [Buttons] enumerated list
 /// that is passed as the required [row].
-/// 
+///
 class ButtonRow extends StatelessWidget {
   const ButtonRow({
     Key key,
@@ -90,23 +93,24 @@ class ButtonRow extends StatelessWidget {
           children: <Widget>[
             ...row
                 .map((button) => Expanded(
-                    flex: 1,
-                    child: OutlineButton(
-                      onPressed: () {
-                        buttonAction(button, context);
-                      },
+                      flex: 1,
+                      child: OutlineButton(
+                        onPressed: () {
+                          buttonAction(button, context);
+                        },
 
-                      /// The type of child will change based on the button pressed.
-                      child: (buttonMap[button] is String)
-                          ? Text(
-                              buttonMap[button],
-                              style: TextStyle(
-                                fontSize: 28,
-                              ),
-                              textAlign: TextAlign.center,
-                            )
-                          : buttonMap[button],
-                    )))
+                        /// The type of child will change based on the button pressed.
+                        child: (buttonMap[button] is String)
+                            ? Text(
+                                buttonMap[button],
+                                style: TextStyle(
+                                  fontSize: 28,
+                                ),
+                                textAlign: TextAlign.center,
+                              )
+                            : buttonMap[button],
+                      ),
+                    ))
                 .toList(),
           ]),
     );
@@ -114,10 +118,10 @@ class ButtonRow extends StatelessWidget {
 
   /// buttonAction
   ///
-  /// Performs a different action based on the [Buttons] pressed.
+  /// Performs a different action based on the [Buttons] pressed. 
   ///
   buttonAction(Buttons button, BuildContext context) {
-    var amountState = Provider.of<Amount>(context);
+    var amountState = Provider.of<AmountProvider>(context);
 
     switch (button) {
       case Buttons.one:
@@ -168,7 +172,7 @@ class ButtonRow extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => Results(amountState.getAmount),
+            builder: (_) => Results(),
           ),
         );
         break;

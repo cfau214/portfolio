@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'Amount.dart';
+import 'AmountProvider.dart';
 import 'calc_buttons.dart';
 
 class CalcHome extends StatelessWidget {
@@ -26,9 +26,7 @@ class CalcBody extends StatefulWidget {
 class _CalcBodyState extends State<CalcBody> {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<Amount>(
-      builder: (_) => Amount(),
-      child: Container(
+    return  Container(
         child: Column(
           children: <Widget>[
             // Top Bar
@@ -43,7 +41,6 @@ class _CalcBodyState extends State<CalcBody> {
             )
           ],
         ),
-      ),
     );
   }
 }
@@ -55,7 +52,7 @@ class _CalcBodyState extends State<CalcBody> {
 class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var amtProvider = Provider.of<Amount>(context);
+    var amtProvider = Provider.of<AmountProvider>(context);
 
     return Container(
       alignment: Alignment.bottomCenter,

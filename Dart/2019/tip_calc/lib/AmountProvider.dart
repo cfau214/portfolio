@@ -15,9 +15,9 @@ import 'package:intl/intl.dart';
 ///
 /// * [_isUnderMaxLength] - Controls the number of digits the user can enter. Currently only allows a number of length ##,###.##.
 ///
-class Amount with ChangeNotifier {
-  Amount();
-  Amount.withAmount(this._amount);
+class AmountProvider with ChangeNotifier {
+  AmountProvider();
+  AmountProvider.withAmount(this._amount);
 
   var numFormatter = NumberFormat("###,###.##", "en_US");
 

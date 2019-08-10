@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'Amount.dart';
+import 'AmountProvider.dart';
 
-class Results extends StatelessWidget {  
-  final _amount;
-  Results(this._amount);
-
+class Results extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ChangeNotifierProvider<Amount>(
-        builder: (_) => Amount.withAmount(this._amount),
-        child: ResultsBody()),
-    );
+    return Scaffold(body: ResultsBody());
   }
 }
 
@@ -34,7 +27,7 @@ class ResultsBody extends StatelessWidget {
 class ResultAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var amtProvider = Provider.of<Amount>(context);
+    var amtProvider = Provider.of<AmountProvider>(context);
 
     return Container(
       alignment: Alignment.bottomCenter,
@@ -78,8 +71,6 @@ class ResultAppBar extends StatelessWidget {
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Container();
   }
 }
