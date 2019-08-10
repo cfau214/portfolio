@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'AmountProvider.dart';
+import 'amount_provider.dart';
 import 'calc_buttons.dart';
 
 class CalcHome extends StatelessWidget {

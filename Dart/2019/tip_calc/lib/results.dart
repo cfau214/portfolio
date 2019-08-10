@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'AmountProvider.dart';
+import 'amount_provider.dart';
 
 class Results extends StatelessWidget {
   @override

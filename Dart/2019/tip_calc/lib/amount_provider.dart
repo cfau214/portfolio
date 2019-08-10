@@ -19,9 +19,9 @@ class AmountProvider with ChangeNotifier {
   AmountProvider();
   AmountProvider.withAmount(this._amount);
 
-  var numFormatter = NumberFormat("###,###.##", "en_US");
+  var numFormatter = NumberFormat("###,##0.00", "en_US");
 
-  num _amount = 0;
+  num _amount = 0.00;
   num get getAmount => _amount;
   String get getAmountAsString => numFormatter.format(_amount);
 

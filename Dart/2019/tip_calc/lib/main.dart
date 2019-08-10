@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'calc_home.dart';
-import 'AmountProvider.dart';
+import 'amount_provider.dart';
 
 void main() => runApp(TipCalculator());
 

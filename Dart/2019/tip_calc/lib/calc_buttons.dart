@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 
 import 'results.dart';
-import 'AmountProvider.dart';
+import 'amount_provider.dart';
 
 /// Buttons
 ///
