@@ -29,10 +29,6 @@ class CalcButtons extends StatelessWidget {
         ButtonRow(row: rowTwo),
         ButtonRow(row: rowThree),
         ButtonRow(row: rowFour),
-        SizedBox(
-          height: 50,
-          child: Container(color: Colors.lightBlue),
-        )
       ],
     );
   }
@@ -82,7 +78,7 @@ class ButtonRow extends StatelessWidget {
 
   /// buttonAction
   ///
-  /// Performs a different action based on the [Buttons] pressed. 
+  /// Performs a different action based on the [Buttons] pressed.
   ///
   buttonAction(Buttons button, BuildContext context) {
     var amountState = Provider.of<AmountProvider>(context);

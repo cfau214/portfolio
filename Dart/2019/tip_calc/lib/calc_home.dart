@@ -26,21 +26,23 @@ class CalcBody extends StatefulWidget {
 class _CalcBodyState extends State<CalcBody> {
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        child: Column(
-          children: <Widget>[
-            // Top Bar
-            Expanded(
-              flex: 3,
-              child: TopBar(),
-            ),
-            // Calculator Buttons
-            Expanded(
-              flex: 9,
-              child: CalcButtons(),
-            )
-          ],
-        ),
+    return Container(
+      child: Column(
+        children: <Widget>[
+          // Top Bar
+          Expanded(
+            flex: 3,
+            child: TopBar(),
+          ),
+          // Calculator Buttons
+          Expanded(
+            flex: 9,
+            child: CalcButtons(),
+          ),
+          // Bottom Bar
+          BottomBar(),
+        ],
+      ),
     );
   }
 }
@@ -52,7 +54,7 @@ class _CalcBodyState extends State<CalcBody> {
 class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var amtProvider = Provider.of<AmountProvider>(context);
+    var amountState = Provider.of<AmountProvider>(context);
 
     return Container(
       alignment: Alignment.bottomCenter,
@@ -77,7 +79,7 @@ class TopBar extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Text(
-              '\$${amtProvider.getAmountAsString}',
+              '\$${amountState.getAmountAsString}',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
@@ -89,6 +91,16 @@ class TopBar extends StatelessWidget {
           Expanded(flex: 1, child: Divider())
         ],
       ),
+    );
+  }
+}
+
+class BottomBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 50,
+      child: Container(color: Colors.lightBlue),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// Buttons class contains an enumerated [Buttons] list.
-/// There is also a [buttonMap] that provides labels for each type of button.
+/// buttons.dart contains an enumerated [Buttons] list and an associated [buttonMap] that 
+/// provides labels or icons depending on each type of button.
 
 /// Buttons Enum
 ///
@@ -25,7 +25,7 @@ enum Buttons {
 /// buttonMap
 ///
 /// This map allows the label for a button to change based on it's enumerated [Buttons] type.
-var buttonMap = <Buttons, dynamic>{
+const buttonMap = <Buttons, dynamic>{
   Buttons.one: "1",
   Buttons.two: "2",
   Buttons.three: "3",
