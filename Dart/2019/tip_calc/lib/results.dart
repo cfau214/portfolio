@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:tip_calc/calc_home.dart';
+
+import 'star_manager.dart';
 
 class Results extends StatelessWidget {
   @override
@@ -12,26 +15,29 @@ class ResultsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: <Widget>[
-          // Top Bar
-          Expanded(
-            flex: 3,
-            child: TopBar(),
-          ),
-          // Calculator Buttons
-          Expanded(
-            flex: 2,
-            child: ServiceBody(),
-          ),
-          // Divider
-          Expanded(
-            flex: 7,
-            child: Divider(),
-          ),
-          // Bottom Bar
-          BottomBar(),
-        ],
+      child: ChangeNotifierProvider<StarManager>(
+        builder: (_) => StarManager(),
+        child: Column(
+          children: <Widget>[
+            // Top Bar
+            Expanded(
+              flex: 3,
+              child: TopBar(),
+            ),
+            // Calculator Buttons
+            Expanded(
+              flex: 2,
+              child: ServiceBody(),
+            ),
+            // Divider
+            Expanded(
+              flex: 7,
+              child: Divider(),
+            ),
+            // Bottom Bar
+            BottomBar(),
+          ],
+        ),
       ),
     );
   }
@@ -39,7 +45,6 @@ class ResultsBody extends StatelessWidget {
 
 class ServiceBody extends StatelessWidget {
   final _waitressPerformance = "How was your service today?";
-  var _starRating = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +75,11 @@ class StarButtonList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        ...starsMap.map((index) =>
-          StarButton(index)  
-        ).toList()
+        ...starsMap
+            .map(
+              (index) => StarButton(index),
+            )
+            .toList()
       ],
     );
   }
@@ -80,20 +87,26 @@ class StarButtonList extends StatelessWidget {
 
 class StarButton extends StatefulWidget {
   StarButton(this._index);
-  final _index;
-  
+
+  final int _index;
+
   @override
   _StarButtonState createState() => _StarButtonState(_index);
 }
 
 class _StarButtonState extends State<StarButton> {
   _StarButtonState(this._index);
-  
+
+  num _index;
   bool isSelected = false;
-  var _index;
+
+  StarManager starProvider;
 
   @override
   Widget build(BuildContext context) {
+    starProvider = Provider.of<StarManager>(context);
+    isSelected = _index <= starProvider.getStars;
+
     return GestureDetector(
       child: Icon(
         isSelected ? Icons.star : Icons.star_border,
@@ -109,8 +122,7 @@ class _StarButtonState extends State<StarButton> {
   }
 
   toggle() {
-    // isSelected ? _starRating-- : _starRating++;
-    // isSelected = !isSelected;
-    print("New Star Rating: $_index");
+    isSelected ? starProvider.removeStars(_index) : starProvider.addStars(_index);
+    isSelected = !isSelected;
   }
 }
