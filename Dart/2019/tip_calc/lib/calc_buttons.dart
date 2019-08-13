@@ -131,9 +131,7 @@ class ButtonRow extends StatelessWidget {
       case Buttons.calculate:
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (_) => Results(),
-          ),
+          MaterialPageRoute(builder: (_) => Results()),
         );
         break;
 
