@@ -2,37 +2,44 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 class StarManager with ChangeNotifier {
-  StarManager();
-
-  static List<Star> starList = <Star>[];
-
-  int _totalStars = starList.length;
-  num get getStars => _totalStars;
-
-  addStars(int increase) {
-    _totalStars += increase;
+  StarManager() {
+    _init();
+  }
+  _init() {
+    for (int i = 0; i < 5; i++) {
+      starList.add(Star(i));
+    }
   }
 
-  removeStars(int decrease) {
-    _totalStars -= decrease;
-  }
+  List<Star> starList = <Star>[];
 
-  init() {
-    starList.addAll(
-      List.filled(5, Star()),
-    );
+  int get starRating => starList.where((star) => star.isSelected).length;
+
+  toggleStar(Star tempStar) {
+    var index = tempStar.index;
+
+    starList[index].toggle();
+
+    for (int i = 0; i < index; i++) {
+      starList[i].isSelected = starList[index].isSelected;
+    }
+
+    notifyListeners();
   }
 }
 
 class Star {
-  static final Color iconColor = Colors.yellow;
+  Star(this.index);
 
+  int index;
   bool isSelected = false;
-  Icon _isSelectedIcon = Icon(Icons.star, color: iconColor);
-  Icon _isNotSelectedIcon = Icon(Icons.star_border);
+  Color iconColor = Colors.yellow;
 
-  Icon get getIcon => isSelected ? _isSelectedIcon : _isNotSelectedIcon;
-  Color get getColor => iconColor;
+  Icon get icon => Icon(
+        isSelected ? Icons.star : Icons.star_border,
+        color: iconColor,
+        size: 30,
+      );
 
   toggle() {
     isSelected = !isSelected;

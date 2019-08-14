@@ -51,7 +51,6 @@ class ServiceBody extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(18),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Expanded(
             flex: 5,
@@ -68,61 +67,33 @@ class ServiceBody extends StatelessWidget {
   }
 }
 
-class StarButtonList extends StatelessWidget {
-  final starsMap = Iterable<int>.generate(5, (i) => i++);
-
+class StarButtonList extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        ...starsMap
-            .map(
-              (index) => StarButton(index),
-            )
-            .toList()
-      ],
-    );
-  }
+  _StarButtonListState createState() => _StarButtonListState();
 }
 
-class StarButton extends StatefulWidget {
-  StarButton(this._index);
-
-  final int _index;
-
-  @override
-  _StarButtonState createState() => _StarButtonState(_index);
-}
-
-class _StarButtonState extends State<StarButton> {
-  _StarButtonState(this._index);
-
-  num _index;
-  bool isSelected = false;
-
+class _StarButtonListState extends State<StarButtonList> {
   StarManager starProvider;
 
   @override
   Widget build(BuildContext context) {
     starProvider = Provider.of<StarManager>(context);
-    isSelected = _index <= starProvider.getStars;
 
-    return GestureDetector(
-      child: Icon(
-        isSelected ? Icons.star : Icons.star_border,
-        color: Colors.yellow,
-        size: 30,
-      ),
-      onTap: () {
-        setState(() {
-          toggle();
-        });
-      },
+    return Row(
+      children: <Widget>[
+        ...createStarList(starProvider.starList)
+      ],
     );
   }
 
-  toggle() {
-    isSelected ? starProvider.removeStars(_index) : starProvider.addStars(_index);
-    isSelected = !isSelected;
+  List<Widget> createStarList(List<Star> list) {
+    return list.map((star) => 
+      GestureDetector(
+        child: star.icon,
+        onTap: () { 
+          starProvider.toggleStar(star);
+        }
+      )
+    ).toList();
   }
 }
