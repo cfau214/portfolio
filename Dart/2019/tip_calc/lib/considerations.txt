@@ -1,0 +1,1 @@
+1. Should we have the service automatically select 1 star, 5 stars or 0 stars? Change logic accordingly.
