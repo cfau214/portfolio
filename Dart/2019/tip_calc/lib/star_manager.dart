@@ -36,9 +36,6 @@ class StarManager with ChangeNotifier {
       for (int i = index + 1; i < starList.length; i++) {
         starList[i].isSelected = false;
       }
-    } 
-    // Star rating must be at least 1.
-    else if (index == 0) {
     } else {
       starList[index].toggle();
 
@@ -58,12 +55,7 @@ class StarManager with ChangeNotifier {
 /// icon depending on if the star [isSelected].
 ///
 class Star {
-  Star(this.index) {
-    // TODO: Should we default the first star to be selected or should we allow 0 rating?
-    if (index == 0) {
-      this.isSelected = true;
-    }
-  }
+  Star(this.index) {}
 
   int index;
   bool isSelected = false;
