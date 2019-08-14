@@ -64,7 +64,7 @@ class Star {
   Icon get icon => Icon(
         isSelected ? Icons.star : Icons.star_border,
         color: iconColor,
-        size: 30,
+        size: 40,
       );
 
   toggle() {

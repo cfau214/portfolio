@@ -53,12 +53,11 @@ class ServiceBody extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-            flex: 5,
+            flex: 6,
             child: Text(_waitressPerformance),
           ),
-          SizedBox(width: 5),
           Expanded(
-            flex: 4,
+            flex: 6,
             child: StarButtonList(),
           ),
         ],
