@@ -27,7 +27,7 @@ class AmountProvider with ChangeNotifier {
   num get getTipAmount => amount * tipPercent;
   num get totalBill => amount += amount * tipPercent;
 
-  _isUnderMaxLength() => amount.toStringAsFixed(2).length < 8;
+  _isUnderMaxLength() => amount.toStringAsFixed(2).length < 7;
 
   addAmount(num amt) {
     if (_isUnderMaxLength()) {

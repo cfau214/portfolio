@@ -43,13 +43,8 @@ class ResultsBody extends StatelessWidget {
               child: Totals(),
             ),
             Expanded(
-              flex: 1,
+              flex: 4,
               child: GrandTotal(),
-            ),
-            // Divider
-            Expanded(
-              flex: 3,
-              child: Divider(),
             ),
             // Bottom Bar
             BottomBar(),
@@ -195,19 +190,21 @@ class _TotalsState extends State<Totals> {
 
     return Row(
       children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(left: 60),
+        Divider(indent: 30),
+        SizedBox(
+          width: 150,
           child: Text(
             '${amountState.getAmountAsString}',
+            textAlign: TextAlign.center,
             style: textStyle,
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(left: 35),
+        Divider(indent: 20),
+        SizedBox(
           child: Text('+'),
         ),
-        Container(
-          margin: EdgeInsets.only(left: 40),
+        Divider(indent: 30),
+        SizedBox(
           child: Text(
             '${amountState.getTipAmount.toStringAsFixed(2)}',
             style: textStyle,
@@ -233,8 +230,19 @@ class GrandTotal extends StatefulWidget {
 class _GrandTotalState extends State<GrandTotal> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Center(
+      child: Container(
+        child: Card(
+          margin: EdgeInsets.all(12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Text('Total: '),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
