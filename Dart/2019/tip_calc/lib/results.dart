@@ -20,16 +20,11 @@ class ResultsBody extends StatelessWidget {
         builder: (_) => StarManager(),
         child: Column(
           children: <Widget>[
-            // Top Bar - Flex should be 25% of total column
-            Expanded(
-              flex: 3,
-              child: TopBar(),
-            ),
-            // Calculator Buttons
             // Expanded(
             //   flex: 2,
             //   child: ServiceBody(),
             // ),
+            Divider(height: 50),
             Expanded(
               flex: 3,
               child: QuickTipAmounts(),
@@ -42,12 +37,12 @@ class ResultsBody extends StatelessWidget {
               flex: 1,
               child: Totals(),
             ),
+            Divider(height: 60),
             Expanded(
               flex: 4,
               child: GrandTotal(),
             ),
-            // Bottom Bar
-            BottomBar(),
+            Divider(height: 50),
           ],
         ),
       ),
@@ -116,7 +111,7 @@ class QuickTipAmounts extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text('Quick Tips: '),
-          for (int i = 15; i < 25; i += 5)
+          for (int i = 15; i <= 25; i += 5)
             ButtonTheme(
               minWidth: 70,
               child: RaisedButton(
@@ -162,7 +157,7 @@ class TotalsLabels extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 130),
+            margin: EdgeInsets.only(left: 120),
             child: Text(
               'Plus Tip',
               style: textStyle,
@@ -230,18 +225,42 @@ class GrandTotal extends StatefulWidget {
 class _GrandTotalState extends State<GrandTotal> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: Card(
-          margin: EdgeInsets.all(12),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Text('Total: '),
-            ],
+    var amountState = Provider.of<AmountProvider>(context);
+
+    return Card(
+      elevation: 8,
+      color: Colors.lightBlueAccent,
+      margin: EdgeInsets.only(left: 42, right: 42, top: 24, bottom: 24),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Container(
+            alignment: Alignment.center,
+            child: Text(
+              'Total: ',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 24,
+                fontStyle: FontStyle.italic,
+                color: Colors.white,
+              ),
+            ),
           ),
-        ),
+          Container(
+            alignment: Alignment.center,
+            child: Text(
+              '\$${amountState.totalBill.toStringAsFixed(2)}',
+              style: TextStyle(
+                fontSize: 40,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
