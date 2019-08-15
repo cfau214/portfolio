@@ -29,7 +29,7 @@ class _CalcBodyState extends State<CalcBody> {
     return Container(
       child: Column(
         children: <Widget>[
-          // Top Bar
+          // Top Bar - Flex should be 25% of total column
           Expanded(
             flex: 3,
             child: TopBar(),

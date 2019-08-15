@@ -20,7 +20,7 @@ class ResultsBody extends StatelessWidget {
         builder: (_) => StarManager(),
         child: Column(
           children: <Widget>[
-            // Top Bar
+            // Top Bar - Flex should be 25% of total column
             Expanded(
               flex: 3,
               child: TopBar(),
@@ -119,8 +119,12 @@ class QuickTipAmounts extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(16))),
                 child: Text(
-                  i.toString(),
-                  style: TextStyle(color: Colors.white),
+                  '$i%',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontStyle: FontStyle.italic,
+                  ),
                 ),
                 onPressed: () {
                   amountState.setTip(i);
