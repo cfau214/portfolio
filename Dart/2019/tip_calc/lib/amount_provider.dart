@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 /// Amount
 ///
 /// This class is a provider that allows outside widgets to access and modify [_amount].
-/// 
+///
 ///
 /// * [_amount] - The tip amount entered.
 /// * [getAmount] - Returns the current amount entered.
@@ -17,26 +17,37 @@ import 'package:intl/intl.dart';
 ///
 class AmountProvider with ChangeNotifier {
   AmountProvider();
-  AmountProvider.withAmount(this._amount);
+  AmountProvider.withAmount(this.amount, {num tipPercent});
 
   var numFormatter = NumberFormat("###,##0.00", "en_US");
 
-  num _amount = 0.00;
-  num get getAmount => _amount;
-  String get getAmountAsString => numFormatter.format(_amount);
+  num amount = 0.00;
+  num tipPercent = 0.15;
 
-  void addAmount(num amount) {
+  String get getAmountAsString => numFormatter.format(amount);
+  num get calculateTip => amount * tipPercent;
+  num get totalBill => amount += amount * tipPercent;
+
+  _isUnderMaxLength() => amount.toStringAsFixed(2).length < 8;
+
+  addAmount(num amt) {
     if (_isUnderMaxLength()) {
-      _amount *= 10;
-      _amount += amount / 100;
+      amount *= 10;
+      amount += amt / 100;
       notifyListeners();
     }
   }
 
-  void clear() {
-    _amount = 0;
+  setTip(num newTipPerc) {
+    // No negative tips!
+    assert(newTipPerc >= 0, 'AmountProvider: setTip() - Warning: Negative Tip Percent $newTipPerc should not be less than 0');
+    
+    tipPercent = (newTipPerc == 0) ? 0 : newTipPerc / 100;
     notifyListeners();
   }
 
-  _isUnderMaxLength() => _amount.toStringAsFixed(2).length < 8;
+  clear() {
+    amount = 0;
+    notifyListeners();
+  }
 }

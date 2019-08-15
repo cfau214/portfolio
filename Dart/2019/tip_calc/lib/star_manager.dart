@@ -55,7 +55,7 @@ class StarManager with ChangeNotifier {
 /// icon depending on if the star [isSelected].
 ///
 class Star {
-  Star(this.index) {}
+  Star(this.index);
 
   int index;
   bool isSelected = false;

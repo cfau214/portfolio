@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:tip_calc/calc_home.dart';
 
 import 'star_manager.dart';
+import 'amount_provider.dart';
 
 class Results extends StatelessWidget {
   @override
@@ -29,6 +30,10 @@ class ResultsBody extends StatelessWidget {
               flex: 2,
               child: ServiceBody(),
             ),
+            Expanded(
+              flex: 2,
+              child: QuickTipAmounts(),
+            ),
             // Divider
             Expanded(
               flex: 7,
@@ -44,7 +49,7 @@ class ResultsBody extends StatelessWidget {
 }
 
 class ServiceBody extends StatelessWidget {
-  final _waitressPerformance = "How was your service today?";
+  final _waitressPerformance = "How was your service?";
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +58,7 @@ class ServiceBody extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-            flex: 6,
+            flex: 5,
             child: Text(_waitressPerformance),
           ),
           Expanded(
@@ -79,20 +84,39 @@ class _StarButtonListState extends State<StarButtonList> {
     starProvider = Provider.of<StarManager>(context);
 
     return Row(
-      children: <Widget>[
-        ...createStarList(starProvider.starList)
-      ],
+      children: <Widget>[...createStarList(starProvider.starList)],
     );
   }
 
   List<Widget> createStarList(List<Star> list) {
-    return list.map((star) => 
-      GestureDetector(
-        child: star.icon,
-        onTap: () { 
-          starProvider.toggleStar(star);
-        }
-      )
-    ).toList();
+    return list
+        .map((star) => GestureDetector(
+            child: star.icon,
+            onTap: () {
+              starProvider.toggleStar(star);
+            }))
+        .toList();
+  }
+}
+
+class QuickTipAmounts extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var amountState = Provider.of<AmountProvider>(context);
+
+    return Container(
+        child: Row(
+      children: <Widget>[
+        for (int i = 15; i < 25; i += 5)
+          RaisedButton(
+            onPressed: () {
+              amountState.setTip(-2);
+            },
+            child: Text(
+              i.toString(),
+            ),
+          )
+      ],
+    ));
   }
 }
