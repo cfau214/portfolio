@@ -105,18 +105,30 @@ class QuickTipAmounts extends StatelessWidget {
     var amountState = Provider.of<AmountProvider>(context);
 
     return Container(
-        child: Row(
-      children: <Widget>[
-        for (int i = 15; i < 25; i += 5)
-          RaisedButton(
-            onPressed: () {
-              amountState.setTip(-2);
-            },
-            child: Text(
-              i.toString(),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Text('Quick Tips: '),
+          for (int i = 15; i < 25; i += 5)
+            ButtonTheme(
+              minWidth: 70,
+              child: RaisedButton(
+                elevation: 8,
+                padding: EdgeInsets.all(0),
+                color: Colors.lightBlueAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(16))),
+                child: Text(
+                  i.toString(),
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () {
+                  amountState.setTip(i);
+                },
+              ),
             ),
-          )
-      ],
-    ));
+        ],
+      ),
+    );
   }
 }

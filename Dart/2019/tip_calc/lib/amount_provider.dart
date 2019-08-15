@@ -6,8 +6,7 @@ import 'package:intl/intl.dart';
 /// This class is a provider that allows outside widgets to access and modify [_amount].
 ///
 ///
-/// * [_amount] - The tip amount entered.
-/// * [getAmount] - Returns the current amount entered.
+/// * [amount] - The tip amount entered.
 /// * [getAmountAsString] - Returns current amount parsed as a formatted string.
 ///
 /// * [addAmount] - Appends the last button pressed to the end of current amount and shifts the decimal one place.
@@ -48,6 +47,7 @@ class AmountProvider with ChangeNotifier {
 
   clear() {
     amount = 0;
+    tipPercent = 0.15;
     notifyListeners();
   }
 }
