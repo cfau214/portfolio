@@ -228,7 +228,7 @@ class _GrandTotalState extends State<GrandTotal> {
     return Card(
       elevation: 8,
       color: Colors.lightBlueAccent,
-      margin: EdgeInsets.only(left: 42, right: 42, top: 80, bottom: 80),
+      margin: EdgeInsets.only(left: 42, right: 42, top: 100, bottom: 100),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
