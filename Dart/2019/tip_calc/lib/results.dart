@@ -37,12 +37,10 @@ class ResultsBody extends StatelessWidget {
           flex: 1,
           child: Totals(),
         ),
-        Divider(height: 60),
         Expanded(
           flex: 4,
           child: GrandTotal(),
         ),
-        Divider(height: 50),
       ],
     );
   }
@@ -230,7 +228,7 @@ class _GrandTotalState extends State<GrandTotal> {
     return Card(
       elevation: 8,
       color: Colors.lightBlueAccent,
-      margin: EdgeInsets.only(left: 42, right: 42, top: 60, bottom: 60),
+      margin: EdgeInsets.only(left: 42, right: 42, top: 80, bottom: 80),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
