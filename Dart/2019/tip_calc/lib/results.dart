@@ -26,17 +26,29 @@ class ResultsBody extends StatelessWidget {
               child: TopBar(),
             ),
             // Calculator Buttons
+            // Expanded(
+            //   flex: 2,
+            //   child: ServiceBody(),
+            // ),
             Expanded(
-              flex: 2,
-              child: ServiceBody(),
+              flex: 3,
+              child: QuickTipAmounts(),
             ),
             Expanded(
-              flex: 2,
-              child: QuickTipAmounts(),
+              flex: 1,
+              child: TotalsLabels(),
+            ),
+            Expanded(
+              flex: 1,
+              child: Totals(),
+            ),
+            Expanded(
+              flex: 1,
+              child: GrandTotal(),
             ),
             // Divider
             Expanded(
-              flex: 7,
+              flex: 3,
               child: Divider(),
             ),
             // Bottom Bar
@@ -133,6 +145,96 @@ class QuickTipAmounts extends StatelessWidget {
             ),
         ],
       ),
+    );
+  }
+}
+
+class TotalsLabels extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var textStyle = TextStyle(
+      fontStyle: FontStyle.italic,
+    );
+
+    return Container(
+      child: Row(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.only(left: 70),
+            child: Text(
+              'Bill Amount',
+              style: textStyle,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 130),
+            child: Text(
+              'Plus Tip',
+              style: textStyle,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Totals extends StatefulWidget {
+  @override
+  _TotalsState createState() => _TotalsState();
+}
+
+class _TotalsState extends State<Totals> {
+  @override
+  Widget build(BuildContext context) {
+    var amountState = Provider.of<AmountProvider>(context);
+    var textStyle = TextStyle(
+      fontSize: 32,
+      fontStyle: FontStyle.italic,
+    );
+
+    return Row(
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.only(left: 60),
+          child: Text(
+            '${amountState.getAmountAsString}',
+            style: textStyle,
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 35),
+          child: Text('+'),
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 40),
+          child: Text(
+            '${amountState.getTipAmount.toStringAsFixed(2)}',
+            style: textStyle,
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 5),
+          child: Text(
+            '(@ ${amountState.tipPercent * 100}%)',
+            style: TextStyle(fontSize: 12),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class GrandTotal extends StatefulWidget {
+  @override
+  _GrandTotalState createState() => _GrandTotalState();
+}
+
+class _GrandTotalState extends State<GrandTotal> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
     );
   }
 }

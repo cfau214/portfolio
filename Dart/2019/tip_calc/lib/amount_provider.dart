@@ -24,7 +24,7 @@ class AmountProvider with ChangeNotifier {
   num tipPercent = 0.15;
 
   String get getAmountAsString => numFormatter.format(amount);
-  num get calculateTip => amount * tipPercent;
+  num get getTipAmount => amount * tipPercent;
   num get totalBill => amount += amount * tipPercent;
 
   _isUnderMaxLength() => amount.toStringAsFixed(2).length < 8;
