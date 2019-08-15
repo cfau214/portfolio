@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'results.dart';
@@ -56,6 +57,7 @@ class ButtonRow extends StatelessWidget {
                       flex: 1,
                       child: OutlineButton(
                         onPressed: () {
+                          HapticFeedback.vibrate();
                           buttonAction(button, context);
                         },
 

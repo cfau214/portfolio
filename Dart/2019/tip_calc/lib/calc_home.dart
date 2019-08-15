@@ -99,7 +99,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 40,
       child: Container(color: Colors.lightBlue),
     );
   }
