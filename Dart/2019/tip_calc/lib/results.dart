@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tip_calc/calc_home.dart';
 
-import 'star_manager.dart';
+// import 'star_manager.dart';
 import 'amount_provider.dart';
 
 class Results extends StatelessWidget {
@@ -15,91 +14,89 @@ class Results extends StatelessWidget {
 class ResultsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ChangeNotifierProvider<StarManager>(
-        builder: (_) => StarManager(),
-        child: Column(
-          children: <Widget>[
-            // Expanded(
-            //   flex: 2,
-            //   child: ServiceBody(),
-            // ),
-            Divider(height: 50),
-            Expanded(
-              flex: 3,
-              child: QuickTipAmounts(),
-            ),
-            Expanded(
-              flex: 1,
-              child: TotalsLabels(),
-            ),
-            Expanded(
-              flex: 1,
-              child: Totals(),
-            ),
-            Divider(height: 60),
-            Expanded(
-              flex: 4,
-              child: GrandTotal(),
-            ),
-            Divider(height: 50),
-          ],
+    // return Container(
+    //   child: ChangeNotifierProvider<StarManager>(
+    //     builder: (_) => StarManager(), child:
+    return Column(
+      children: <Widget>[
+        // Expanded(
+        //   flex: 2,
+        //   child: ServiceBody(),
+        // ),
+        Divider(height: 50),
+        Expanded(
+          flex: 3,
+          child: QuickTipAmounts(),
         ),
-      ),
+        Expanded(
+          flex: 1,
+          child: TotalsLabels(),
+        ),
+        Expanded(
+          flex: 1,
+          child: Totals(),
+        ),
+        Divider(height: 60),
+        Expanded(
+          flex: 4,
+          child: GrandTotal(),
+        ),
+        Divider(height: 50),
+      ],
     );
   }
 }
 
-class ServiceBody extends StatelessWidget {
-  final _waitressPerformance = "How was your service?";
+// class ServiceBody extends StatelessWidget {
+//   final _waitressPerformance = "How was your service?";
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(18),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            flex: 5,
-            child: Text(_waitressPerformance),
-          ),
-          Expanded(
-            flex: 6,
-            child: StarButtonList(),
-          ),
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       padding: EdgeInsets.all(18),
+//       child: Row(
+//         children: <Widget>[
+//           Expanded(
+//             flex: 5,
+//             child: Text(_waitressPerformance),
+//           ),
+//           Expanded(
+//             flex: 6,
+//             child: StarButtonList(),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
-class StarButtonList extends StatefulWidget {
-  @override
-  _StarButtonListState createState() => _StarButtonListState();
-}
+// class StarButtonList extends StatefulWidget {
+//   @override
+//   _StarButtonListState createState() => _StarButtonListState();
+// }
 
-class _StarButtonListState extends State<StarButtonList> {
-  StarManager starProvider;
+// class _StarButtonListState extends State<StarButtonList> {
+//   StarManager starProvider;
 
-  @override
-  Widget build(BuildContext context) {
-    starProvider = Provider.of<StarManager>(context);
+//   @override
+//   Widget build(BuildContext context) {
+//     starProvider = Provider.of<StarManager>(context);
 
-    return Row(
-      children: <Widget>[...createStarList(starProvider.starList)],
-    );
-  }
+//     return Row(
+//       children: <Widget>[...createStarList(starProvider.starList)],
+//     );
+//   }
 
-  List<Widget> createStarList(List<Star> list) {
-    return list
-        .map((star) => GestureDetector(
-            child: star.icon,
-            onTap: () {
-              starProvider.toggleStar(star);
-            }))
-        .toList();
-  }
-}
+//   List<Widget> createStarList(List<Star> list) {
+//     return list
+//         .map((star) => GestureDetector(
+//             child: star.icon,
+//             onTap: () {
+//               starProvider.toggleStar(star);
+//             }))
+//         .toList();
+//   }
+// }
 
 class QuickTipAmounts extends StatelessWidget {
   @override
@@ -113,7 +110,8 @@ class QuickTipAmounts extends StatelessWidget {
           Text('Quick Tips: '),
           for (int i = 15; i <= 25; i += 5)
             ButtonTheme(
-              minWidth: 70,
+              minWidth: 80,
+              height: 50,
               child: RaisedButton(
                 elevation: 8,
                 padding: EdgeInsets.all(0),
@@ -157,7 +155,7 @@ class TotalsLabels extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 120),
+            margin: EdgeInsets.only(left: 150),
             child: Text(
               'Plus Tip',
               style: textStyle,
@@ -194,11 +192,11 @@ class _TotalsState extends State<Totals> {
             style: textStyle,
           ),
         ),
-        Divider(indent: 20),
+        Divider(indent: 25),
         SizedBox(
           child: Text('+'),
         ),
-        Divider(indent: 30),
+        Divider(indent: 50),
         SizedBox(
           child: Text(
             '${amountState.getTipAmount.toStringAsFixed(2)}',
@@ -230,7 +228,7 @@ class _GrandTotalState extends State<GrandTotal> {
     return Card(
       elevation: 8,
       color: Colors.lightBlueAccent,
-      margin: EdgeInsets.only(left: 42, right: 42, top: 24, bottom: 24),
+      margin: EdgeInsets.only(left: 42, right: 42, top: 42, bottom: 42),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
