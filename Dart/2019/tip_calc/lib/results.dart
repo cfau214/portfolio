@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-// import 'star_manager.dart';
 import 'amount_provider.dart';
 
 class Results extends StatelessWidget {
@@ -15,15 +14,9 @@ class Results extends StatelessWidget {
 class ResultsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // return Container(
-    //   child: ChangeNotifierProvider<StarManager>(
-    //     builder: (_) => StarManager(), child:
+
     return Column(
       children: <Widget>[
-        // Expanded(
-        //   flex: 2,
-        //   child: ServiceBody(),
-        // ),
         Divider(height: 50),
         Expanded(
           flex: 3,
@@ -45,57 +38,6 @@ class ResultsBody extends StatelessWidget {
     );
   }
 }
-
-// class ServiceBody extends StatelessWidget {
-//   final _waitressPerformance = "How was your service?";
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: EdgeInsets.all(18),
-//       child: Row(
-//         children: <Widget>[
-//           Expanded(
-//             flex: 5,
-//             child: Text(_waitressPerformance),
-//           ),
-//           Expanded(
-//             flex: 6,
-//             child: StarButtonList(),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-// class StarButtonList extends StatefulWidget {
-//   @override
-//   _StarButtonListState createState() => _StarButtonListState();
-// }
-
-// class _StarButtonListState extends State<StarButtonList> {
-//   StarManager starProvider;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     starProvider = Provider.of<StarManager>(context);
-
-//     return Row(
-//       children: <Widget>[...createStarList(starProvider.starList)],
-//     );
-//   }
-
-//   List<Widget> createStarList(List<Star> list) {
-//     return list
-//         .map((star) => GestureDetector(
-//             child: star.icon,
-//             onTap: () {
-//               starProvider.toggleStar(star);
-//             }))
-//         .toList();
-//   }
-// }
 
 class QuickTipAmounts extends StatelessWidget {
   @override
@@ -227,13 +169,14 @@ class _GrandTotalState extends State<GrandTotal> {
 
     return Card(
       elevation: 8,
-      color: Colors.lightBlueAccent,
-      margin: EdgeInsets.only(left: 42, right: 42, top: 100, bottom: 100),
+      color: Colors.indigoAccent,
+      margin: EdgeInsets.only(left: 42, right: 42, top: 140, bottom: 140),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          
           Container(
             alignment: Alignment.center,
             child: Text(

@@ -31,12 +31,12 @@ class _CalcBodyState extends State<CalcBody> {
         children: <Widget>[
           // Top Bar - Flex should be 25% of total column
           Expanded(
-            flex: 3,
+            flex: 4,
             child: TopBar(),
           ),
           // Calculator Buttons
           Expanded(
-            flex: 9,
+            flex: 10,
             child: CalcButtons(),
           ),
           // Bottom Bar

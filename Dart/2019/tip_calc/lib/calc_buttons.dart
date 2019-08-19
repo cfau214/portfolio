@@ -7,6 +7,9 @@ import 'results.dart';
 import 'amount_provider.dart';
 import 'buttons.dart';
 
+_navResults(BuildContext context) {
+  Navigator.push(context, MaterialPageRoute(builder: (_) => Results()));
+}
 /// CalcButtons creates the layout for the calculator.
 ///
 /// * [rowOne] - Buttons 7-9
@@ -56,6 +59,7 @@ class ButtonRow extends StatelessWidget {
                 .map((button) => Expanded(
                       flex: 1,
                       child: OutlineButton(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                         onPressed: () {
                           HapticFeedback.vibrate();
                           buttonAction(button, context);
@@ -131,10 +135,7 @@ class ButtonRow extends StatelessWidget {
         break;
 
       case Buttons.calculate:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => Results()),
-        );
+        _navResults(context);
         break;
 
       default:
