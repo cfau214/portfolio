@@ -7,34 +7,44 @@ import 'amount_provider.dart';
 class Results extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: ResultsBody());
+    return Scaffold(
+      body: Center(
+        child: ResultsBody(),
+      ),
+    );
   }
 }
 
 class ResultsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-    return Column(
-      children: <Widget>[
-        Divider(height: 50),
-        Expanded(
-          flex: 3,
-          child: QuickTipAmounts(),
-        ),
-        Expanded(
-          flex: 1,
-          child: TotalsLabels(),
-        ),
-        Expanded(
-          flex: 1,
-          child: Totals(),
-        ),
-        Expanded(
-          flex: 4,
-          child: GrandTotal(),
-        ),
-      ],
+    return Container(
+      padding: EdgeInsets.only(left: 30, right: 30),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Spacer(flex: 3),
+          Expanded(
+            flex: 3,
+            child: QuickTipAmounts(),
+          ),
+          Spacer(flex: 2),
+          Expanded(
+            flex: 1,
+            child: TotalsLabels(),
+          ),
+          Expanded(
+            flex: 3,
+            child: Totals(),
+          ),
+          Spacer(flex: 2),
+          Expanded(
+            flex: 3,
+            child: GrandTotal(),
+          ),
+          Spacer(flex: 3)
+        ],
+      ),
     );
   }
 }
@@ -88,20 +98,15 @@ class TotalsLabels extends StatelessWidget {
 
     return Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.only(left: 70),
-            child: Text(
-              'Bill Amount',
-              style: textStyle,
-            ),
+          Text(
+            'Bill Amount',
+            style: textStyle,
           ),
-          Container(
-            margin: EdgeInsets.only(left: 150),
-            child: Text(
-              'Plus Tip',
-              style: textStyle,
-            ),
+          Text(
+            'Plus Tip',
+            style: textStyle,
           ),
         ],
       ),
@@ -124,33 +129,30 @@ class _TotalsState extends State<Totals> {
     );
 
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Divider(indent: 30),
-        SizedBox(
-          width: 150,
+        Padding(
+          padding: EdgeInsets.only(left: 20, right: 20),
           child: Text(
             '${amountState.getAmountAsString}',
             textAlign: TextAlign.center,
             style: textStyle,
           ),
         ),
-        Divider(indent: 25),
-        SizedBox(
+        Padding(
+          padding: EdgeInsets.only(left: 20, right: 20),
           child: Text('+'),
         ),
-        Divider(indent: 50),
-        SizedBox(
+        Padding(
+          padding: EdgeInsets.only(left: 20),
           child: Text(
             '${amountState.getTipAmount.toStringAsFixed(2)}',
             style: textStyle,
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(left: 5),
-          child: Text(
-            '(@ ${amountState.tipPercent * 100}%)',
-            style: TextStyle(fontSize: 12),
-          ),
+        Text(
+          '(@ ${amountState.tipPercent * 100}%)',
+          style: TextStyle(fontSize: 12),
         ),
       ],
     );
@@ -170,37 +172,28 @@ class _GrandTotalState extends State<GrandTotal> {
     return Card(
       elevation: 8,
       color: Colors.indigoAccent,
-      margin: EdgeInsets.only(left: 42, right: 42, top: 140, bottom: 140),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          
-          Container(
-            alignment: Alignment.center,
-            child: Text(
-              'Total: ',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 24,
-                fontStyle: FontStyle.italic,
-                color: Colors.white,
-              ),
+          Text(
+            'Total: ',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 24,
+              fontStyle: FontStyle.italic,
+              color: Colors.white,
             ),
           ),
-          Container(
-            alignment: Alignment.center,
-            child: Text(
-              '\$${amountState.totalBill.toStringAsFixed(2)}',
-              style: TextStyle(
-                fontSize: 40,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w600,
-                color: Colors.white,
-              ),
+          Text(
+            '\$${amountState.totalBill.toStringAsFixed(2)}',
+            style: TextStyle(
+              fontSize: 40,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
             ),
-          )
+          ),
         ],
       ),
     );
