@@ -12,7 +12,7 @@ class ManagerSplash extends StatelessWidget {
             child: Icon(
               Icons.home,
               size: 100,
-              color: Colors.lightBlue,
+              color: Colors.white,
             ),
             onPressed: () => {
                   Navigator.pop(context),

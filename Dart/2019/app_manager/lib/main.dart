@@ -9,6 +9,12 @@ final ThemeData _themeData = ThemeData(
   brightness: Brightness.light,
   primarySwatch: Colors.lightBlue,
   accentColor: Colors.lightBlueAccent,
+  primaryTextTheme: Typography.whiteCupertino,
+  textTheme: Typography.whiteCupertino,
+  buttonTheme: ButtonThemeData(
+    buttonColor: Colors.lightBlue,
+    textTheme: ButtonTextTheme.normal,
+  ),
 );
 
 class MyApp extends StatelessWidget {
@@ -18,9 +24,9 @@ class MyApp extends StatelessWidget {
       title: 'App Manager',
       theme: _themeData,
       home: ManagerSplash(),
-      routes: <String, WidgetBuilder> {
-        '/home' : (BuildContext context) => ManagerHome(),
-        '/tipCalculator' : (BuildContext context) => TipCalculator(),
+      routes: <String, WidgetBuilder>{
+        '/home': (BuildContext context) => ManagerHome(),
+        '/tipCalculator': (BuildContext context) => TipCalculator(),
       },
     );
   }
