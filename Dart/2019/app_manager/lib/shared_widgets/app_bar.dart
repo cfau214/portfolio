@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-Widget defaultAppBar() {
+Widget namedAppBar(String title) {
   return AppBar(
-    title: Text('App Manager'),
+    title: Text(title),
   );
 }

@@ -5,16 +5,16 @@ class ManagerSplash extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
-            elevation: 8,
-            child: Icon(
-              Icons.home,
-              size: 100,
-              color: Colors.white,
-            ),
-            onPressed: () => {
-                  Navigator.pushReplacementNamed(context, '/home'),
-                }),
+        child: IconButton(
+          alignment: Alignment.center,
+          padding: EdgeInsets.zero,
+          icon: Icon(Icons.home),
+          iconSize: 100,
+          color: Colors.lightBlue,
+          onPressed: () => {
+            Navigator.pushReplacementNamed(context, '/home'),
+          },
+        ),
       ),
     );
   }
