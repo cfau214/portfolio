@@ -59,7 +59,7 @@ class QuickTipAmounts extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text('Quick Tips: '),
-          for (int i = 15; i <= 25; i += 5)
+          for (int i in [15, 18, 20])
             ButtonTheme(
               minWidth: 80,
               height: 50,

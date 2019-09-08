@@ -11,8 +11,6 @@ import 'package:app_manager/navigator.dart';
 class ManagerHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    TextStyle _drawerStyle = TextStyle(color: Colors.black);
-
     return Scaffold(
       appBar: namedAppBar('App Manager'),
       body: ManagerHomeBody(),
@@ -20,9 +18,9 @@ class ManagerHome extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             DrawerHeader(
-              child: Text('Test Header', style: _drawerStyle),
+              child: Text('Test Header'),
             ),
-            ListTile(title: Text('Test Title', style: _drawerStyle)),
+            ListTile(title: Text('Test Title')),
           ],
         ),
       ),

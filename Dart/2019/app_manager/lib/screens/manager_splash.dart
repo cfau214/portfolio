@@ -10,9 +10,8 @@ class ManagerSplash extends StatelessWidget {
           padding: EdgeInsets.zero,
           icon: Icon(Icons.home),
           iconSize: 100,
-          color: Colors.lightBlue,
           onPressed: () => {
-            Navigator.pushReplacementNamed(context, '/home'),
+            Navigator.pushNamed(context, '/home'),
           },
         ),
       ),
