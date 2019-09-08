@@ -17,3 +17,15 @@ final ThemeData dark = ThemeData(
   ),
   iconTheme: IconThemeData(color: Colors.white)
 );
+
+class ThemeProvider with ChangeNotifier {
+  ThemeProvider();
+
+  bool value = false;
+  get theme => value == false ? light : dark;
+
+  toggleValue() {
+    value = !value;
+    notifyListeners();
+  }
+}

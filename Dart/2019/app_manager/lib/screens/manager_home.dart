@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:app_manager/shared_widgets/app_bar.dart';
 import 'package:app_manager/navigator.dart';
 
@@ -12,7 +13,7 @@ class ManagerHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: namedAppBar('App Manager'),
+      appBar: namedAppBar('App Manager', context),
       body: ManagerHomeBody(),
       drawer: Drawer(
         child: ListView(
