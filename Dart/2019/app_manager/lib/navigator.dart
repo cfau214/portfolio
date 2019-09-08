@@ -4,8 +4,11 @@ import 'screens/manager_home.dart';
 import 'apps/tip_calc/tip_calculator.dart';
 
 class MyNavigator {
+  static var home = '/home';
+  static var tipCalculator = '/tipCalculator';
+
   static var routes = <String, WidgetBuilder>{
-    '/home': (BuildContext context) => ManagerHome(),
-    '/tipCalculator': (BuildContext context) => TipCalculator(),
+    home : (BuildContext context) => ManagerHome(),
+    tipCalculator : (BuildContext context) => TipCalculator(),
   };
 }

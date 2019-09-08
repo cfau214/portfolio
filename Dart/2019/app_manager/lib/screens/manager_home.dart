@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_manager/shared_widgets/app_bar.dart';
+import 'package:app_manager/navigator.dart';
 
 //TODO:
 // [x] - Update Tip calculator to use new appBar
@@ -45,7 +46,7 @@ class ManagerHomeBody extends StatelessWidget {
             ),
             iconSize: 70,
             onPressed: () {
-              Navigator.pushNamed(context, '/tipCalculator');
+              Navigator.pushNamed(context, MyNavigator.tipCalculator);
             },
           ),
         ),
