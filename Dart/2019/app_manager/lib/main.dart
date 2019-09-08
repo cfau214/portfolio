@@ -1,7 +1,6 @@
+import 'package:app_manager/navigator.dart';
 import 'package:flutter/material.dart';
 import 'screens/manager_splash.dart';
-import 'screens/manager_home.dart';
-import 'apps/tip_calc/tip_calculator.dart';
 
 main() => runApp(MyApp());
 
@@ -24,10 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'App Manager',
       theme: _themeData,
       home: ManagerSplash(),
-      routes: <String, WidgetBuilder>{
-        '/home': (BuildContext context) => ManagerHome(),
-        '/tipCalculator': (BuildContext context) => TipCalculator(),
-      },
+      routes: MyNavigator.routes,
     );
   }
 }
