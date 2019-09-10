@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "856113803014",
+    "firebase_url": "https://cocktails-app-87ba8.firebaseio.com",
+    "project_id": "cocktails-app-87ba8",
+    "storage_bucket": "cocktails-app-87ba8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856113803014:android:3dc50709e47d5d736a7887",
+        "android_client_info": {
+          "package_name": "com.cf.cocktails"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856113803014-5r8ei7dgootbor7gisdkmeck5818fug7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd9iImPdfrWvvp7nG-i4Unmyl5WlCua2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856113803014-5r8ei7dgootbor7gisdkmeck5818fug7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
