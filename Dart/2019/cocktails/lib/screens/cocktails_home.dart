@@ -37,14 +37,15 @@ class _CocktailsBodyState extends State<CocktailsBody> {
   Widget _buildGridView(
       BuildContext context, List<DocumentSnapshot> snapshots) {
     return GridView.count(
-        crossAxisCount: 3,
-        padding: EdgeInsets.all(10),
-        children: snapshots.map((data) => _buildGridItem(context, data)));
+      crossAxisCount: 3,
+      padding: EdgeInsets.all(10),
+      children: snapshots.map((data) => _buildGridItem(context, data)).toList(),
+    );
   }
 
   Widget _buildGridItem(BuildContext context, DocumentSnapshot data) {
     final record = Record.fromSnapshot(data);
 
-    return GridTile(child: Text('Test'));
+    return GridTile(child: Text(record.toString()));
   }
 }

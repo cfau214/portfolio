@@ -5,9 +5,9 @@ class Record {
   final String description;
   final DocumentReference reference;
 
-  final Map<String, int> measurements;
+  final Map<dynamic, dynamic> measurements;
 
-  Record.fromMap(Map<String, dynamic> map, {this.reference})
+  Record.fromMap(Map<dynamic, dynamic> map, {this.reference})
     : assert(map['name'] != null),
       assert(map['description'] != null),
       assert(map['measurements'] != null),
@@ -18,6 +18,5 @@ class Record {
   Record.fromSnapshot(DocumentSnapshot snapshot)
     : this.fromMap(snapshot.data, reference: snapshot.reference);
 
-  
   @override toString() => '$name - $description';
 }
