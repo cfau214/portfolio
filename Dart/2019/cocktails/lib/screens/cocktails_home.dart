@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cocktails/database/record.dart';
 
+//TODO:
+// [x] - Store images on cloud.
+// [x] - Get images from cloud and use them in app.
+// [x] - On tap of each cocktail, move to new detailed screen that has more detailed info, such as measurements and instructions.
+// [x] - Home should have grid of pictures with cocktail name only. Description on detailed page.
+// [x] - Can we design with Hero transition in mind?
+
 class CocktailsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
