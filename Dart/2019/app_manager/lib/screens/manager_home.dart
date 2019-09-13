@@ -6,8 +6,9 @@ import 'package:app_manager/navigator.dart';
 //TODO:
 // [x] - Update Tip calculator to use new appBar
 // [x] - Fix overflow issues on tip calc.
-// [x] - Add Switch widget for dynamic theme
-// [x] - Custom appBar with Drawer that can be added to all new apps.
+// [x] - Add calculator app?
+// [x] - Make more apps!!
+// [x] - Cocktails app -> Change appBar to use shared appBar after moving to this project.
 
 class ManagerHome extends StatelessWidget {
   @override
