@@ -18,5 +18,5 @@ class Record {
   Record.fromSnapshot(DocumentSnapshot snapshot)
     : this.fromMap(snapshot.data, reference: snapshot.reference);
 
-  @override toString() => '$name - $description';
+  @override toString() => '$name\n$description';
 }

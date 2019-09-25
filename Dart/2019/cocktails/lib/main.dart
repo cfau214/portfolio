@@ -14,6 +14,7 @@ class CocktailsApp extends StatelessWidget {
 }
 
 //TODO: 
+// [x] - Create Navigator for this app.
 // [x] - Create list of cocktails with images.
 // [x] - Add cocktails to database.
 // [x] - Retrieve all cocktails from database and display as text widget.
