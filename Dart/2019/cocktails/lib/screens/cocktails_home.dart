@@ -109,9 +109,6 @@ class _CustomGridItemState extends State<CustomGridItem> {
       child: GridTile(
         child: Stack(
           children: <Widget>[
-            // record.imageUrl == null
-            //     ? CircularProgressIndicator()
-            //     :
             Center(
               child: imageUrl == null
                   ? CircularProgressIndicator()
@@ -120,16 +117,13 @@ class _CustomGridItemState extends State<CustomGridItem> {
                       errorWidget: (context, url, error) => Icon(Icons.error),
                       fit: BoxFit.fill,
                       fadeInDuration: Duration(seconds: 1),
-                      height: double.infinity,
-                      width: double.infinity,
                     ),
             ),
-            // : Image.network(imageUrl),
             Container(
               alignment: Alignment.bottomCenter,
               child: Card(
                 elevation: 8,
-                color: Colors.lightBlue,
+                color: Colors.black,
                 child: Text(
                   record.name,
                   style: TextStyle(
