@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cocktails/database/record.dart';
@@ -108,20 +109,35 @@ class _CustomGridItemState extends State<CustomGridItem> {
       child: GridTile(
         child: Stack(
           children: <Widget>[
-            record.imageUrl == null
-                ? CircularProgressIndicator()
-                : Image.network(imageUrl),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
+            // record.imageUrl == null
+            //     ? CircularProgressIndicator()
+            //     :
+            Center(
+              child: imageUrl == null
+                  ? CircularProgressIndicator()
+                  : CachedNetworkImage(
+                      imageUrl: imageUrl,
+                      errorWidget: (context, url, error) => Icon(Icons.error),
+                      fit: BoxFit.fill,
+                      fadeInDuration: Duration(seconds: 1),
+                      height: double.infinity,
+                      width: double.infinity,
+                    ),
+            ),
+            // : Image.network(imageUrl),
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: Card(
+                elevation: 8,
+                color: Colors.lightBlue,
+                child: Text(
                   record.name,
                   style: TextStyle(
-                    color: Colors.lightBlue,
+                    color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
-              ],
+              ),
             ),
           ],
         ),
@@ -138,44 +154,3 @@ class _CustomGridItemState extends State<CustomGridItem> {
         });
   }
 }
-
-// Widget _buildGridView(
-//     BuildContext context, List<DocumentSnapshot> snapshots) {
-//   return GridView.count(
-//     crossAxisCount: 3,
-//     padding: EdgeInsets.all(20),
-//     children: snapshots.map((data) => _buildGridItem(context, data)).toList(),
-//   );
-// }
-
-// Widget _buildGridItem(BuildContext context, DocumentSnapshot data) {
-//   final record = Record.fromSnapshot(data);
-
-//   return InkWell(
-//     onTap: () {
-//       debugPrint('Tapped ${record.name}');
-//     },
-//     child: GridTile(
-//       child: Stack(
-//         children: <Widget>[
-//           record.imageUrl == null
-//               ? CircularProgressIndicator()
-//               : Image.network(record.imageUrl),
-//           Column(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: <Widget>[
-//               Text(
-//                 record.name,
-//                 style: TextStyle(
-//                   color: Colors.lightBlue,
-//                   fontSize: 18,
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ],
-//       ),
-//     ),
-//   );
-// }
-// }
