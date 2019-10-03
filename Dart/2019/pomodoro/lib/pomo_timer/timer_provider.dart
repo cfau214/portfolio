@@ -10,8 +10,8 @@ class TimerProvider with ChangeNotifier {
   Timer _timer;
 
   TimerProvider()
-      : minutes = 0,
-        seconds = 5,
+      : minutes = 25,
+        seconds = 0,
         _isActive = false;
 
   // START
