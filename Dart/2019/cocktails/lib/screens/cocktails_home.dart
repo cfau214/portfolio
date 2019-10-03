@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cocktails/database/record.dart';
@@ -39,42 +40,111 @@ class _CocktailsBodyState extends State<CocktailsBody> {
 
         // If snapshot does not have any data, show progress bar. Otherwise show grid view with list of cocktails.
         return snapshot.hasData
-            ? _buildGridView(context, snapshot.data.documents)
+            ? CustomGridView(snapshots: snapshot.data.documents)
             : LinearProgressIndicator();
       },
     );
   }
+}
 
-  Widget _buildGridView(
-      BuildContext context, List<DocumentSnapshot> snapshots) {
+class CustomGridView extends StatefulWidget {
+  final List<DocumentSnapshot> snapshots;
+
+  CustomGridView({
+    Key key,
+    @required this.snapshots,
+  }) : super(key: key);
+
+  @override
+  _CustomGridViewState createState() => _CustomGridViewState();
+}
+
+class _CustomGridViewState extends State<CustomGridView> {
+  // Must override State's get widget function and return super.widget to use variables defined in state class.
+  @override
+  CustomGridView get widget => super.widget;
+
+  @override
+  Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 3,
       padding: EdgeInsets.all(20),
-      children: snapshots.map((data) => _buildGridItem(context, data)).toList(),
+      children:
+          widget.snapshots.map((data) => CustomGridItem(data: data)).toList(),
     );
   }
+}
 
-  Widget _buildGridItem(BuildContext context, DocumentSnapshot data) {
-    final record = Record.fromSnapshot(data);
+class CustomGridItem extends StatefulWidget {
+  final DocumentSnapshot data;
 
+  CustomGridItem({
+    Key key,
+    @required this.data,
+  });
+
+  @override
+  _CustomGridItemState createState() => _CustomGridItemState();
+}
+
+class _CustomGridItemState extends State<CustomGridItem> {
+  @override
+  CustomGridItem get widget => super.widget;
+  Record record;
+  String imageUrl;
+
+  @override
+  void initState() {
+    _loadAsyncData();
+
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         debugPrint('Tapped ${record.name}');
       },
       child: GridTile(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
           children: <Widget>[
-            Text(
-              record.name,
-              style: TextStyle(
-                color: Colors.lightBlue,
-                fontSize: 18,
+            Center(
+              child: imageUrl == null
+                  ? CircularProgressIndicator()
+                  : CachedNetworkImage(
+                      imageUrl: imageUrl,
+                      errorWidget: (context, url, error) => Icon(Icons.error),
+                      fit: BoxFit.fill,
+                      fadeInDuration: Duration(seconds: 1),
+                    ),
+            ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: Card(
+                elevation: 8,
+                color: Colors.black,
+                child: Text(
+                  record.name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
               ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  _loadAsyncData() async {
+    record = Record.fromSnapshot(widget.data);
+    record.imageUrl.then((url) => {
+          setState(() => {
+                imageUrl = url,
+              })
+        });
   }
 }
