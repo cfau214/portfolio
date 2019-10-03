@@ -19,7 +19,7 @@ class PomodoroBody extends StatefulWidget {
 }
 
 class _PomodoroBodyState extends State<PomodoroBody> {
-  bool isRunning = false;
+  bool isRunning = true;
   // bool shouldReset = false;
 
   @override
