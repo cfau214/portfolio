@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pomodoro/pomo_timer/pomo_timer.dart';
+import 'package:provider/provider.dart';
+import 'package:pomodoro/pomo_timer/timer_provider.dart';
 
 class PomodoroHome extends StatelessWidget {
   @override
@@ -8,7 +9,10 @@ class PomodoroHome extends StatelessWidget {
       appBar: AppBar(
         title: Text('Pomodoro Timer'),
       ),
-      body: PomodoroBody(),
+      body: ChangeNotifierProvider<TimerProvider>(
+        builder: (_) => TimerProvider(),
+        child: PomodoroBody(),
+      ),
     );
   }
 }
@@ -19,57 +23,61 @@ class PomodoroBody extends StatefulWidget {
 }
 
 class _PomodoroBodyState extends State<PomodoroBody> {
-  bool isRunning = false;
-  // bool shouldReset = false;
+  TimerProvider provider;
+  String time;
+
+  var _textStyle = TextStyle(fontSize: 26);
 
   @override
   Widget build(BuildContext context) {
+    provider = Provider.of<TimerProvider>(context);
+    assert(provider != null);
+
+    time = provider.getTime();
+
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          PomoTimer(
-            isRunning: isRunning,
-            // shouldReset: shouldReset,
+          Container(
+            child: Text(time, style: TextStyle(fontSize: 90)),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              RaisedButton(
-                child: Text('Start'),
-                onPressed: () {
-                  toggleState();
-                },
+              SizedBox(
+                height: 50,
+                width: 150,
+                child: RaisedButton(
+                  elevation: 8,
+                  child: Text('Start', style: _textStyle),
+                  onPressed: () {
+                    provider.start();
+                  },
+                ),
               ),
-              RaisedButton(
-                child: Text('Stop'),
-                onPressed: () {
-                  toggleState();
-                },
+              Container(
+                height: 50,
+                width: 150,
+                child: RaisedButton(
+                  elevation: 8,
+                  child: Text('Stop', style: _textStyle),
+                  onPressed: () {
+                    provider.stop();
+                  },
+                ),
               ),
-              // RaisedButton(
-              //   child: Text('Reset'),
-              //   onPressed: () {
-              //     toggleState();
-              //     reset();
-              //   },
-              // )
             ],
           ),
+          RaisedButton(
+            elevation: 8,
+            child: Text('Reset', style: _textStyle),
+            onPressed: () {
+              provider.reset();
+            },
+          )
         ],
       ),
     );
   }
-
-  toggleState() {
-    setState(() {
-      isRunning = !isRunning;
-    });
-  }
-
-  // reset() {
-  //   setState(() {
-  //     shouldReset = !shouldReset;
-  //   });
-  // }
 }
