@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter/services.dart';
+
 class PomoTimer extends StatefulWidget {
   final bool isRunning;
   // final bool shouldReset;
@@ -42,6 +44,28 @@ class _PomoTimerState extends State<PomoTimer> {
     );
   }
 
+  startTimer() {
+    Timer.periodic(
+      Duration(seconds: 1),
+      (timer) => {
+        widget.isRunning
+            ? setState(() {
+                seconds--;
+                if (seconds == 0) {
+                  if (minutes == 0) {
+                    timer.cancel();
+                    HapticFeedback.vibrate(); //TODO: Verify Implementation.
+                  } else {
+                    minutes--;
+                    seconds = 60;
+                  }
+                }
+              })
+            : timer.cancel()
+      },
+    );
+  }
+
   String getTime() => getMinutes() + ":" + getSeconds();
 
   String getMinutes() {
@@ -70,26 +94,5 @@ class _PomoTimerState extends State<PomoTimer> {
     }
 
     return ret;
-  }
-
-  startTimer() {
-    Timer.periodic(
-      Duration(seconds: 1),
-      (timer) => {
-        // IMPLEMENT TIMER ALGORITHM
-        setState(() {
-          seconds--;
-          if (seconds == 0) {
-            if (minutes == 0) {
-              timer.cancel();
-              //TODO: Implement anything that happens on cancel. Vibration?
-            } else {
-              minutes--;
-              seconds = 60;
-            }
-          }
-        })
-      },
-    );
   }
 }
