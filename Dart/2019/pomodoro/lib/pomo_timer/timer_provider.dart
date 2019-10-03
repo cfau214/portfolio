@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:vibration/vibration.dart';
 import 'dart:async';
 
 class TimerProvider with ChangeNotifier {
@@ -40,7 +41,13 @@ class TimerProvider with ChangeNotifier {
             if (minutes == 0)
               {
                 stop(),
-                HapticFeedback.vibrate()
+                if (Vibration.hasVibrator() != null)
+                  {
+                    if (Vibration.hasAmplitudeControl() != null)
+                      {Vibration.vibrate(duration: 5000, amplitude: 1024)}
+                    else
+                      {Vibration.vibrate(duration: 5000)}
+                  }
               }
             else
               {
