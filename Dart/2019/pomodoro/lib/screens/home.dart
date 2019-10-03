@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro/pomo_timer/pomo_timer.dart';
 
 class PomodoroHome extends StatelessWidget {
   @override
@@ -12,43 +13,63 @@ class PomodoroHome extends StatelessWidget {
   }
 }
 
-class PomodoroBody extends StatelessWidget {
+class PomodoroBody extends StatefulWidget {
+  @override
+  _PomodoroBodyState createState() => _PomodoroBodyState();
+}
+
+class _PomodoroBodyState extends State<PomodoroBody> {
+  bool isRunning = false;
+  // bool shouldReset = false;
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          PomoTimer(),
+          PomoTimer(
+            isRunning: isRunning,
+            // shouldReset: shouldReset,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               RaisedButton(
                 child: Text('Start'),
-                onPressed: () {},
+                onPressed: () {
+                  toggleState();
+                },
               ),
               RaisedButton(
                 child: Text('Stop'),
-                onPressed: () {},
-              )
+                onPressed: () {
+                  toggleState();
+                },
+              ),
+              // RaisedButton(
+              //   child: Text('Reset'),
+              //   onPressed: () {
+              //     toggleState();
+              //     reset();
+              //   },
+              // )
             ],
           ),
         ],
       ),
     );
   }
-}
 
-class PomoTimer extends StatefulWidget {
-  @override
-  _PomoTimerState createState() => _PomoTimerState();
-}
-
-class _PomoTimerState extends State<PomoTimer> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text('Timer', style: TextStyle(fontSize: 48)),
-    );
+  toggleState() {
+    setState(() {
+      isRunning = !isRunning;
+    });
   }
+
+  // reset() {
+  //   setState(() {
+  //     shouldReset = !shouldReset;
+  //   });
+  // }
 }
