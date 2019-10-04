@@ -4,15 +4,17 @@ import 'package:vibration/vibration.dart';
 import 'dart:async';
 
 class TimerProvider with ChangeNotifier {
-  bool _isActive;
   int minutes;
   int seconds;
+  bool _isActive;
   Timer _timer;
 
   TimerProvider()
       : minutes = 25,
         seconds = 0,
         _isActive = false;
+
+  bool get isActive => _isActive;
 
   // START
   start() {

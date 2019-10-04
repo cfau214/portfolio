@@ -6,9 +6,6 @@ class PomodoroHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Pomodoro Timer'),
-      ),
       body: ChangeNotifierProvider<TimerProvider>(
         builder: (_) => TimerProvider(),
         child: PomodoroBody(),
@@ -46,9 +43,14 @@ class _PomodoroBodyState extends State<PomodoroBody> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               SizedBox(
-                height: 50,
-                width: 150,
+                // height: 50,
+                // width: 150,
+                height: provider.isActive ? 30 : 50,
+                width: provider.isActive ? 130 : 150,
                 child: RaisedButton(
+                  color: provider.isActive
+                      ? Colors.black
+                      : Theme.of(context).buttonTheme.colorScheme,
                   elevation: 8,
                   child: Text('Start', style: _textStyle),
                   onPressed: () {
@@ -60,6 +62,9 @@ class _PomodoroBodyState extends State<PomodoroBody> {
                 height: 50,
                 width: 150,
                 child: RaisedButton(
+                  color: provider.isActive
+                      ? Colors.red
+                      : Theme.of(context).buttonTheme.colorScheme,
                   elevation: 8,
                   child: Text('Stop', style: _textStyle),
                   onPressed: () {
