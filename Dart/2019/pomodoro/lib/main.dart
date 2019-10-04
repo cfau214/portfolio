@@ -8,6 +8,7 @@ class PomodoroApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Pomodoro Timer',
       home: PomodoroHome(),
       theme: themes.light,

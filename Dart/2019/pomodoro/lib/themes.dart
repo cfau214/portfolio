@@ -13,7 +13,7 @@ final ThemeData dark = ThemeData(
     fontFamily: 'FiraCode',
     brightness: Brightness.dark,
     buttonTheme: ButtonThemeData(
-      buttonColor: Colors.grey.shade700,
+      buttonColor: Colors.black,
       textTheme: ButtonTextTheme.normal,
     ),
     iconTheme: IconThemeData(color: Colors.white));
