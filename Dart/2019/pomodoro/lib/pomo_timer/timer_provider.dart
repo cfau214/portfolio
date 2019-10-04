@@ -38,7 +38,7 @@ class TimerProvider with ChangeNotifier {
           },
         _timer = timer,
         seconds--,
-        if (seconds == 0)
+        if (seconds == -1)
           {
             if (minutes == 0)
               {
@@ -54,7 +54,7 @@ class TimerProvider with ChangeNotifier {
             else
               {
                 minutes--,
-                seconds = 60,
+                seconds = 59,
               }
           },
         notifyListeners()

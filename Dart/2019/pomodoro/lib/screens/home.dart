@@ -36,26 +36,37 @@ class _PomodoroBodyState extends State<PomodoroBody> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          SizedBox(height: 20),
           Container(
-            child: Text(time, style: TextStyle(fontSize: 90)),
+            child: Text(
+              time,
+              style: TextStyle(
+                  fontSize: 90,
+                  color: provider.minutes < 1
+                      ? Colors.red
+                      : Theme.of(context).textTheme.title.color),
+            ),
           ),
+          SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              SizedBox(
-                // height: 50,
-                // width: 150,
+              AnimatedContainer(
+                duration: Duration(milliseconds: 200),
                 height: provider.isActive ? 30 : 50,
                 width: provider.isActive ? 130 : 150,
                 child: RaisedButton(
                   color: provider.isActive
                       ? Colors.black
                       : Theme.of(context).buttonTheme.colorScheme,
+                  disabledColor: Colors.black,
                   elevation: 8,
                   child: Text('Start', style: _textStyle),
-                  onPressed: () {
-                    provider.start();
-                  },
+                  onPressed: provider.isActive
+                      ? null
+                      : () {
+                          provider.start();
+                        },
                 ),
               ),
               Container(
