@@ -41,7 +41,7 @@ class TimerProvider with ChangeNotifier {
       seconds = 60;
     }
 
-    new Timer.periodic(
+    Timer.periodic(
       Duration(seconds: 1),
       (timer) => {
         if (minutes == 25)
