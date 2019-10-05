@@ -1,159 +1,96 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:vibration/vibration.dart';
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+import 'package:vibration/vibration.dart';
+
 class TimerProvider with ChangeNotifier {
-  int minutes;
-  int maxMinutes;
-  int seconds;
-  int breakCounter;
-  bool _isActive;
+  Stopwatch _watch;
   Timer _timer;
 
-  static final int _defaultMins = 25;
-  static final int _defaultSeconds = 0;
+  int maxMinutes = 1;
+  int minutes = 1;
+  int seconds = 1;
 
-  TimerProvider()
-      : minutes = _defaultMins,
-        maxMinutes = _defaultMins,
-        seconds = _defaultSeconds,
-        breakCounter = 0,
-        _isActive = false;
+  bool get isActive => _watch.isRunning;
+  bool get isOnBreak => true;
 
-  bool get isActive => _isActive;
-  bool get isOnBreak => maxMinutes == 5 || maxMinutes == 10 ? true : false;
+  Duration get currentDuration => _currentDuration;
+  Duration _currentDuration = Duration.zero;
 
-  // START
-  start() {
-    if (!_isActive) {
-      _startTimer();
-    }
-
-    HapticFeedback.lightImpact();
+  TimerProvider() {
+    _watch = Stopwatch(); // Initialize stopwatch.
+    // minutes = 25;
+    // seconds = 0;
   }
 
-  _startTimer() {
-    _isActive = true;
-
-    if (minutes == 0 && seconds == 0) {
-      minutes = maxMinutes;
-      seconds = 60;
+  _onTick() {
+    _currentDuration = _watch.elapsed;
+    minutes = maxMinutes - _watch.elapsed.inMinutes - 1;
+    seconds = (maxMinutes * 60 - _watch.elapsed.inSeconds) % 60;
+    // if (seconds == 0) {
+    //   if (minutes == 0) {
+    //     stop();
+    //     // updateBreak();
+    //     if (Vibration.hasVibrator() != null) {
+    //       if (Vibration.hasAmplitudeControl() != null) {
+    //         Vibration.vibrate(duration: 5000, amplitude: 1024);
+    //       } else {
+    //         Vibration.vibrate(duration: 5000);
+    //       }
+    //     }
+    //   } else {
+    //     minutes--;
+    //     seconds = 59;
+    //   }
+    // }
+    if (seconds == 0 && minutes == 0) {
+      stop();
+      if (Vibration.hasVibrator() != null) {
+        if (Vibration.hasAmplitudeControl() != null) {
+          Vibration.vibrate(duration: 5000, amplitude: 254);
+        } else {
+          Vibration.vibrate(duration: 5000);
+        }
+      }
+    } else if (minutes == 25) {
+      minutes--;
     }
 
-    Timer.periodic(
-      Duration(seconds: 1),
-      (timer) => {
-        if (minutes == 25)
-          {
-            minutes = 24,
-            seconds = 60,
-          },
-        _timer = timer,
-        seconds--,
-        if (seconds == 0)
-          {
-            if (minutes == 0)
-              {
-                stop(),
-                updateBreak(),
-                if (Vibration.hasVibrator() != null)
-                  {
-                    if (Vibration.hasAmplitudeControl() != null)
-                      {Vibration.vibrate(duration: 5000, amplitude: 1024)}
-                    else
-                      {Vibration.vibrate(duration: 5000)}
-                  }
-              }
-            else
-              {
-                minutes--,
-                seconds = 59,
-              }
-          },
-        notifyListeners()
-      },
-    );
-  }
-
-  // STOP
-  stop() {
-    if (_isActive) {
-      _isActive = false;
-      assert(_timer != null);
-      _timer.cancel();
-    } else {
-      reset();
-    }
-    HapticFeedback.lightImpact();
     notifyListeners();
   }
 
-  // RESET
+  start() {
+    if (_timer != null) return;
+
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      _timer = timer;
+      _onTick();
+    });
+    _watch.start();
+
+    notifyListeners();
+  }
+
+  stop() {
+    _timer?.cancel();
+    _timer = null;
+    _watch.stop();
+    _currentDuration = _watch.elapsed;
+
+    notifyListeners();
+  }
+
   reset() {
-    maxMinutes = _defaultMins;
-    minutes = maxMinutes;
-    seconds = _defaultSeconds;
-    breakCounter = -1;
+    stop();
+    _watch.reset();
+    _currentDuration = Duration.zero;
+    minutes = 25;
+    seconds = 00;
+
+    notifyListeners();
   }
 
-  // Break Counter
-  updateBreak() {
-    breakCounter++;
-
-    switch (breakCounter) {
-      case 6:
-        reset();
-        break;
-      case 5:
-        maxMinutes = 10;
-        break;
-      case 4:
-        maxMinutes = _defaultMins;
-        break;
-      case 3:
-        maxMinutes = 5;
-        break;
-      case 2:
-        maxMinutes = _defaultMins;
-        break;
-      case 1:
-        maxMinutes = 5;
-        break;
-
-      default:
-        reset();
-        break;
-    }
-  }
-
-  String getTime() => getMinutes() + ":" + getSeconds();
-
-  String getMinutes() {
-    String ret;
-
-    if (minutes == 0) {
-      ret = "00";
-    } else if (minutes < 10) {
-      ret = "0$minutes";
-    } else {
-      ret = "$minutes";
-    }
-
-    return ret;
-  }
-
-  String getSeconds() {
-    String ret;
-
-    if (seconds == 0) {
-      ret = "00";
-    } else if (seconds < 10) {
-      ret = "0$seconds";
-    } else {
-      ret = "$seconds";
-    }
-
-    return ret;
+  getTime() {
+    return "$minutes:${seconds < 10 ? "0$seconds" : seconds}";
   }
 }

@@ -18,35 +18,16 @@ class PomodoroHome extends StatelessWidget {
   }
 }
 
-class PomodoroBody extends StatefulWidget {
-  @override
-  _PomodoroBodyState createState() => _PomodoroBodyState();
-}
-
-class _PomodoroBodyState extends State<PomodoroBody> {
-  TimerProvider provider;
-  String time;
-
-  var _textStyle = TextStyle(fontSize: 26);
-
+class PomodoroBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    provider = Provider.of<TimerProvider>(context);
-    assert(provider != null);
-
-    time = provider.getTime();
-
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           SizedBox(height: 20),
           Expanded(
-            child: MainColumn(
-              time: time,
-              provider: provider,
-              textStyle: _textStyle,
-            ),
+            child: MainColumn(),
           ),
         ],
       ),
@@ -55,20 +36,13 @@ class _PomodoroBodyState extends State<PomodoroBody> {
 }
 
 class MainColumn extends StatelessWidget {
-  const MainColumn({
-    Key key,
-    @required this.time,
-    @required this.provider,
-    @required TextStyle textStyle,
-  })  : _textStyle = textStyle,
-        super(key: key);
-
-  final String time;
-  final TimerProvider provider;
-  final TextStyle _textStyle;
-
   @override
   Widget build(BuildContext context) {
+    TextStyle _textStyle = TextStyle(fontSize: 26);
+
+    TimerProvider provider = Provider.of<TimerProvider>(context);
+    String time = provider.getTime();
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -106,11 +80,9 @@ class MainColumn extends StatelessWidget {
                 disabledColor: Colors.black,
                 elevation: 8,
                 child: Text('Start', style: _textStyle),
-                onPressed: provider.isActive
-                    ? null
-                    : () {
-                        provider.start();
-                      },
+                onPressed: () {
+                  provider.start();
+                },
               ),
             ),
             // Stop Button
@@ -127,7 +99,7 @@ class MainColumn extends StatelessWidget {
                   style: _textStyle,
                 ),
                 onPressed: () {
-                  provider.stop();
+                  provider.isActive ? provider.stop() : provider.reset();
                 },
               ),
             ),
