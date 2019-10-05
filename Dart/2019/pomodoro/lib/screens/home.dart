@@ -42,6 +42,7 @@ class MainColumn extends StatelessWidget {
 
     TimerProvider provider = Provider.of<TimerProvider>(context);
     String time = provider.getTime();
+    int breakNumber = provider.getBreakNumberForUI();
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -49,7 +50,7 @@ class MainColumn extends StatelessWidget {
         Visibility(
           visible: provider.isOnBreak,
           child: Text(
-            'Break',
+            '${breakNumber == 3 ? 'Final ' : ''}Break ${breakNumber == 3 ? '' : breakNumber}',
             style: TextStyle(color: Colors.red),
           ),
         ),
