@@ -7,13 +7,13 @@ class TimerProvider with ChangeNotifier {
   Stopwatch _watch;
   Timer _timer;
 
-  int maxMinutes = 25;
+  int maxMinutes = 25;  // Changes based on breakCounter.
   int minutes = 25;
   int seconds = 0;
   int breakCount = 0;
 
   bool get isActive => _watch.isRunning;
-  bool get isOnBreak => breakCount == 5 || breakCount == 10;
+  bool get isOnBreak => breakCount == 1 || breakCount == 3 || breakCount == 5;
   bool get hasReachedZero => minutes == 0 && seconds == 0;
 
   Duration get currentDuration => _currentDuration;
@@ -27,8 +27,8 @@ class TimerProvider with ChangeNotifier {
     if (_timer != null) return;
 
     if (hasReachedZero) {
-      minutes = 1;
-      seconds = 5;
+      minutes = maxMinutes;
+      seconds = 0;
       _watch.reset();
       _currentDuration = Duration.zero;
     }
@@ -40,13 +40,13 @@ class TimerProvider with ChangeNotifier {
   }
 
   _onTick() {
-    //TODO: Set up breaks, make sure that timer is actually working. Test it!
     _currentDuration = _watch.elapsed;
     minutes = maxMinutes - _watch.elapsed.inMinutes - 1;
     seconds = (maxMinutes * 60 - _watch.elapsed.inSeconds) % 60;
-    // seconds = 5 - _watch.elapsed.inSeconds;
-    if (seconds == 0 && minutes > 0) minutes++;
 
+    // if (maxMinutes == 10) minutes -= 10;
+    if (seconds == 0) minutes++;  // Since minute decrements when seconds hit 0 instead of 59.
+                                  // eg. 23:01 -> 22:00 -> 22:59 
     if (seconds == 0 && minutes == 0) {
       stop();
       updateBreak();
