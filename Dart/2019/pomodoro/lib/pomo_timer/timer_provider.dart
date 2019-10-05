@@ -77,6 +77,7 @@ class TimerProvider with ChangeNotifier {
     _currentDuration = Duration.zero;
     minutes = 25;
     seconds = 0;
+    breakCount = 0;
 
     notifyListeners();
   }
