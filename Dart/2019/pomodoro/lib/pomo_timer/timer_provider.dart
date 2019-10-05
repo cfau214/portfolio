@@ -83,7 +83,7 @@ class TimerProvider with ChangeNotifier {
   }
 
   getTime() {
-    return "$minutes:${seconds < 10 ? "0$seconds" : seconds}";
+    return "${minutes < 10 ? 0 : ''}$minutes:${seconds < 10 ? "0$seconds" : seconds}";
   }
 
   updateBreak() {
