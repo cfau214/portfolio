@@ -81,9 +81,11 @@ class MainColumn extends StatelessWidget {
                 disabledColor: Colors.black,
                 elevation: 8,
                 child: Text('Start', style: _textStyle),
-                onPressed: () {
-                  provider.start();
-                },
+                onPressed: provider.isActive
+                    ? null
+                    : () {
+                        provider.start();
+                      },
               ),
             ),
             // Stop Button
