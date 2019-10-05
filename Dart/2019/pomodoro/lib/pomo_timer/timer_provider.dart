@@ -27,6 +27,7 @@ class TimerProvider with ChangeNotifier {
     if (_timer != null) return;
 
     if (hasReachedZero) {
+      updateBreak();
       minutes = maxMinutes;
       seconds = 0;
       _watch.reset();
@@ -49,7 +50,7 @@ class TimerProvider with ChangeNotifier {
                                   // eg. 23:01 -> 22:00 -> 22:59 
     if (seconds == 0 && minutes == 0) {
       stop();
-      updateBreak();
+      // updateBreak();
       if (Vibration.hasVibrator() != null) {
         if (Vibration.hasAmplitudeControl() != null) {
           Vibration.vibrate(duration: 5000, amplitude: 254);
