@@ -45,10 +45,9 @@ class TimerProvider with ChangeNotifier {
     minutes = maxMinutes - _watch.elapsed.inMinutes - 1;
     seconds = (maxMinutes * 60 - _watch.elapsed.inSeconds) % 60;
 
-    // if (maxMinutes == 10) minutes -= 10;
     if (seconds == 0) minutes++;  // Since minute decrements when seconds hit 0 instead of 59.
                                   // eg. 23:01 -> 22:00 -> 22:59 
-    if (seconds == 0 && minutes == 0) {
+    if (hasReachedZero) {
       stop();
       // updateBreak();
       if (Vibration.hasVibrator() != null) {
